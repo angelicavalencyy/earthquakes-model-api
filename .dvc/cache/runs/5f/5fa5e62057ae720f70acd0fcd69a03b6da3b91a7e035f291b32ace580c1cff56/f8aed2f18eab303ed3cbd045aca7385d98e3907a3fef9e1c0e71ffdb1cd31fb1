@@ -1,0 +1,28 @@
+cmd: python src/train_kmed.py
+deps:
+- path: data/raw
+  hash: md5
+  md5: 0c434dcbb1edd1df6187b8fcf765b0c9.dir
+  size: 51293821
+  nfiles: 3
+- path: src/train_kmed.py
+  hash: md5
+  md5: 2bbbf7bd897476b2a8f16f011912fbbc
+  size: 21965
+outs:
+- path: app/ml/model_v2.pkl
+  hash: md5
+  md5: 7c1fed3fbdf963258b3d38c023556944
+  size: 6710
+- path: app/ml/model_v3.pkl
+  hash: md5
+  md5: 9d7dd11ee74e93c656e2f1b2d33e896d
+  size: 6808
+- path: app/ml/model_v4.pkl
+  hash: md5
+  md5: bbf21c8f1e7d0d726604a51e910f2d9b
+  size: 6900
+- path: app/ml/model_v5.pkl
+  hash: md5
+  md5: 75ef560ad7e43d95407235d4d31ea03c
+  size: 6989

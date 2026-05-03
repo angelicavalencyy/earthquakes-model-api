@@ -1,10 +1,4 @@
-"""Realtime inference helpers used by the API.
 
-Contains small utilities to load the model and transform BMKG payloads
-into the model input format.
-
-Pylint: some module-level globals are used intentionally for model caching.
-"""
 
 # pylint: disable=global-statement,invalid-name
 import pickle

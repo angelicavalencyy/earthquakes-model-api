@@ -1,0 +1,25 @@
+cmd: python src/train_kmed.py
+deps:
+- path: data/raw
+  hash: md5
+  md5: 0c434dcbb1edd1df6187b8fcf765b0c9.dir
+  size: 51293821
+  nfiles: 3
+- path: src/train_kmed.py
+  hash: md5
+  md5: 59ed9eb5b9971a003bc86fa1e155860e
+  size: 22555
+outs:
+- path: app/ml
+  hash: md5
+  md5: 33448ac0bf6a446381521208bdf37e11.dir
+  size: 10005
+  nfiles: 4
+- path: data/processed/kabupaten_boundaries.json
+  hash: md5
+  md5: ed0fdd9b07f400e1a2227aa5062cbbb0
+  size: 5806746
+- path: data/processed/raw_features_v2.csv
+  hash: md5
+  md5: 9fadcf6d64e5fa131bf5caa088b06260
+  size: 50146
