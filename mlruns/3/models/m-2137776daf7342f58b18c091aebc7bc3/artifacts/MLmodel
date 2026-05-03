@@ -1,0 +1,15 @@
+artifact_path: file:///C:/angel/1_PA/backend-fastapi/mlruns/3/models/m-2137776daf7342f58b18c091aebc7bc3/artifacts
+flavors:
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.9.0
+model_id: m-2137776daf7342f58b18c091aebc7bc3
+model_size_bytes: 320
+model_uuid: m-2137776daf7342f58b18c091aebc7bc3
+prompts: null
+run_id: eeac6a8bba9540ef9bc88c658acbcfca
+utc_time_created: '2026-03-23 05:16:29.645067'

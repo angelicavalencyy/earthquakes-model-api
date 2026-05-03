@@ -1,0 +1,15 @@
+creation_timestamp: 1777359590415
+current_stage: None
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1777359590415
+model_id: m-d750f8fd66814a6188c805802ddf36ba
+name: Earthquake_Realtime_KMedoids_Registry_v6
+run_id: 978954fce59d4aa7972943558880a564
+run_link: null
+source: models:/m-d750f8fd66814a6188c805802ddf36ba
+status: READY
+status_message: null
+storage_location: file:///c:/angel/1_PA/backend-fastapi/mlruns/821421654599231354/models/m-d750f8fd66814a6188c805802ddf36ba/artifacts
+user_id: null
+version: 8

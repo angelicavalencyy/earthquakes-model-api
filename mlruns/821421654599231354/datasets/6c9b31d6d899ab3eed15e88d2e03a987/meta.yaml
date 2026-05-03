@@ -1,0 +1,11 @@
+digest: aad0b889
+name: features_k_2
+profile: '{"num_rows": 469, "num_elements": 2814}'
+schema: '{"mlflow_colspec": [{"type": "string", "name": "id_kabupaten", "required":
+  true}, {"type": "string", "name": "nama_kabupaten", "required": true}, {"type":
+  "double", "name": "frekuensi_gempa", "required": true}, {"type": "double", "name":
+  "depth_mean", "required": true}, {"type": "double", "name": "mag_max", "required":
+  true}, {"type": "double", "name": "mag_mean", "required": true}]}'
+source: '{"tags": {"mlflow.user": "angelica", "mlflow.source.name": "src/train_realtime.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "2d60a09413b6f1c99556fd8a9181bfc96d2258f5"}}'
+source_type: code

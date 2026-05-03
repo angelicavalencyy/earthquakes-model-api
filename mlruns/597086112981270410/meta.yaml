@@ -1,0 +1,6 @@
+artifact_location: file:///c:/angel/1_PA/backend-fastapi/mlruns/597086112981270410
+creation_time: 1777358797989
+experiment_id: '597086112981270410'
+last_update_time: 1777358797989
+lifecycle_stage: active
+name: test_fast_uri

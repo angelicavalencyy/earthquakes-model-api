@@ -1,0 +1,28 @@
+stages:
+  train_risk_map:
+    cmd: python src/train_kmed.py
+    deps:
+      - src/train_kmed.py
+      - data/raw
+    outs:
+      - app/ml/model_v2.pkl
+      - app/ml/model_v3.pkl
+      - app/ml/model_v4.pkl
+      - app/ml/model_v5.pkl
+
+  train_realtime:
+    cmd: python src/train_realtime.py
+    deps:
+      - src/train_realtime.py
+      - data/raw/bmkg_raw.csv
+      - data/raw/gadm41_IDN_2.json
+    outs:
+      - data/processed/raw_features_realtime.csv
+      - data/processed/kabupaten_boundaries.json
+      - app/ml/realtime_model_k2.pkl
+      - app/ml/realtime_model_k3.pkl
+      - app/ml/realtime_model_k4.pkl
+      - app/ml/realtime_model_k5.pkl
+
+
+  

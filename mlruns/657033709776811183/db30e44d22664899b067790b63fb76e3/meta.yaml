@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/angel/1_PA/backend-fastapi/mlruns/657033709776811183/db30e44d22664899b067790b63fb76e3/artifacts
+end_time: 1777794415436
+entry_point_name: ''
+experiment_id: '657033709776811183'
+lifecycle_stage: active
+run_id: db30e44d22664899b067790b63fb76e3
+run_name: invincible-cod-468
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777794366366
+status: 3
+tags: []
+user_id: angelica

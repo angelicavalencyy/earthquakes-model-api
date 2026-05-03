@@ -1,0 +1,23 @@
+artifact_path: file:///C:/angel/1_PA/backend-fastapi/mlruns/5/models/m-8fddca460b484922b7534fdafa8d84cc/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.9.0
+model_id: m-8fddca460b484922b7534fdafa8d84cc
+model_size_bytes: 4625
+model_uuid: m-8fddca460b484922b7534fdafa8d84cc
+prompts: null
+run_id: 588e9b2f033e4475a37964333ba78706
+utc_time_created: '2026-04-26 03:28:59.555469'

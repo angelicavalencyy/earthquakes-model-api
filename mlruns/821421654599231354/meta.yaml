@@ -1,0 +1,6 @@
+artifact_location: file:///c:/angel/1_PA/backend-fastapi/mlruns/821421654599231354
+creation_time: 1777358930614
+experiment_id: '821421654599231354'
+last_update_time: 1777358930614
+lifecycle_stage: active
+name: Earthquake_Realtime_Clustering_KMedoids_v5

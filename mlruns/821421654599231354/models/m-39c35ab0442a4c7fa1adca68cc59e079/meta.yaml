@@ -1,0 +1,10 @@
+artifact_location: file:///c:/angel/1_PA/backend-fastapi/mlruns/821421654599231354/models/m-39c35ab0442a4c7fa1adca68cc59e079/artifacts
+creation_timestamp: 1777362333301
+experiment_id: '821421654599231354'
+last_updated_timestamp: 1777362343490
+model_id: m-39c35ab0442a4c7fa1adca68cc59e079
+model_type: null
+name: model_k3
+source_run_id: 072b10ada777415ba255543156935df2
+status: 2
+status_message: null

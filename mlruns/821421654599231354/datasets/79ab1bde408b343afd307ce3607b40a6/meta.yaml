@@ -1,0 +1,11 @@
+digest: 744737b9
+name: features_k_2
+profile: '{"num_rows": 450, "num_elements": 2700}'
+schema: '{"mlflow_colspec": [{"type": "string", "name": "id_kabupaten", "required":
+  true}, {"type": "string", "name": "nama_kabupaten", "required": true}, {"type":
+  "double", "name": "frekuensi_gempa", "required": true}, {"type": "double", "name":
+  "depth_mean", "required": true}, {"type": "double", "name": "mag_max", "required":
+  true}, {"type": "double", "name": "mag_mean", "required": true}]}'
+source: '{"tags": {"mlflow.user": "angelica", "mlflow.source.name": "-c", "mlflow.source.type":
+  "LOCAL"}}'
+source_type: code

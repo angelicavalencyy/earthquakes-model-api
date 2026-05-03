@@ -1,0 +1,15 @@
+creation_timestamp: 1777362241403
+current_stage: None
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1777362241403
+model_id: m-cfd3afba1c1447699a7630a428f987e4
+name: Earthquake_KMedoids_Registry
+run_id: a3abb8b5f89d4d3b92ede8abb40c3525
+run_link: null
+source: models:/m-cfd3afba1c1447699a7630a428f987e4
+status: READY
+status_message: null
+storage_location: file:///C:/angel/1_PA/backend-fastapi/mlruns/657033709776811183/models/m-cfd3afba1c1447699a7630a428f987e4/artifacts
+user_id: null
+version: 8
