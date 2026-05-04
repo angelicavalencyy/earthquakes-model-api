@@ -462,6 +462,30 @@ def save_model(
     print(f"Model {model_version} logged to MLflow")
 
 
+def build_human_readable_cluster_df(raw_features_df, clustered_df):
+    """Return cluster output with raw feature values for reporting/export."""
+    export_columns = [
+        "id_kabupaten",
+        "nama_kabupaten",
+        *CLUSTER_FEATURE_COLUMNS,
+    ]
+    cluster_columns = [
+        "id_kabupaten",
+        "nama_kabupaten",
+        "cluster_label",
+        "risk_score",
+        "risk_level",
+        "PC1",
+        "PC2",
+    ]
+
+    return raw_features_df[export_columns].merge(
+        clustered_df[cluster_columns],
+        on=["id_kabupaten", "nama_kabupaten"],
+        how="left",
+    )
+
+
 def safe_remove(path):
     if os.path.exists(path):
         os.remove(path)
@@ -563,7 +587,9 @@ def main():
                 artifact_prefix=f"kmed_k{k_val}",
             )
 
-            mlflow.log_text(current_df.to_csv(index=False), f"clustered_k{k_val}.csv")
+            human_readable_df = build_human_readable_cluster_df(raw_features_df, current_df)
+            mlflow.log_text(human_readable_df.to_csv(index=False), f"clustered_k{k_val}.csv")
+            mlflow.log_text(current_df.to_csv(index=False), f"clustered_k{k_val}_scaled.csv")
             mlflow.log_text(cluster_info_df.to_csv(index=False), f"cluster_summary_k{k_val}.csv")
             mlflow.log_text(pca_df.to_csv(index=False), f"pca_k{k_val}.csv")
 

@@ -33,5 +33,6 @@ async def ensure_realtime_updated_at(conn):
 async def init_db():
     async with async_engine.begin() as conn:
         await conn.run_sync(SQLModel.metadata.create_all)
-        await ensure_realtime_updated_at(conn)
+        # Avoid blocking startup on schema-altering statements.
+        # Keep runtime schema changes out of the app boot path so the API can serve FE requests immediately.
         
