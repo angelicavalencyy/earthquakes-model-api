@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/angel/1_PA/backend-fastapi/mlruns/704045293332042164/0a0323d2f0eb43b3bca28994c69a3019/artifacts
+end_time: 1780846499483
+entry_point_name: ''
+experiment_id: '704045293332042164'
+lifecycle_stage: active
+run_id: 0a0323d2f0eb43b3bca28994c69a3019
+run_name: W3_optimized_KMedoids_euclidean_k4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780846493918
+status: 3
+tags: []
+user_id: angelica

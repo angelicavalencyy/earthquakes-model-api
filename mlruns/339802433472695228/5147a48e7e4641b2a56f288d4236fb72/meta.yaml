@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/angel/1_PA/backend-fastapi/mlruns/339802433472695228/5147a48e7e4641b2a56f288d4236fb72/artifacts
+end_time: 1780848133618
+entry_point_name: ''
+experiment_id: '339802433472695228'
+lifecycle_stage: active
+run_id: 5147a48e7e4641b2a56f288d4236fb72
+run_name: Final_Comparison
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780848132663
+status: 3
+tags: []
+user_id: angelica

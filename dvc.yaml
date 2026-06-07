@@ -16,7 +16,5 @@ stages:
       - data/raw/bmkg_raw.csv
       - data/raw/gadm41_IDN_2.json
     outs:
-      - data/processed/raw_features_realtime.csv
-      - data/processed/kabupaten_boundaries.json
       - app/ml/kmeans/realtime
       - app/ml/kmed/realtime

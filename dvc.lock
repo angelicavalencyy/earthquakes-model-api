@@ -36,25 +36,19 @@ stages:
       nfiles: 3
     - path: src/train_kmed.py
       hash: md5
-      md5: 2bbbf7bd897476b2a8f16f011912fbbc
-      size: 21965
+      md5: f483ed1d2b9a6158d8bb722f22b05480
+      size: 25878
     outs:
-    - path: app/ml/model_v2.pkl
+    - path: app/ml/kmeans/static
       hash: md5
-      md5: 7c1fed3fbdf963258b3d38c023556944
-      size: 6710
-    - path: app/ml/model_v3.pkl
+      md5: e9415d7e774f70e1f98c8767eea531f7.dir
+      size: 676076
+      nfiles: 4
+    - path: app/ml/kmed/static
       hash: md5
-      md5: 9d7dd11ee74e93c656e2f1b2d33e896d
-      size: 6808
-    - path: app/ml/model_v4.pkl
-      hash: md5
-      md5: bbf21c8f1e7d0d726604a51e910f2d9b
-      size: 6900
-    - path: app/ml/model_v5.pkl
-      hash: md5
-      md5: 75ef560ad7e43d95407235d4d31ea03c
-      size: 6989
+      md5: c4c7755c74af2923a2ea488813a5217f.dir
+      size: 845335
+      nfiles: 5
   train_realtime:
     cmd: python src/train_realtime.py
     deps:
@@ -66,32 +60,22 @@ stages:
       hash: md5
       md5: 348c151fe1864d091c81d346b5eb5321
       size: 36911995
+    - path: src/realtime_helpers.py
+      hash: md5
+      md5: 7eb75b6939238696df7377fe4c0112dc
+      size: 36190
     - path: src/train_realtime.py
       hash: md5
-      md5: ce2f1e25dd36d444101677347236614d
-      size: 22066
+      md5: 02278ef38ce58e96d4b6f2817d948ca2
+      size: 30160
     outs:
-    - path: app/ml/realtime_model_k2.pkl
+    - path: app/ml/kmeans/realtime
       hash: md5
-      md5: 34f5e62469c770abdd62d373a716fbf8
-      size: 5582
-    - path: app/ml/realtime_model_k3.pkl
+      md5: 4d23b2996b42d4d9f78fd62034136085.dir
+      size: 280065
+      nfiles: 2
+    - path: app/ml/kmed/realtime
       hash: md5
-      md5: c1a46fb39a37093e0926e5c48e5c68ee
-      size: 5661
-    - path: app/ml/realtime_model_k4.pkl
-      hash: md5
-      md5: 071c56b2f61aa239747dafd65086a7ee
-      size: 5734
-    - path: app/ml/realtime_model_k5.pkl
-      hash: md5
-      md5: 777f012e1e93dd33f1fde46a8e12c5e4
-      size: 5807
-    - path: data/processed/kabupaten_boundaries.json
-      hash: md5
-      md5: ed0fdd9b07f400e1a2227aa5062cbbb0
-      size: 5806746
-    - path: data/processed/raw_features_realtime.csv
-      hash: md5
-      md5: 169651d86cb64fb41997132819f66035
-      size: 42477
+      md5: e1f6c6d97aa9c8473efac57fe96cd4c4.dir
+      size: 420198
+      nfiles: 3
