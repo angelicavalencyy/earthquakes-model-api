@@ -1,0 +1,8 @@
+Model Clustering Summary
+Algorithm: WeightedKMedoids
+Distance metric: Euclidean
+Number of clusters (k): 3
+Input features: frekuensi_gempa, mag_max, mag_mean, depth_mean
+Training data: historical earthquake data
+Testing data: realtime earthquake data
+Output: cluster label, risk score, and risk level per event

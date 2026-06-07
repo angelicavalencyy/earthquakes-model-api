@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/angel/1_PA/backend-fastapi/mlruns/357919479542955654/df472d4a07dc4cb29a864e9ef60e7049/artifacts
+deleted_time: 1780324405324
+end_time: 1780324040734
+entry_point_name: ''
+experiment_id: '357919479542955654'
+lifecycle_stage: deleted
+run_id: df472d4a07dc4cb29a864e9ef60e7049
+run_name: glamorous-seal-430
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780324040620
+status: 3
+tags: []
+user_id: angelica

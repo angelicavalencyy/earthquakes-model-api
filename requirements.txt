@@ -10,3 +10,6 @@ asyncpg>=0.29.0
 pandas>=2.2.0
 python-dateutil>=2.9.0.post0
 joblib>=1.4.0
+scikit-learn==1.8.0
+scikit-learn-extra==0.3.0
+rapidfuzz>=3.0.0

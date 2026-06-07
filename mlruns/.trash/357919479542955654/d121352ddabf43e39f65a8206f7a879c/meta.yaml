@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/angel/1_PA/backend-fastapi/mlruns/357919479542955654/d121352ddabf43e39f65a8206f7a879c/artifacts
+deleted_time: 1780324405345
+end_time: 1780322487979
+entry_point_name: ''
+experiment_id: '357919479542955654'
+lifecycle_stage: deleted
+run_id: d121352ddabf43e39f65a8206f7a879c
+run_name: WeightedKMedoids_Manhattan_Trials
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780322485653
+status: 3
+tags: []
+user_id: angelica

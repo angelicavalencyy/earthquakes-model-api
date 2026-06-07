@@ -1,0 +1,9 @@
+{
+  "WeightedKMedoids-Manhattan": {
+    "target_k": 3,
+    "best_k": 3,
+    "best_index": 1,
+    "best_sse": 22.373555019445558,
+    "best_silhouette": 0.29925237659499265
+  }
+}

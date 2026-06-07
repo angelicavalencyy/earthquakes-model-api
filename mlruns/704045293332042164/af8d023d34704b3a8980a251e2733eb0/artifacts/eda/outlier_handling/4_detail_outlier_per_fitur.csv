@@ -1,0 +1,16 @@
+fitur,outlier_sebelum,outlier_sesudah,reduksi,skewness_sebelum,skewness_sesudah
+frekuensi_gempa,11,0,11,4.1652,0.1279
+seismic_density,1,15,-14,20.6701,2.489
+mag_p95,33,33,0,-1.9087,-1.9253
+mag_std,0,0,0,-0.4923,-0.5703
+b_value,4,10,-6,10.0595,1.771
+depth_std,10,12,-2,1.8684,1.6159
+depth_skew,11,12,-1,1.9064,1.4911
+shallow_ratio,0,0,0,-1.0051,-1.0051
+event_concentration,33,33,0,2.5572,2.5572
+centroid_lat,0,0,0,0.1089,0.1084
+centroid_lon,33,33,0,-2.7416,-2.7446
+korban_total,5,13,-8,11.0785,1.9442
+rumah_rusak_total,11,0,11,6.9437,1.0952
+fasum_rusak_total,12,15,-3,6.6194,4.664
+TOTAL,116,132,-16,,

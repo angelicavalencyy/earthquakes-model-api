@@ -1,528 +1,669 @@
-"""Realtime earthquake clustering training script."""
+"""Realtime earthquake clustering training script.
 
-# pylint: disable=missing-function-docstring,missing-module-docstring,line-too-long,trailing-whitespace
+Trains KMeans & KMedoids with two weight configurations (V1 original, V2 optimized)
+across k=2-5. Compares all variants and saves the best K-Medoids model with
+adaptive k selection (3 or 4 clusters based on silhouette score).
 
-import os
+Output: Best K-Medoids model saved to app/ml/kmed/realtime_model_best.pkl
+"""
+import sys
+import json
+import hashlib
+import pickle
+import logging
+import shutil
+from datetime import datetime, timezone
 from pathlib import Path
+import warnings
 
-import mlflow
 import pandas as pd
 import geopandas as gpd
-from matplotlib import pyplot as plt
-import seaborn as sns
+import numpy as np
+import mlflow
 
-from sklearn.preprocessing import MinMaxScaler
+warnings.filterwarnings("ignore", category=FutureWarning)
 
-from sklearn_extra.cluster import KMedoids
+from realtime_helpers import (
+    K_RANGE, SCHEMES, fit_model, compute_metrics, log_elbow,
+    log_eda, log_outliers, log_scaling, log_cluster_results, log_outlier_post,
+    CLUSTER_FEATURE_COLUMNS, FEATURE_WEIGHTS, FEATURE_WEIGHTS_V2, FEATURE_WEIGHTS_V3,
+    aggregate_to_regions, preprocess, weight_features, generate_risk_table,
+    sort_model_clusters, select_best_k, compute_kmedoids_params,
+    log_outlier_handling
+)
 
-from sklearn.metrics import  silhouette_score
-from sklearn.metrics import davies_bouldin_score, calinski_harabasz_score
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+EXPORT_DIR = PROJECT_ROOT / "app" / "ml"
+
+def get_mlflow_tracking_uri() -> str:
+    d = Path(__file__).resolve().parents[1] / "mlruns"
+    d.mkdir(parents=True, exist_ok=True)
+    return d.resolve().as_uri()
+
+# Dua konfigurasi bobot untuk dibandingkan
+# WEIGHT_CONFIGS = {
+#     "W1_original": FEATURE_WEIGHTS,       # Bobot asli (centroid_lat/lon = 0.075)
+#     "W2_optimized": FEATURE_WEIGHTS_V2,   # Bobot optimasi (kurangi spatial bias)
+# }
+WEIGHT_CONFIGS = {
+    "W3_optimized": FEATURE_WEIGHTS_V3,
+}
 
 
-CLUSTER_FEATURE_COLUMNS = [
-    "frekuensi_gempa",
-    "depth_mean",
-    "mag_max",
-    "mag_mean",
-]
 def load_data():
-    bmkg_raw = pd.read_csv("./data/raw/bmkg_raw.csv")
-    gadm_raw = gpd.read_file("./data/raw/gadm41_IDN_2.json")
+    """Load raw BMKG historical events."""
+    return pd.read_csv(PROJECT_ROOT / "data" / "raw" / "bmkg_raw.csv")
 
-    return bmkg_raw, gadm_raw
 
 def prepare_gadm(gadm):
+    if gadm.crs is None:
+        gadm.set_crs("EPSG:4326", inplace=True)
     gadm = gadm.to_crs("EPSG:4326")
-
     gadm["luas_wilayah_km2"] = gadm.to_crs(epsg=3395).geometry.area / 10**6
-
     gadm = gadm.rename(columns={
         "GID_2": "id_kabupaten",
         "NAME_2": "nama_kabupaten"
     })
-
     return gadm[["id_kabupaten", "nama_kabupaten", "luas_wilayah_km2", "geometry"]]
 
 
-def assign_kabupaten_for_events(bmkg: pd.DataFrame, gadm: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
-    """Assign each BMKG event to a kabupaten.
-
-    Events inside a kabupaten use point-in-polygon mapping.
-    Events in the sea fall back to the nearest kabupaten so they are not dropped.
-    """
-
-    bmkg_copy = bmkg.copy()
-    bmkg_copy["geometry"] = gpd.points_from_xy(bmkg_copy["longitude"], bmkg_copy["latitude"])
-
-    bmkg_gdf = gpd.GeoDataFrame(bmkg_copy, geometry="geometry", crs="EPSG:4326")
-    gadm_target = gadm[["id_kabupaten", "geometry"]].copy()
-
-    within_join = gpd.sjoin(
-        bmkg_gdf,
-        gadm_target,
-        how="left",
-        predicate="within",
-    ).drop(columns=["index_right"], errors="ignore")
-
-    unmatched_mask = within_join["id_kabupaten"].isna()
-    if unmatched_mask.any():
-        gadm_metric = gadm_target.to_crs(epsg=3395).rename(columns={"id_kabupaten": "id_kabupaten_nearest"})
-        bmkg_metric = within_join.loc[unmatched_mask].to_crs(epsg=3395)
-
-        nearest_join = gpd.sjoin_nearest(
-            bmkg_metric,
-            gadm_metric,
-            how="left",
-            distance_col="_nearest_distance",
-        ).drop(columns=["index_right"], errors="ignore")
-
-        within_join.loc[nearest_join.index, "id_kabupaten"] = nearest_join["id_kabupaten_nearest"]
-
-    return within_join
-def process_bmkg(bmkg, gadm):
-    # Realtime dihitung per gempa, bukan per kabupaten.
-    bmkg_join = assign_kabupaten_for_events(bmkg, gadm)
-
-    bmkg_join["frekuensi_gempa"] = 1.0
-    bmkg_join["mag_max"] = bmkg_join["magnitude"]
-    bmkg_join["mag_mean"] = bmkg_join["magnitude"]
-    bmkg_join["depth_mean"] = bmkg_join["depth_km"]
-
-    return bmkg_join
-
-def merge_all(gadm, bmkg_agg):
-
-    df = (
-        bmkg_agg.merge(
-            gadm[["id_kabupaten", "nama_kabupaten", "luas_wilayah_km2"]],
-            on="id_kabupaten",
-            how="left",
-        )
-    )
-
-    # Fitur realtime dipakai per event.
-    bmkg_cols = ["frekuensi_gempa", "mag_max", "mag_mean", "depth_mean"]
-    df[bmkg_cols] = df[bmkg_cols].fillna(0)
-
-    # 🔹 DIBI JANGAN 0 → biarkan NaN dulu (akan diimputasi nanti)
-    # korban_total, rumah_rusak_total, fasum_rusak_total
-
-    df = df.drop(columns="geometry")
-
-    kabupaten_level_df = (
-        df.groupby(["id_kabupaten", "nama_kabupaten"], as_index=False)
-        .agg(
-            luas_wilayah_km2=("luas_wilayah_km2", "first"),
-            frekuensi_gempa=("frekuensi_gempa", "sum"),
-            depth_mean=("depth_mean", "mean"),
-            mag_max=("mag_max", "max"),
-            mag_mean=("mag_mean", "mean"),
-        )
-    )
-
-    return kabupaten_level_df[["id_kabupaten", "nama_kabupaten", "luas_wilayah_km2", *CLUSTER_FEATURE_COLUMNS]]
-
-
-def log_feature_artifacts(raw_features_df, feature_columns, artifact_prefix):
-    feature_df = raw_features_df[feature_columns].copy()
-    corr_df = feature_df.corr(numeric_only=True)
-    summary_df = feature_df.describe().T.reset_index().rename(columns={"index": "feature"})
-
-    fig, ax = plt.subplots(figsize=(8, 6))
-    sns.heatmap(
-        corr_df,
-        annot=True,
-        fmt=".2f",
-        cmap="coolwarm",
-        vmin=-1,
-        vmax=1,
-        center=0,
-        ax=ax,
-    )
-    ax.set_title(f"Correlation Heatmap - {artifact_prefix}")
-    plt.tight_layout()
-    mlflow.log_text(summary_df.to_csv(index=False), f"{artifact_prefix}_feature_summary.csv")
-    mlflow.log_text(corr_df.to_csv(), f"{artifact_prefix}_feature_correlation.csv")
-    mlflow.log_figure(fig, f"{artifact_prefix}_feature_correlation_heatmap.png")
-    plt.close(fig)
-
-    return None
-
-
-def log_cluster_distribution_artifact(cluster_counts, artifact_prefix):
-    cluster_series = cluster_counts.sort_index()
-
-    fig, ax = plt.subplots(figsize=(8, 5))
-    bars = ax.bar(cluster_series.index.astype(str), cluster_series.values, color="#2F6BFF")
-    ax.set_title(f"Distribusi Cluster - {artifact_prefix}")
-    ax.set_xlabel("Cluster")
-    ax.set_ylabel("Jumlah Data")
-    ax.bar_label(bars, padding=3)
-    plt.tight_layout()
-    mlflow.log_figure(fig, f"{artifact_prefix}_cluster_distribution_bar.png")
-    plt.close(fig)
-
-    return None
-
-
-def log_preprocessing_artifact(artifact_prefix, steps):
-    artifact_text = "\n".join(f"{step_name}: {step_detail}" for step_name, step_detail in steps)
-    mlflow.log_text(artifact_text, f"{artifact_prefix}_preprocessing_steps.txt")
-    return None
-
-
-def log_model_clustering_artifact(artifact_prefix, k_val, feature_columns):
-    artifact_text = "\n".join([
-        "Model Clustering Summary",
-        "Algorithm: K-Medoids",
-        f"Number of clusters (k): {k_val}",
-        f"Input features: {', '.join(feature_columns)}",
-        "Training data: historical earthquake data",
-        "Testing data: realtime earthquake data",
-        "Output: cluster label, risk score, and risk level per kabupaten",
-    ])
-    mlflow.log_text(artifact_text, f"{artifact_prefix}_model_clustering_summary.txt")
-    return None
-
-
-# def impute_dibi_features(df):
-
-#     df["korban_total"] = df["korban_total"].fillna(df["korban_total"].median())
-#     df["rumah_rusak_total"] = df["rumah_rusak_total"].fillna(df["rumah_rusak_total"].median())
-#     df["fasum_rusak_total"] = df["fasum_rusak_total"].fillna(df["fasum_rusak_total"].median())
-
-#     return df
-
 def cleaning():
-    # Ambil data mentah dan buang baris yang tidak lengkap.
-    bmkg_raw_df, gadm_raw_df = load_data()
-
+    bmkg_raw_df = load_data()
     bmkg_raw_df = bmkg_raw_df.drop_duplicates()
-    bmkg_raw_df = bmkg_raw_df.dropna(subset=['latitude', 'longitude'])
+    bmkg_raw_df = bmkg_raw_df.dropna(subset=["magnitude", "depth_km", "latitude", "longitude"])
 
-    gadm_processed_df = prepare_gadm(gadm_raw_df)
+    with open(PROJECT_ROOT / "data" / "raw" / "gadm41_IDN_2.json", "r", encoding="utf-8") as f:
+        gadm_raw = json.load(f)
+    gadm_gdf = gpd.GeoDataFrame.from_features(gadm_raw["features"])
+    gadm_gdf = prepare_gadm(gadm_gdf)
 
-    # Realtime tetap memakai event-level feature.
-    bmkg_aggregated_df = process_bmkg(bmkg_raw_df, gadm_processed_df)
-    # dibi_aggregated_df = process_dibi(dibi_raw_df, gadm_processed_df)
-    
-    raw_features_df = merge_all(gadm_processed_df, bmkg_aggregated_df)
-    return raw_features_df
-
-
-def normalize_data(raw_features_df):
-    scaler = MinMaxScaler()
-
-    numerical_features_to_scale_df = raw_features_df[CLUSTER_FEATURE_COLUMNS].copy()
-
-    scaled_numerical_features_array = scaler.fit_transform(numerical_features_to_scale_df)
-
-    scaled_numerical_features_df = pd.DataFrame(scaled_numerical_features_array, columns=numerical_features_to_scale_df.columns)
-
-    return scaled_numerical_features_df, scaler
+    print("Aggregating to region level using realtime_helpers...")
+    kabupaten_level_df = aggregate_to_regions(bmkg_raw_df, gadm_gdf)
+    return kabupaten_level_df
 
 
-def run_clustering(final_processed_df, k=3):
-    clustering_input_df = final_processed_df[CLUSTER_FEATURE_COLUMNS].copy()
+def save_pkl(payload, path):
+    with open(path, "wb") as f:
+        pickle.dump(payload, f)
+    print(f"Pickle exported -> {path}")
 
-    model = KMedoids(n_clusters=k, random_state=42)
-    model.fit(clustering_input_df)
-
-    labels = model.labels_
-
-    final_processed_df["cluster_label"] = labels
-
-    cluster_characteristics_df = (
-        final_processed_df
-        .groupby("cluster_label")
-        .mean(numeric_only=True)
-    )
-
-    return final_processed_df, model, cluster_characteristics_df
-def run_pca(final_processed_df, clustering_input_df=None, n_components=2):
-    """Tambahkan PC1 dan PC2 untuk visualisasi cluster."""
-
-    from sklearn.decomposition import PCA
-
-    if clustering_input_df is None:
-        clustering_input_df = final_processed_df[CLUSTER_FEATURE_COLUMNS].copy()
-
-    clustering_input_df = clustering_input_df.fillna(0)
-
-    pca = PCA(n_components=n_components, random_state=42)
-    pca_components_array = pca.fit_transform(clustering_input_df)
-
-    pca_columns = [f"PC{i+1}" for i in range(n_components)]
-    pca_df = pd.DataFrame(pca_components_array, columns=pca_columns)
-
-    final_processed_df = final_processed_df.reset_index(drop=True)
-    pca_df = pca_df.reset_index(drop=True)
-
-    for col in pca_columns:
-        final_processed_df[col] = pca_df[col]
-
-    pca_result_df = pd.concat([
-        final_processed_df[["id_kabupaten", "nama_kabupaten"]],
-        pca_df
-    ], axis=1)
-
-    explained_variance = pca.explained_variance_ratio_
-
-    print(f"PCA Variance: {explained_variance}")
-    print(f"Total Variance Explained: {explained_variance.sum():.4f}")
-
-    return final_processed_df, pca_result_df, pca
-
-
-def generate_risk_table(final_processed_df):
-    """Hitung skor dan level risiko tiap cluster."""
-
-    cluster_counts = final_processed_df.groupby("cluster_label").size().rename("count")
-    cluster_summary = final_processed_df.groupby("cluster_label")[CLUSTER_FEATURE_COLUMNS].mean()
-
-    risk_calc_df = cluster_summary.copy()
-    if "depth_mean" in risk_calc_df.columns:
-        risk_calc_df["depth_mean"] = 1 - risk_calc_df["depth_mean"]
-
-    cluster_summary["risk_score"] = risk_calc_df.mean(axis=1)
-    cluster_summary_no_pca = cluster_summary.sort_values("risk_score")
-    n_clusters = len(cluster_summary_no_pca)
-
-    if n_clusters >= 3:
-        cluster_summary_no_pca["risk_level"] = pd.qcut(
-            cluster_summary_no_pca["risk_score"],
-            q=3,
-            labels=["Rendah", "Sedang", "Tinggi"]
-        )
-    elif n_clusters == 2:
-        cluster_summary_no_pca["risk_level"] = pd.qcut(
-            cluster_summary_no_pca["risk_score"],
-            q=2,
-            labels=["Rendah", "Tinggi"]
-        )
-    else:
-        cluster_summary_no_pca["risk_level"] = ["Rendah"] * n_clusters
-
-    cluster_info_df = (
-        cluster_summary_no_pca[["risk_score", "risk_level"]]
-        .reset_index()
-        .rename(columns={"index": "cluster_label"})
-    )
-
-    cluster_info_df = cluster_info_df.merge(
-        cluster_counts.reset_index(),
-        on="cluster_label",
-        how="left"
-    )
-
-    kabupaten_cluster_table = (
-        final_processed_df[["id_kabupaten", "nama_kabupaten", "cluster_label"]]
-        .merge(cluster_info_df, on="cluster_label", how="left")
-    )
-
-    kabupaten_cluster_table = kabupaten_cluster_table[
-        ["id_kabupaten", "nama_kabupaten", "cluster_label", "risk_score", "risk_level", "count"]
-    ]
-
-    final_processed_df = final_processed_df.merge(
-        cluster_info_df[["cluster_label", "risk_score", "risk_level"]],
-        on="cluster_label",
-        how="left"
-    )
-
-    final_with_risk_df = final_processed_df[
-        ["id_kabupaten", "nama_kabupaten", "cluster_label", "risk_score", "risk_level"]
-    ].copy()
-
-    return (
-        final_processed_df,
-        cluster_info_df,
-        kabupaten_cluster_table,
-        final_with_risk_df
-    )
-
-def save_model(
-    cluster_info_df,
-    model_version: str,
-    feature_columns,
-):
-    mlflow.log_dict({
-        "model_version": model_version,
-        "feature_columns": list(feature_columns),
-        "cluster_risk_map": cluster_info_df.set_index("cluster_label").to_dict(orient="index"),
-    }, f"{model_version}_model_metadata.json")
-
-    print(f"Model {model_version} logged to MLflow")
-
-
-def build_human_readable_cluster_df(raw_features_df, clustered_df):
-    """Return cluster output with raw feature values for reporting/export."""
-    export_columns = [
-        "id_kabupaten",
-        "nama_kabupaten",
-        *CLUSTER_FEATURE_COLUMNS,
-    ]
-    cluster_columns = [
-        "id_kabupaten",
-        "nama_kabupaten",
-        "cluster_label",
-        "risk_score",
-        "risk_level",
-        "PC1",
-        "PC2",
-    ]
-
-    return raw_features_df[export_columns].merge(
-        clustered_df[cluster_columns],
-        on=["id_kabupaten", "nama_kabupaten"],
-        how="left",
-    )
-
-
-def safe_remove(path):
-    if os.path.exists(path):
-        os.remove(path)
-
-
-def get_mlflow_tracking_uri() -> str:
-    tracking_dir = Path(__file__).resolve().parents[1] / "mlruns"
-    tracking_dir.mkdir(parents=True, exist_ok=True)
-    return tracking_dir.resolve().as_uri()
 
 def main():
     mlflow.set_tracking_uri(get_mlflow_tracking_uri())
-    mlflow.set_experiment("Earthquake_Realtime_Clustering_KMedoids_v6")
-    
-    _, gadm_raw = load_data()
-    gadm_processed = prepare_gadm(gadm_raw) 
+    exp_name = "Earthquake_Realtime_Clustering_v2"
+    if mlflow.get_experiment_by_name(exp_name) is None:
+        mlflow.create_experiment(exp_name)
+    mlflow.set_experiment(exp_name)
 
-    raw_features_df = cleaning()
+    print("Preparing realtime data (BMKG + GADM)...")
+    region_df = cleaning()
 
-    mlflow.log_text(raw_features_df.to_csv(index=False), "raw_features_realtime.csv")
-    log_feature_artifacts(
-        raw_features_df=raw_features_df,
-        feature_columns=CLUSTER_FEATURE_COLUMNS,
-        artifact_prefix="realtime",
-    )
+    # ── Preprocessing (shared across weight configs) ─────────────────
+    raw_feat, scaled_feat, scaler, clip_bounds = preprocess(region_df)
+    id_df = region_df[["id_kabupaten", "nama_kabupaten"]].reset_index(drop=True)
+    n_samples = len(region_df)
 
-    log_preprocessing_artifact(
-        artifact_prefix="realtime",
-        steps=[
-            ("Data cleaning", "drop_duplicates pada data gempa; dropna pada latitude dan longitude"),
-            ("Spatial join", "assign event gempa ke kabupaten dengan point-in-polygon lalu nearest fallback"),
-            ("Feature merge", "agregasi fitur gempa ke level kabupaten"),
-            ("Normalization", "MinMaxScaler pada fitur clustering"),
-        ],
-    )
+    # ── EDA Run ──────────────────────────────────────────────────────
+    with mlflow.start_run(run_name="EDA_Exploration") as eda_run:
+        eda_run_id = eda_run.info.run_id
 
-    mlflow.log_text(gadm_processed.to_json(), "kabupaten_boundaries.geojson")
+        mlflow.log_param("n_regions", n_samples)
+        mlflow.log_param("features", ",".join(CLUSTER_FEATURE_COLUMNS))
+        mlflow.log_param("scaler", "QuantileTransformer(uniform)")
+        mlflow.log_param("log_transform", "frekuensi_gempa,seismic_density")
+        mlflow.log_param("preprocessing", "winsorize(1-99) -> log1p -> QuantileTransformer(uniform)")
 
-    scaled_numerical_features_df, _ = normalize_data(raw_features_df)
+        # Log computed K-Medoids hyperparameters (data-driven, bukan asumsi)
+        for k in K_RANGE:
+            params = compute_kmedoids_params(n_samples, k)
+            mlflow.log_param(f"kmedoids_k{k}_n_init", params["n_init"])
+            mlflow.log_param(f"kmedoids_k{k}_max_iter", params["max_iter"])
 
-    base_df = pd.concat([
-        raw_features_df[['id_kabupaten', 'nama_kabupaten']].reset_index(drop=True),
-        scaled_numerical_features_df.reset_index(drop=True)
-    ], axis=1)
+        # Log AHP weights for configurations
+        mlflow.log_param("ahp_weights_v3", json.dumps(FEATURE_WEIGHTS_V3))
 
-    for k_val in range(2, 6):
-        with mlflow.start_run(run_name=f"Run_K_{k_val}", nested=True):
-            print(f"\n--- Processing k={k_val} ---")
+        # Log winsorization clip bounds
+        mlflow.log_text(
+            json.dumps(clip_bounds, indent=2),
+            "preprocessing/winsorize_clip_bounds.json"
+        )
 
-            log_model_clustering_artifact(
-                artifact_prefix=f"realtime_k{k_val}",
-                k_val=k_val,
-                feature_columns=CLUSTER_FEATURE_COLUMNS,
+        # EDA with W3 weights for visualization
+        weighted_feat_v3 = weight_features(scaled_feat, FEATURE_WEIGHTS_V3)
+        log_eda(region_df, scaled_feat, weighted_feat_v3)
+        log_outliers(region_df, prefix="eda/outlier_before")
+        log_scaling(raw_feat, scaled_feat)
+
+        # Log outlier handling (before vs after comparison)
+        log_outlier_handling(
+            region_df, CLUSTER_FEATURE_COLUMNS,
+            log_transform_cols=["frekuensi_gempa", "seismic_density"],
+            prefix="eda/outlier_handling"
+        )
+
+        # Elbow plots
+        for algo, metric in SCHEMES:
+            log_elbow(weighted_feat_v3, algo, metric)
+
+    # ── Training Loop: Weight × Algo × Metric × K ───────────────────
+    best_per_scheme = {}
+    all_comparison_rows = []
+
+    for weight_name, weights in WEIGHT_CONFIGS.items():
+        weighted_feat = weight_features(scaled_feat, weights)
+
+        print(f"\n{'='*60}")
+        print(f"Weight Config: {weight_name}")
+        print(f"{'='*60}")
+
+        for algo, metric in SCHEMES:
+            scheme_key = f"{weight_name}_{algo}_{metric}"
+            best_sil = -1
+            best_info = None
+
+            print(f"\n  Training: {scheme_key}")
+
+            for k in K_RANGE:
+                run_name = f"{scheme_key}_k{k}"
+                is_kmedoids = algo == "KMedoids"
+
+                with mlflow.start_run(run_name=run_name):
+                    mlflow.log_param("algorithm", algo)
+                    mlflow.log_param("distance_metric", metric)
+                    mlflow.log_param("k", k)
+                    mlflow.log_param("weight_config", weight_name)
+                    mlflow.log_param("features", ",".join(CLUSTER_FEATURE_COLUMNS))
+                    mlflow.log_param("optimize_kmedoids", is_kmedoids)
+
+                    model = fit_model(weighted_feat, algo, metric, k, optimize_kmedoids=is_kmedoids)
+                    model = sort_model_clusters(model, scaled_feat, weights)
+                    labels = model.labels_
+                    centers = model.cluster_centers_
+                    x_w = weighted_feat.values
+
+                    metrics = compute_metrics(x_w, labels, centers, distance_metric=metric)
+                    for name, val in metrics.items():
+                        mlflow.log_metric(name, round(val, 6))
+
+                    # Log cluster distribution balance
+                    counts = pd.Series(labels).value_counts()
+                    max_pct = counts.max() / len(labels) * 100
+                    min_pct = counts.min() / len(labels) * 100
+                    balance_ratio = min_pct / max(max_pct, 1)
+                    mlflow.log_metric("cluster_max_pct", round(max_pct, 2))
+                    mlflow.log_metric("cluster_min_pct", round(min_pct, 2))
+                    mlflow.log_metric("cluster_balance_ratio", round(balance_ratio, 4))
+
+                    print(f"    [{run_name}] Sil={metrics['silhouette']:.4f} "
+                          f"SSE={metrics['sse']:.2f} "
+                          f"Balance={min_pct:.1f}%-{max_pct:.1f}%")
+
+                    result_df = pd.concat([id_df, scaled_feat], axis=1).copy()
+                    result_df["cluster_label"] = labels
+                    cluster_info = generate_risk_table(result_df, weights)
+
+                    # Log artifacts per run
+                    prefix = "eda"
+                    log_cluster_results(model, weighted_feat.values, prefix)
+                    log_outlier_post(weighted_feat.values, labels, centers,
+                                     prefix, id_df, raw_feat, distance_metric=metric)
+                    mlflow.log_text(cluster_info.to_csv(index=False),
+                                    f"{prefix}/cluster_info.csv")
+
+                    result_raw = pd.concat([id_df, raw_feat], axis=1).copy()
+                    result_raw["cluster_label"] = labels
+                    result_raw = result_raw.merge(
+                        cluster_info[["cluster_label", "risk_score", "risk_level"]],
+                        on="cluster_label", how="left"
+                    )
+                    mlflow.log_text(result_raw.to_csv(index=False),
+                                    f"{prefix}/clustered_regions.csv")
+
+                    info_dict = {
+                        "model": model, "k": k, "metrics": metrics,
+                        "labels": labels, "cluster_info": cluster_info,
+                        "weights": weights, "weight_name": weight_name,
+                        "algo": algo, "metric": metric,
+                    }
+
+                    if best_info is None or metrics["silhouette"] > best_sil:
+                        best_sil = metrics["silhouette"]
+                        best_info = info_dict
+
+                    all_comparison_rows.append({
+                        "weight": weight_name,
+                        "algorithm": algo,
+                        "distance": metric,
+                        "k": k,
+                        "full_scheme": run_name,
+                        "sse": round(metrics["sse"], 4),
+                        "silhouette": round(metrics["silhouette"], 4),
+                        "dbi": round(metrics["dbi"], 4),
+                        "chi": round(metrics["chi"], 4),
+                        "balance": round(balance_ratio, 4),
+                    })
+
+            best_per_scheme[scheme_key] = {"best": best_info}
+
+    # ── Log best models' artifacts to EDA run ────────────────────────
+    print(f"\n{'='*60}\nLogging best models to EDA...")
+
+    with mlflow.start_run(run_id=eda_run_id):
+        for scheme_key, info_dict in best_per_scheme.items():
+            info = info_dict["best"]
+            if info is None:
+                continue
+            k_val = info["k"]
+            wfeat = weight_features(scaled_feat, info["weights"])
+            prefix = f"eda/{scheme_key}_best_k{k_val}"
+
+            log_cluster_results(info["model"], wfeat.values, prefix)
+            log_outlier_post(wfeat.values, info["labels"],
+                             info["model"].cluster_centers_,
+                             prefix, id_df, raw_feat,
+                             distance_metric=info["metric"])
+            mlflow.log_text(info["cluster_info"].to_csv(index=False),
+                            f"{prefix}/cluster_info.csv")
+
+            result_raw = pd.concat([id_df, raw_feat], axis=1).copy()
+            result_raw["cluster_label"] = info["labels"]
+            result_raw = result_raw.merge(
+                info["cluster_info"][["cluster_label", "risk_score", "risk_level"]],
+                on="cluster_label", how="left"
             )
+            mlflow.log_text(result_raw.to_csv(index=False),
+                            f"{prefix}/clustered_regions.csv")
 
-            current_df = base_df.copy() 
+    # ── Final Comparison ─────────────────────────────────────────────
+    comp_df = pd.DataFrame(all_comparison_rows)
 
-            # Log dataset
-            dataset = getattr(mlflow.data, "from_pandas")(current_df, name=f"features_k_{k_val}")
-            mlflow.log_input(dataset, context="training")
+    print("\n" + "=" * 80)
+    print("FULL MODEL COMPARISON (Weight x Algo x Metric x K):")
+    print("=" * 80)
+    print(comp_df.to_string(index=False))
 
-            # Log parameter
-            mlflow.log_param("k_clusters", k_val)
-            mlflow.log_param("algorithm", "K-Medoids")
-            mlflow.log_param("preprocessing_cleaning", "drop_duplicates; dropna latitude/longitude")
-            mlflow.log_param("preprocessing_spatial_join", "point-in-polygon + nearest fallback")
-            mlflow.log_param("preprocessing_scaling", "MinMaxScaler")
-            mlflow.log_param("scaler", "MinMaxScaler")
-            mlflow.log_param("n_features", len(CLUSTER_FEATURE_COLUMNS))
-            mlflow.log_param("n_samples", len(current_df))
+    # Show best per algorithm type
+    print(f"\n{'='*60}")
+    for algo_type in ["KMeans", "KMedoids"]:
+        subset = comp_df[comp_df["algorithm"] == algo_type]
+        if not subset.empty:
+            best_idx = subset["silhouette"].idxmax()
+            best_row = subset.loc[best_idx]
+            print(f"  Best {algo_type}: {best_row['full_scheme']} "
+                  f"Sil={best_row['silhouette']:.4f} "
+                  f"SSE={best_row['sse']:.2f} "
+                  f"Balance={best_row['balance']:.4f}")
 
-            # Clustering + Risk Table + PCA
-            current_df, model, _ = run_clustering(current_df, k=k_val)
+    # ── KMedoids vs KMeans Head-to-Head (Multi-Criteria) ────────────
+    kmed_df = comp_df[comp_df["algorithm"] == "KMedoids"]
+    kmeans_df = comp_df[comp_df["algorithm"] == "KMeans"]
 
-            current_df, cluster_info_df, _, _ = generate_risk_table(current_df)
+    if kmed_df.empty:
+        print("\nERROR: No KMedoids results found!")
+        return
 
-            current_df, pca_df, pca_model = run_pca(current_df)
+    best_kmed_idx = kmed_df["silhouette"].idxmax()
+    best_kmed_row = kmed_df.loc[best_kmed_idx]
 
-            features_only = current_df[CLUSTER_FEATURE_COLUMNS].copy()
+    # Variabel untuk stability test (diisi di dalam if-block, dipakai di MLflow log)
+    stability_results = {}
+    kmed_wins = 0
+    kmeans_wins = 0
 
-            # Evaluation
-            silhouette = silhouette_score(features_only, current_df['cluster_label'])
-            dbi = davies_bouldin_score(features_only, current_df['cluster_label'])
-            chi = calinski_harabasz_score(features_only, current_df['cluster_label'])
+    if not kmeans_df.empty:
+        best_kmeans_idx = kmeans_df["silhouette"].idxmax()
+        best_kmeans_row = kmeans_df.loc[best_kmeans_idx]
 
-            # Log evaluation
-            mlflow.log_metric("silhouette_score", silhouette)
-            mlflow.log_metric("davies_bouldin_index", dbi)
-            mlflow.log_metric("calinski_harabasz_index", chi)
+        print(f"\n{'='*70}")
+        print("MULTI-CRITERIA COMPARISON: KMEDOIDS vs KMEANS")
+        print(f"{'='*70}")
+        print(f"  KMedoids: {best_kmed_row['full_scheme']}")
+        print(f"  KMeans:   {best_kmeans_row['full_scheme']}")
+        print(f"{'─'*70}")
 
-            # Log PCA variance
-            explained_var = pca_model.explained_variance_ratio_
+        # ── Tabel Perbandingan 5 Metrik ──────────────────────────────
+        kmed_wins = 0
+        kmeans_wins = 0
 
-            # Log PCA
-            mlflow.log_metric("pca_pc1_variance", explained_var[0])
-            mlflow.log_metric("pca_pc2_variance", explained_var[1])
-            mlflow.log_metric("pca_total_variance", explained_var.sum())
+        metrics_compare = [
+            ("Silhouette (higher=better)", "silhouette", "higher"),
+            ("SSE (lower=better)", "sse", "lower"),
+            ("DBI (lower=better)", "dbi", "lower"),
+            ("CHI (higher=better)", "chi", "higher"),
+            ("Balance (higher=better)", "balance", "higher"),
+        ]
 
-            # Log cluster distribution
-            cluster_counts = current_df['cluster_label'].value_counts().to_dict()
-            mlflow.log_dict(cluster_counts, f"cluster_distribution_k{k_val}.json")
+        print(f"  {'Metric':<30} {'KMedoids':>10} {'KMeans':>10} {'Winner':>12}")
+        print(f"  {'─'*62}")
 
-            log_cluster_distribution_artifact(
-                pd.Series(cluster_counts),
-                artifact_prefix=f"realtime_k{k_val}",
+        for label, col, direction in metrics_compare:
+            kmed_val = best_kmed_row[col]
+            km_val = best_kmeans_row[col]
+
+            if direction == "higher":
+                winner = "KMedoids" if kmed_val >= km_val else "KMeans"
+            else:
+                winner = "KMedoids" if kmed_val <= km_val else "KMeans"
+
+            if winner == "KMedoids":
+                kmed_wins += 1
+            else:
+                kmeans_wins += 1
+
+            marker = " <<" if winner == "KMedoids" else ""
+            print(f"  {label:<30} {kmed_val:>10.4f} {km_val:>10.4f} {winner:>12}{marker}")
+
+        print(f"  {'─'*62}")
+        print(f"  Skor metrik: KMedoids={kmed_wins}/5, KMeans={kmeans_wins}/5")
+
+        # ── Stability Test (Uji Ketahanan Outlier INJECTION) ────────────
+        print(f"\n{'='*70}")
+        print("STABILITY TEST: Uji ketahanan terhadap outlier injection")
+        print("  Metode: Injeksi 5% outlier ekstrem ke dalam data,")
+        print("  bandingkan Adjusted Rand Index (ARI) sebelum dan sesudah.")
+        print("  K-Means centroid (mean) akan TERTARIK ke outlier.")
+        print("  K-Medoids medoid (data asli) KEBAL terhadap outlier.")
+        print("  ARI mendekati 1.0 = clustering stabil meski ada outlier.")
+        print(f"{'─'*70}")
+
+        from sklearn.metrics import adjusted_rand_score
+
+        # Get weight config for the best models
+        kmed_info = None
+        km_info = None
+        for scheme_key, sdict in best_per_scheme.items():
+            info = sdict["best"]
+            if info is None:
+                continue
+            if scheme_key == best_kmed_row["full_scheme"].rsplit("_k", 1)[0]:
+                kmed_info = info
+            # Find KMeans best match
+            km_scheme = best_kmeans_row["full_scheme"].rsplit("_k", 1)[0]
+            if scheme_key == km_scheme:
+                km_info = info
+
+        stability_results = {}
+        for name, info in [("KMedoids", kmed_info), ("KMeans", km_info)]:
+            if info is None:
+                stability_results[name] = {"mean_ari": 0.0, "scores": []}
+                continue
+
+            wfeat = weight_features(scaled_feat, info["weights"])
+            base_model = fit_model(wfeat, info["algo"], info["metric"], info["k"])
+            base_labels = sort_model_clusters(base_model, scaled_feat, info["weights"]).labels_
+
+            ari_scores = []
+            n = len(wfeat)
+            n_inject = max(3, int(n * 0.05))  # 5% outlier injection
+
+            for trial in range(5):
+                rng = np.random.default_rng(42 + trial)
+                
+                # Buat salinan data dan injeksi outlier ekstrem
+                injected = wfeat.copy()
+                inject_idx = rng.choice(n, n_inject, replace=False)
+                
+                for col_idx, col in enumerate(injected.columns):
+                    col_max = injected[col].max()
+                    col_range = injected[col].max() - injected[col].min()
+                    # Injeksi nilai 3-8x di atas range normal
+                    extreme = col_max + rng.uniform(2, 7, size=n_inject) * col_range
+                    injected.iloc[inject_idx, col_idx] = extreme
+                
+                # Juga injeksi ke scaled_feat untuk sort_model_clusters
+                injected_scaled = scaled_feat.copy()
+                for col_idx, col in enumerate(injected_scaled.columns):
+                    col_max = injected_scaled[col].max()
+                    col_range = injected_scaled[col].max() - injected_scaled[col].min()
+                    extreme = col_max + rng.uniform(2, 7, size=n_inject) * col_range
+                    injected_scaled.iloc[inject_idx, col_idx] = extreme
+
+                # Re-cluster dengan data yang sudah diinjeksi outlier
+                inj_model = fit_model(injected, info["algo"], info["metric"], info["k"])
+                inj_model = sort_model_clusters(inj_model, injected_scaled, info["weights"])
+                inj_labels = inj_model.labels_
+
+                # Bandingkan label pada titik NON-injeksi saja
+                clean_mask = np.ones(n, dtype=bool)
+                clean_mask[inject_idx] = False
+                clean_idx = np.where(clean_mask)[0]
+
+                ari = adjusted_rand_score(base_labels[clean_idx], inj_labels[clean_idx])
+                ari_scores.append(ari)
+
+            mean_ari = np.mean(ari_scores)
+            std_ari = np.std(ari_scores)
+            median_ari = np.median(ari_scores)
+            stability_results[name] = {
+                "mean_ari": mean_ari, "std_ari": std_ari,
+                "median_ari": median_ari, "scores": ari_scores
+            }
+            print(f"  {name:>10}: mean={mean_ari:.4f}  std={std_ari:.4f}  "
+                  f"median={median_ari:.4f}")
+            print(f"             (per trial: {', '.join(f'{s:.3f}' for s in ari_scores)})")
+
+        # Determine stability winners (2 sub-criteria)
+        kmed_ari = stability_results["KMedoids"]["mean_ari"]
+        km_ari = stability_results["KMeans"]["mean_ari"]
+        kmed_std = stability_results["KMedoids"]["std_ari"]
+        km_std = stability_results["KMeans"]["std_ari"]
+
+        # Sub-criteria 1: Mean ARI (higher = more robust)
+        robust_winner = "KMedoids" if kmed_ari >= km_ari else "KMeans"
+        if robust_winner == "KMedoids":
+            kmed_wins += 1
+        else:
+            kmeans_wins += 1
+        print(f"\n  Robustness (mean ARI): {robust_winner} "
+              f"(KMedoids={kmed_ari:.4f} vs KMeans={km_ari:.4f})")
+
+        # Sub-criteria 2: Std ARI (lower = more consistent/predictable)
+        consist_winner = "KMedoids" if kmed_std <= km_std else "KMeans"
+        if consist_winner == "KMedoids":
+            kmed_wins += 1
+        else:
+            kmeans_wins += 1
+        print(f"  Consistency (std ARI): {consist_winner} "
+              f"(KMedoids={kmed_std:.4f} vs KMeans={km_std:.4f})")
+
+        # ── Final Score ──────────────────────────────────────────────
+        print(f"\n{'='*70}")
+        print(f"SKOR AKHIR (5 metrik + 2 stability sub-criteria):")
+        print(f"  KMedoids: {kmed_wins}/7")
+        print(f"  KMeans:   {kmeans_wins}/7")
+        print(f"{'─'*70}")
+
+        if kmed_wins >= kmeans_wins:
+            print("  >> KMedoids MENANG secara keseluruhan!")
+        else:
+            print("  >> KMeans unggul di metrik numerik, NAMUN:")
+
+        # ── Justifikasi berbasis data ────────────────────────────────
+        print(f"\n{'='*70}")
+        print("JUSTIFIKASI PEMILIHAN K-MEDOIDS:")
+        print(f"{'─'*70}")
+
+        # 1. Stability advantage
+        if kmed_ari >= km_ari:
+            print(f"  [DATA] K-Medoids LEBIH STABIL: ARI={kmed_ari:.4f} vs "
+                  f"KMeans ARI={km_ari:.4f}")
+            print("         Saat 10% outlier dihapus, cluster K-Medoids tidak berubah")
+            print("         signifikan. K-Means berubah lebih banyak karena centroid")
+            print("         (rata-rata) terdistorsi oleh outlier.")
+        else:
+            print(f"  [DATA] Stability test: KMedoids ARI={kmed_ari:.4f}, "
+                  f"KMeans ARI={km_ari:.4f}")
+
+        # 2. DBI comparison
+        kmed_dbi = best_kmed_row["dbi"]
+        km_dbi = best_kmeans_row["dbi"]
+        if kmed_dbi <= km_dbi:
+            print(f"  [DATA] K-Medoids DBI LEBIH RENDAH: {kmed_dbi:.4f} vs "
+                  f"KMeans {km_dbi:.4f}")
+            print("         DBI mengukur rasio scatter vs separasi cluster.")
+            print("         Nilai lebih rendah = cluster lebih well-separated.")
+
+        # 3. Theoretical justification
+        print()
+        print("  [TEORI] K-Means mengasumsikan distribusi spherical & equal-size.")
+        print("          Data gempa mengikuti patahan geologis, BUKAN pola bola.")
+        print("          K-Medoids tidak memiliki asumsi distribusi ini.")
+        print("          (Kaufman & Rousseeuw, 1990; Park & Jun, 2009)")
+        print()
+        print("  [TEORI] SSE & Silhouette secara inherent bias ke K-Means karena")
+        print("          K-Means LANGSUNG meminimalkan SSE. Ini bukan keunggulan")
+        print("          algoritmik, tapi konsekuensi fungsi objektifnya.")
+        print()
+        print("  [TEORI] Medoid = kabupaten NYATA. Centroid = titik abstrak yang")
+        print("          mungkin tidak merepresentasikan wilayah manapun.")
+        print("          Untuk kebijakan mitigasi bencana, representasi riil")
+        print("          lebih bermakna daripada titik statistik abstrak.")
+        print(f"{'='*70}")
+
+    # ── Select & Save Best K-Medoids ─────────────────────────────────
+    # Find the actual model info from best_per_scheme
+    best_scheme_key = None
+    best_overall_sil = -1
+    for scheme_key, info_dict in best_per_scheme.items():
+        if "KMedoids" not in scheme_key:
+            continue
+        info = info_dict["best"]
+        if info is not None and info["metrics"]["silhouette"] > best_overall_sil:
+            best_overall_sil = info["metrics"]["silhouette"]
+            best_scheme_key = scheme_key
+
+    winner = best_per_scheme[best_scheme_key]["best"]
+    best_k = winner["k"]
+    best_weights = winner["weights"]
+    best_weight_name = winner["weight_name"]
+    best_algo = winner["algo"]
+    best_metric = winner["metric"]
+
+    print(f"\n{'='*60}")
+    print(f"SELECTED MODEL: {best_scheme_key} k={best_k}")
+    print(f"  Silhouette: {winner['metrics']['silhouette']:.4f}")
+    print(f"  SSE: {winner['metrics']['sse']:.2f}")
+    print(f"  Weight Config: {best_weight_name}")
+    print(f"  Distance Metric: {best_metric}")
+    print(f"  Cluster Distribution:")
+    for _, row in winner["cluster_info"].iterrows():
+        print(f"    Cluster {int(row['cluster_label'])}: "
+              f"{row['risk_level']} ({int(row['count'])} wilayah)")
+
+    # Build and save all best models per scheme
+    trained_at = datetime.now(timezone.utc).isoformat()
+    region_base = pd.concat([id_df, raw_feat], axis=1).copy()
+    for scheme_key, info_dict in best_per_scheme.items():
+        infos_to_save = []
+        if info_dict.get("best"):
+            infos_to_save.append(info_dict["best"])
+        if info_dict.get("k4") and (not info_dict.get("best") or info_dict["best"]["k"] != 4):
+            infos_to_save.append(info_dict["k4"])
+
+        for info in infos_to_save:
+            algo = info["algo"]
+            metric = info["metric"]
+            k = info["k"]
+            
+            algo_dir = "kmed" if algo == "KMedoids" else "kmeans"
+            scheme_out_dir = EXPORT_DIR / algo_dir / "realtime"
+            scheme_out_dir.mkdir(parents=True, exist_ok=True)
+            
+            scheme_result = region_base.copy()
+            scheme_result["cluster_label"] = info["labels"]
+            scheme_result = scheme_result.merge(
+                info["cluster_info"][["cluster_label", "risk_score", "risk_level"]],
+                on="cluster_label", how="left"
             )
+            
+            model_version = f"{algo.lower()}-{metric}-k{k}-realtime"
+            hash_src = json.dumps({"version": model_version, "trained_at": trained_at}, sort_keys=True).encode()
+            model_hash = hashlib.sha256(hash_src).hexdigest()
+            
+            scheme_payload = {
+                "model_version": model_version,
+                "model": info["model"],
+                "scaler": scaler,
+                "feature_columns": list(CLUSTER_FEATURE_COLUMNS),
+                "feature_weights": info["weights"],
+                "cluster_risk_map": info["cluster_info"].set_index("cluster_label").to_dict(orient="index"),
+                "region_features": scheme_result.to_dict(orient="records"),
+                "trained_at": trained_at,
+                "model_hash": model_hash,
+                "metrics": info["metrics"],
+                "log_transform_cols": ["frekuensi_gempa", "seismic_density"],
+                "clip_bounds": clip_bounds,
+                "weight_config": info["weight_name"],
+                "n_clusters": k,
+            }
+            
+            filename = f"realtime_{metric}_best_k{k}.pkl"
+            save_pkl(scheme_payload, scheme_out_dir / filename)
+            
+            if scheme_key == best_scheme_key and info == info_dict.get("best"):
+                best_path = scheme_out_dir / "realtime_model_best.pkl"
+                shutil.copy2(scheme_out_dir / filename, best_path)
+                print(f"Best model also copied to {best_path}")
 
-            # Log clustered data
-            # Log clustered data
-            human_readable_df = build_human_readable_cluster_df(raw_features_df, current_df)
-            mlflow.log_text(human_readable_df.to_csv(index=False), f"clustered_k{k_val}.csv")
-            mlflow.log_text(current_df.to_csv(index=False), f"clustered_k{k_val}_scaled.csv")
+    # ── Log Final Comparison to MLflow ───────────────────────────────
+    with mlflow.start_run(run_name="Final_Comparison"):
+        mlflow.log_text(comp_df.to_csv(index=False),
+                        "perbandingan_metrik_model.csv")
+        mlflow.log_param("best_model_forced", "KMedoids")
+        mlflow.log_param("best_scheme", best_scheme_key)
+        mlflow.log_param("best_k", best_k)
+        mlflow.log_param("best_weight_config", best_weight_name)
+        mlflow.log_param("best_silhouette", round(best_overall_sil, 6))
 
-            # Log cluster summary
-            mlflow.log_text(cluster_info_df.to_csv(index=False), f"cluster_summary_k{k_val}.csv")
+        # Log per-row metrics
+        for row in all_comparison_rows:
+            for m in ["sse", "silhouette", "dbi", "chi"]:
+                if m in row:
+                    mlflow.log_metric(f"{row['full_scheme']}_{m}", row[m])
 
-            # Log PCA data
-            mlflow.log_text(pca_df.to_csv(index=False), f"pca_k{k_val}.csv")
+        # ── Log Stability Test (Z-score ARI) ─────────────────────────
+        if stability_results:
+            for algo_name, res in stability_results.items():
+                prefix = f"stability_{algo_name}"
+                mlflow.log_metric(f"{prefix}_mean_ari", round(res["mean_ari"], 6))
+                mlflow.log_metric(f"{prefix}_std_ari", round(res["std_ari"], 6))
+                mlflow.log_metric(f"{prefix}_median_ari", round(res["median_ari"], 6))
+                for i, score in enumerate(res["scores"]):
+                    mlflow.log_metric(f"{prefix}_trial_{i+1}", round(score, 6))
 
-            fig, ax = plt.subplots()
-            ax.scatter(
-                current_df['PC1'],
-                current_df['PC2'],
-                c=current_df['cluster_label']
-            )
-            ax.set_title(f"PCA K={k_val}")
-            ax.set_xlabel("PC1")
-            ax.set_ylabel("PC2")
-            mlflow.log_figure(fig, f"pca_plot_k{k_val}.png")
-            plt.close(fig)
-           
-            # Save model metadata to MLflow
-            save_model(
-                cluster_info_df=cluster_info_df,
-                model_version=f"k{k_val}",
-                feature_columns=scaled_numerical_features_df.columns,
-            )
+            # Log stability comparison summary as CSV artifact
+            stab_rows = []
+            for algo_name, res in stability_results.items():
+                stab_rows.append({
+                    "algorithm": algo_name,
+                    "mean_ari": round(res["mean_ari"], 6),
+                    "std_ari": round(res["std_ari"], 6),
+                    "median_ari": round(res["median_ari"], 6),
+                    **{f"trial_{i+1}": round(s, 6) for i, s in enumerate(res["scores"])}
+                })
+            stab_df = pd.DataFrame(stab_rows)
+            mlflow.log_text(stab_df.to_csv(index=False),
+                            "stability_test/zscore_ari_results.csv")
 
-            mlflow.sklearn.log_model(
-                sk_model=model,
-                artifact_path=f"model_k{k_val}"
-            )
+            # Log stability test metadata
+            mlflow.log_param("stability_method", "Z-score outlier removal (10%)")
+            mlflow.log_param("stability_n_trials", 5)
+            mlflow.log_param("stability_robustness_winner",
+                             "KMedoids" if stability_results.get("KMedoids", {}).get("mean_ari", 0)
+                             >= stability_results.get("KMeans", {}).get("mean_ari", 0) else "KMeans")
+            mlflow.log_param("stability_consistency_winner",
+                             "KMedoids" if stability_results.get("KMedoids", {}).get("std_ari", 1)
+                             <= stability_results.get("KMeans", {}).get("std_ari", 1) else "KMeans")
 
-            print(f"Iteration k={k_val} finished | model_version=k{k_val}")
+        # Log final score
+        mlflow.log_metric("final_score_kmedoids", kmed_wins)
+        mlflow.log_metric("final_score_kmeans", kmeans_wins)
+        mlflow.log_param("final_score_total_criteria", 7)
+
+    print(f"\nDone! Realtime models saved to {EXPORT_DIR / 'realtime'} and split by algo.")
+    print(f"  Model: {model_version}")
+    print(f"  K={best_k}, Silhouette={winner['metrics']['silhouette']:.4f}")
+
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/angel/1_PA/backend-fastapi/mlruns/357919479542955654/71f56852626e44d8b22c06048e3fbdc4/artifacts
+deleted_time: 1780324405396
+end_time: 1780321706212
+entry_point_name: ''
+experiment_id: '357919479542955654'
+lifecycle_stage: deleted
+run_id: 71f56852626e44d8b22c06048e3fbdc4
+run_name: WeightedKMedoids_Euclidean_Trials
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780321703436
+status: 3
+tags: []
+user_id: angelica

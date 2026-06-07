@@ -1,4 +1,0 @@
-Data cleaning: drop_duplicates pada data gempa; dropna pada latitude dan longitude
-Spatial join: assign event gempa ke kabupaten dengan point-in-polygon lalu nearest fallback
-Feature merge: agregasi fitur gempa ke level kabupaten
-Normalization: MinMaxScaler pada fitur clustering

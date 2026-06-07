@@ -1,0 +1,31 @@
+{
+  "model_version": "weighted-k3-weightedkmedoids-euclidean",
+  "feature_columns": [
+    "frekuensi_gempa",
+    "mag_max",
+    "mag_mean",
+    "depth_mean"
+  ],
+  "cluster_risk_map": {
+    "1": {
+      "risk_score": 0.1515872432311641,
+      "risk_level": "Rendah",
+      "count": 85
+    },
+    "2": {
+      "risk_score": 0.32230948651565205,
+      "risk_level": "Sedang",
+      "count": 189
+    },
+    "0": {
+      "risk_score": 0.4140255678027285,
+      "risk_level": "Tinggi",
+      "count": 228
+    }
+  },
+  "cluster_label_map": {
+    "1": "Zona Tenang - Rendah frekuensi & magnitudo",
+    "2": "Zona Frekuensi Tinggi - Banyak kejadian, magnitudo sedang",
+    "0": "Zona Aktif Dangkal - Magnitudo tinggi, kedalaman dangkal"
+  }
+}

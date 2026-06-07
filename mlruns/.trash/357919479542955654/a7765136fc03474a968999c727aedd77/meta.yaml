@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/angel/1_PA/backend-fastapi/mlruns/357919479542955654/a7765136fc03474a968999c727aedd77/artifacts
+deleted_time: 1780324405349
+end_time: 1780322408027
+entry_point_name: ''
+experiment_id: '357919479542955654'
+lifecycle_stage: deleted
+run_id: a7765136fc03474a968999c727aedd77
+run_name: polite-midge-473
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780322407911
+status: 3
+tags: []
+user_id: angelica

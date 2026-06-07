@@ -1,0 +1,6 @@
+Data cleaning: drop_duplicates; dropna magnitude/depth/latitude/longitude
+Exploration: histogram, scatterplot, and correlation heatmap logged to MLflow
+Scaling: MinMaxScaler on clustering features
+Weighting: frekuensi_gempa*=0.1,seismic_density*=0.15,mag_p95*=0.15,mag_std*=0.05,b_value*=0.08,depth_std*=0.05,depth_skew*=0.07,shallow_ratio*=0.1,event_concentration*=0.1,centroid_lat*=0.075,centroid_lon*=0.075
+Elbow: SSE logged for k=2..10
+Trials: 5 runs selected by best silhouette score

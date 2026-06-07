@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/angel/1_PA/backend-fastapi/mlruns/357919479542955654/56b8d1480d1e4afab65e16b3e6405c38/artifacts
+deleted_time: 1780324405346
+end_time: 1780322488512
+entry_point_name: ''
+experiment_id: '357919479542955654'
+lifecycle_stage: deleted
+run_id: 56b8d1480d1e4afab65e16b3e6405c38
+run_name: trusting-yak-53
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780322488389
+status: 3
+tags: []
+user_id: angelica

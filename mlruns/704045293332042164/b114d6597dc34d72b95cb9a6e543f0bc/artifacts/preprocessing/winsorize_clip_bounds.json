@@ -1,0 +1,58 @@
+{
+  "frekuensi_gempa": {
+    "low": 0.0,
+    "high": 2544.720000000001
+  },
+  "seismic_density": {
+    "low": 0.0,
+    "high": 1.1719792616018327
+  },
+  "mag_p95": {
+    "low": 0.0,
+    "high": 6.2632009274635
+  },
+  "mag_std": {
+    "low": 0.0,
+    "high": 1.3612451315979162
+  },
+  "b_value": {
+    "low": 0.17650515588493937,
+    "high": 2.0599052339620347
+  },
+  "depth_std": {
+    "low": 0.0,
+    "high": 304.60342826229623
+  },
+  "depth_skew": {
+    "low": -1.5153549083357205,
+    "high": 12.230393049664158
+  },
+  "shallow_ratio": {
+    "low": 0.0,
+    "high": 1.0
+  },
+  "event_concentration": {
+    "low": 0.0,
+    "high": 1.0
+  },
+  "centroid_lat": {
+    "low": -9.913308977933102,
+    "high": 5.21646545086963
+  },
+  "centroid_lon": {
+    "low": 0.0,
+    "high": 139.5584936461283
+  },
+  "korban_total": {
+    "low": 0.0,
+    "high": 3960.9800000000073
+  },
+  "rumah_rusak_total": {
+    "low": 0.0,
+    "high": 74785.85000000018
+  },
+  "fasum_rusak_total": {
+    "low": 0.0,
+    "high": 2162.250000000001
+  }
+}

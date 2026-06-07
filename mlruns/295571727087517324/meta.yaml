@@ -1,0 +1,8 @@
+artifact_location: mlflow-artifacts:/295571727087517324
+creation_time: 1780324623506
+experiment_id: '295571727087517324'
+last_update_time: 1780324623506
+lifecycle_stage: active
+name: Earthquake_Realtime_Clustering_Structured
+trace_location: null
+workspace: default

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/295571727087517324/eae8175137144b1d93c9192f3b0fc676/artifacts
+deleted_time: 1780325318218
+end_time: 1780324690091
+entry_point_name: ''
+experiment_id: '295571727087517324'
+lifecycle_stage: deleted
+run_id: eae8175137144b1d93c9192f3b0fc676
+run_name: EDA_Exploration
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780324651507
+status: 3
+tags: []
+user_id: angelica

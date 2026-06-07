@@ -1,0 +1,4 @@
+cluster_label,risk_score,risk_level,count
+0,0.24442225643687543,Rendah,124
+2,0.34662297755864696,Sedang,230
+1,0.35717696212353406,Tinggi,148

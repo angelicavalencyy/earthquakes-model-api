@@ -7,13 +7,15 @@ using the ML inference helpers.
 import re
 import traceback
 from datetime import datetime, timezone
+import pandas as pd
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlmodel import select, desc
 from sqlmodel.ext.asyncio.session import AsyncSession
 from app.db.session import get_session
 from app.db.models import RealtimePredict
-from app.services.inference_realtime import load_model, predict_realtime_from_bmkg
+from app.services.inference_realtime import load_model, predict_realtime_from_bmkg, _map_to_kabupaten, get_region_frequency
 from app.services.bmkg_realtime import fetch_bmkg_data
+from app.db.bmkg_realtime import BMKGRealtimePayload
 
 router = APIRouter()
 
@@ -54,19 +56,26 @@ def parse_lon(val: str | None) -> float | None:
 
 
 @router.post("/realtime")
-def realtime_prediction(data: dict):
+def realtime_prediction(payload: BMKGRealtimePayload):
     """Synchronous wrapper endpoint to predict from BMKG payload."""
-    return predict_realtime_from_bmkg(data)
+    try:
+        return predict_realtime_from_bmkg(payload.model_dump())
+    except RuntimeError as e:
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=str(e)) from e
+    except ValueError as e:
+        traceback.print_exc()
+        raise HTTPException(status_code=400, detail=str(e)) from e
+    except Exception as e:
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
 
 @router.get("/realtime/auto")
 async def realtime_auto(session: AsyncSession = Depends(get_session)):
-    """Fetch BMKG data, predict, and persist realtime predictions.
-
-    Returns a summary with counts and the prediction results.
-    """
+    """Fetch BMKG data, predict, and persist realtime predictions."""
     try:
-        raw_data = fetch_bmkg_data()
+        raw_data = await fetch_bmkg_data()
         results = predict_realtime_from_bmkg(raw_data)
 
         gempa_list = raw_data["Infogempa"]["gempa"]
@@ -99,7 +108,6 @@ async def realtime_auto(session: AsyncSession = Depends(get_session)):
                     RealtimePredict.latitude  == parse_lat(combined["Lintang"]),   
                     RealtimePredict.longitude == parse_lon(combined["Bujur"]),     
                 )
-
             )
             
             existing_item = existing_result.first()
@@ -132,7 +140,7 @@ async def realtime_auto(session: AsyncSession = Depends(get_session)):
         await session.commit()
 
         return {
-            "count": len(enriched_results),        # total dari BMKG
+            "count": len(enriched_results),
             "inserted": inserted_count,
             "updated": updated_count,
             "skipped": 0,
@@ -143,61 +151,163 @@ async def realtime_auto(session: AsyncSession = Depends(get_session)):
         traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e)) from e
 
+async def _recompute_realtime_history(session: AsyncSession) -> dict:
+    """Internal function to run predictions on historical data and update the database."""
+    query = select(RealtimePredict).order_by(desc(RealtimePredict.updated_at))
+    result = await session.exec(query)
+    data = result.all()
+    
+    updated_count = 0
+    errors = []
+    
+    for item in data:
+        try:
+            payload = {
+                "Lintang": str(item.latitude),
+                "Bujur": str(item.longitude),
+                "Magnitude": str(item.magnitude),
+                "Kedalaman": str(item.depth) + " km",
+                "Wilayah": item.wilayah,
+                "Tanggal": item.tanggal,
+                "Jam": item.jam,
+                "Coordinates": item.koordinat
+            }
+            
+            pred = predict_realtime_from_bmkg(payload)
+            
+            changed = False
+            if item.cluster != pred.get("cluster_label"):
+                item.cluster = pred.get("cluster_label")
+                changed = True
+            if float(item.risk_score) != float(pred.get("risk_score", 0)) if item.risk_score else True:
+                item.risk_score = pred.get("risk_score")
+                changed = True
+            if item.risk_level != pred.get("risk_level"):
+                item.risk_level = pred.get("risk_level")
+                changed = True
+                
+            if changed:
+                session.add(item)
+                updated_count += 1
+                
+        except Exception as e:
+            errors.append({"id": str(item.id), "error": str(e)})
+            
+    if updated_count > 0:
+        await session.commit()
+        
+    return {
+        "total_processed": len(data),
+        "updated_count": updated_count,
+        "errors": errors
+    }
+
 
 @router.get("/realtime/history")
 async def get_history(
-    session: AsyncSession = Depends(get_session),
-    limit: int | None = Query(default=None),
-    offset: int = Query(default=0, ge=0),
-    risk_level: str | None = Query(default=None),  # filter opsional
+    limit: int | None = Query(None, description="Max records to return. Default is all.", ge=1),
+    offset: int = Query(0, description="Pagination offset", ge=0),
+    risk_level: str | None = Query(None, description="Filter by exact risk_level string"),
+    recompute: bool = Query(False, description="If true, re-run model predictions on all history before returning"),
+    session: AsyncSession = Depends(get_session)
 ):
-    """Return paginated realtime prediction history from the database."""
+    """Get historical realtime predictions from the database."""
     try:
-        query = select(RealtimePredict).order_by(desc(RealtimePredict.updated_at))
+        recompute_summary = None
+        if recompute:
+            recompute_summary = await _recompute_realtime_history(session)
 
-        #  Filter by risk_level kalau ada
-        if risk_level:
-            query = query.where(RealtimePredict.risk_level == risk_level)
-
-        if limit is not None:
-            query = query.limit(limit)
-        query = query.offset(offset)
-        result = await session.exec(query)
-        data = result.all()
-
-        #  Total count
         count_query = select(RealtimePredict)
         if risk_level:
             count_query = count_query.where(RealtimePredict.risk_level == risk_level)
         count_result = await session.exec(count_query)
         total = len(count_result.all())
 
-        return {
+        query = select(RealtimePredict).order_by(desc(RealtimePredict.updated_at))
+        if risk_level:
+            query = query.where(RealtimePredict.risk_level == risk_level)
+            
+        if limit is not None:
+            query = query.limit(limit)
+        query = query.offset(offset)
+
+        result = await session.exec(query)
+        data = result.all()
+
+        response = {
             "total":      total,
             "returned":   len(data),
             "offset":     offset,
             "risk_level": risk_level or "all",
-            "data": [
-                {
-                    "id":         str(item.id),
-                    "tanggal":    item.tanggal,
-                    "jam":        item.jam,
-                    "koordinat":  item.koordinat,
-                    "latitude":   float(item.latitude)  if item.latitude  else None,
-                    "longitude":  float(item.longitude) if item.longitude else None,
-                    "magnitude":  float(item.magnitude) if item.magnitude else None,
-                    "depth":      float(item.depth)     if item.depth     else None,
-                    "wilayah":    item.wilayah,
-                    "cluster":    item.cluster,
-                    "risk_score": float(item.risk_score) if item.risk_score else None,
-                    "risk_level": item.risk_level,
-                    "created_at": item.created_at.isoformat(),
-                    "updated_at": item.updated_at.isoformat(),
-                }
-                for item in data
-            ]
+            "data":       []
         }
+        if recompute_summary is not None:
+            response["recompute"] = recompute_summary
 
+        for item in data:
+            row = {
+                "id":         str(item.id),
+                "tanggal":    item.tanggal,
+                "jam":        item.jam,
+                "koordinat":  item.koordinat,
+                "latitude":   float(item.latitude)  if item.latitude  else None,
+                "longitude":  float(item.longitude) if item.longitude else None,
+                "magnitude":  float(item.magnitude) if item.magnitude else None,
+                "depth":      float(item.depth)     if item.depth     else None,
+                "wilayah":    item.wilayah,
+                "gadm_id":    "offshore",
+                "gadm_name":  "Lepas Pantai / Luar Wilayah",
+                "frekuensi_gempa": 0,
+                "cluster":    item.cluster,
+                "risk_score": float(item.risk_score) if item.risk_score is not None else None,
+                "risk_level": item.risk_level,
+                "created_at": item.created_at.isoformat() if item.created_at else None,
+                "updated_at": item.updated_at.isoformat() if item.updated_at else None,
+            }
+            
+            lat = row.get("latitude")
+            lon = row.get("longitude")
+            if lat is not None and lon is not None:
+                val_id, val_name = _map_to_kabupaten(lat, lon)
+                if val_id is not None:
+                    row["gadm_id"] = str(val_id)
+                    row["frekuensi_gempa"] = get_region_frequency(str(val_id)) or 0
+                if val_name is not None:
+                    row["gadm_name"] = str(val_name)
+                    
+            response["data"].append(row)
+
+        return response
+    except Exception as e:
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=str(e)) from e
+
+
+@router.get("/realtime/train-status")
+async def get_realtime_train_status():
+    """Get the latest training logs and metrics for the realtime risk model."""
+    try:
+        from app.services.inference_realtime import (
+            model_version, trained_at, model_hash, total_data_trained, total_earthquakes_trained
+        )
+        
+        # Parse cluster count from model_version if possible (e.g. "kmedoids-manhattan-k3" -> 3)
+        cluster_count = 3  # Default fallback
+        if model_version and "-k" in model_version:
+            try:
+                cluster_count = int(model_version.split("-k")[-1].split("-")[0])
+            except ValueError:
+                pass
+                
+                
+        return {
+            "model_version": "Model Versi 1",  # "nanti di count" -> for now hardcode 1 or a placeholder
+            "cluster": cluster_count,
+            "trained_at": trained_at,
+            "model_hash": model_hash,
+            "total_data_trained": total_data_trained,
+            "total_earthquakes_trained": total_earthquakes_trained
+        }
     except Exception as e:
         traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e)) from e

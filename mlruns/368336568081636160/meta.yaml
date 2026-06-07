@@ -1,0 +1,8 @@
+artifact_location: file:///C:/angel/1_PA/backend-fastapi/mlruns/368336568081636160
+creation_time: 1780821267569
+experiment_id: '368336568081636160'
+last_update_time: 1780821267569
+lifecycle_stage: active
+name: Earthquake_Realtime_W3_KMedoids
+trace_location: null
+workspace: default

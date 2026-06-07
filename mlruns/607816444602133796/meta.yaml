@@ -1,0 +1,8 @@
+artifact_location: file:///C:/angel/1_PA/backend-fastapi/mlruns/607816444602133796
+creation_time: 1780821459383
+experiment_id: '607816444602133796'
+last_update_time: 1780821459383
+lifecycle_stage: active
+name: Earthquake_RiskZone_Static_W3_KMedoids
+trace_location: null
+workspace: default

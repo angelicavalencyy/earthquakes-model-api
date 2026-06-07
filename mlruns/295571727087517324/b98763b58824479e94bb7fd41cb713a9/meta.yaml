@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/295571727087517324/b98763b58824479e94bb7fd41cb713a9/artifacts
+end_time: 1780326543554
+entry_point_name: ''
+experiment_id: '295571727087517324'
+lifecycle_stage: active
+run_id: b98763b58824479e94bb7fd41cb713a9
+run_name: KMedoids_euclidean_k3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780326542127
+status: 3
+tags: []
+user_id: angelica

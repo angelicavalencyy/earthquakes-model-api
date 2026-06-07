@@ -1,0 +1,4 @@
+cluster,outlier_count,total,outlier_pct,mean_dist
+0,87,415,20.96,0.6802
+1,27,87,31.03,1.4334
+ALL,114,502,22.71,0.0

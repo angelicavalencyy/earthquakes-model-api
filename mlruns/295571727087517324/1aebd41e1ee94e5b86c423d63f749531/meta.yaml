@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/295571727087517324/1aebd41e1ee94e5b86c423d63f749531/artifacts
+deleted_time: 1780325318130
+end_time: 1780324783571
+entry_point_name: ''
+experiment_id: '295571727087517324'
+lifecycle_stage: deleted
+run_id: 1aebd41e1ee94e5b86c423d63f749531
+run_name: KMeans_manhattan_k5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780324783128
+status: 3
+tags: []
+user_id: angelica

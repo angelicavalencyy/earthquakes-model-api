@@ -1,0 +1,5 @@
+cluster_label,risk_score,risk_level,count
+0,-1.0459236795784619,Rendah,33
+1,-0.17574905543673686,Sedang,56
+2,0.06352489323371141,Tinggi,349
+3,0.746953355645741,Sangat Tinggi,64

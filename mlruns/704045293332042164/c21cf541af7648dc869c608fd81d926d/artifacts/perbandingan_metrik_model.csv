@@ -1,0 +1,13 @@
+weight,algorithm,distance,k,full_scheme,sse,silhouette,dbi,chi,balance
+W3_optimized,KMeans,euclidean,3,W3_optimized_KMeans_euclidean_k3,3.3373,0.297,1.2959,206.1962,0.6698
+W3_optimized,KMeans,euclidean,4,W3_optimized_KMeans_euclidean_k4,2.583,0.3252,1.1851,225.737,0.7941
+W3_optimized,KMeans,euclidean,5,W3_optimized_KMeans_euclidean_k5,2.1218,0.3507,1.0684,232.6939,0.4245
+W3_optimized,KMeans,manhattan,3,W3_optimized_KMeans_manhattan_k3,87.1546,0.2863,1.6526,159.5317,0.4957
+W3_optimized,KMeans,manhattan,4,W3_optimized_KMeans_manhattan_k4,75.6257,0.3257,1.1997,212.141,0.6364
+W3_optimized,KMeans,manhattan,5,W3_optimized_KMeans_manhattan_k5,67.6236,0.343,1.1776,200.5596,0.2657
+W3_optimized,KMedoids,euclidean,3,W3_optimized_KMedoids_euclidean_k3,3.6536,0.2871,1.3681,200.1368,0.884
+W3_optimized,KMedoids,euclidean,4,W3_optimized_KMedoids_euclidean_k4,3.03,0.3365,1.1805,215.3203,0.2396
+W3_optimized,KMedoids,euclidean,5,W3_optimized_KMedoids_euclidean_k5,2.459,0.3436,1.1277,225.7643,0.2824
+W3_optimized,KMedoids,manhattan,3,W3_optimized_KMedoids_manhattan_k3,90.0984,0.2987,1.4635,174.484,0.3834
+W3_optimized,KMedoids,manhattan,4,W3_optimized_KMedoids_manhattan_k4,79.2044,0.3129,1.2498,201.5975,0.7007
+W3_optimized,KMedoids,manhattan,5,W3_optimized_KMedoids_manhattan_k5,71.19,0.3311,1.2185,193.28,0.3037

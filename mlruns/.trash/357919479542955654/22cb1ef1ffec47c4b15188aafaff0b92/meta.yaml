@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/angel/1_PA/backend-fastapi/mlruns/357919479542955654/22cb1ef1ffec47c4b15188aafaff0b92/artifacts
+deleted_time: 1780324405388
+end_time: 1780321706937
+entry_point_name: ''
+experiment_id: '357919479542955654'
+lifecycle_stage: deleted
+run_id: 22cb1ef1ffec47c4b15188aafaff0b92
+run_name: glamorous-grub-308
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780321706817
+status: 3
+tags: []
+user_id: angelica

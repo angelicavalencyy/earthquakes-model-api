@@ -1,0 +1,5 @@
+scheme,best_k,sse,silhouette,dbi,chi
+KMeans_euclidean_k2_best_model,2,190.4429,0.7862,0.52,423.2488
+KMeans_manhattan_k2_best_model,2,407.0067,0.4955,1.3094,151.8601
+KMedoids_euclidean_k2_best_model,2,209.497,0.7589,0.6157,398.4466
+KMedoids_manhattan_k2_best_model,2,416.1831,0.4629,1.3826,134.7725

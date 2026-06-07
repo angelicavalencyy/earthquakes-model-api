@@ -1,0 +1,9 @@
+{
+  "WeightedKMedoids-Euclidean": {
+    "target_k": 3,
+    "best_k": 3,
+    "best_index": 1,
+    "best_sse": 2.4481139051077956,
+    "best_silhouette": 0.3031555106634501
+  }
+}

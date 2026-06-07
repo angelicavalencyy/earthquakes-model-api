@@ -1,5 +1,0 @@
-Data cleaning: drop_duplicates pada data gempa; dropna pada latitude dan longitude
-Spatial join: point-in-polygon ke poligon GADM Level 2 untuk label kabupaten/kota
-Feature merge: penggabungan fitur gempa dan DIBI ke level kabupaten
-Imputation: median imputation untuk korban_total, rumah_rusak_total, dan fasum_rusak_total
-Normalization: MinMaxScaler pada fitur clustering

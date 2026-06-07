@@ -1,0 +1,8 @@
+artifact_location: file:///C:/angel/1_PA/backend-fastapi/mlruns/339802433472695228
+creation_time: 1780496470170
+experiment_id: '339802433472695228'
+last_update_time: 1780496470170
+lifecycle_stage: active
+name: Earthquake_Realtime_Clustering_v2
+trace_location: null
+workspace: default

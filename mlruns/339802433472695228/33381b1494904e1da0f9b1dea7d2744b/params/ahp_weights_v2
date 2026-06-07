@@ -1,0 +1,1 @@
+{"frekuensi_gempa": 0.13, "seismic_density": 0.18, "mag_p95": 0.18, "mag_std": 0.05, "b_value": 0.08, "depth_std": 0.04, "depth_skew": 0.04, "shallow_ratio": 0.13, "event_concentration": 0.1, "centroid_lat": 0.035, "centroid_lon": 0.035}

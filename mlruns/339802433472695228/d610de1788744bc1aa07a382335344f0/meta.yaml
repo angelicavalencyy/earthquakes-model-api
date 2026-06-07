@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/angel/1_PA/backend-fastapi/mlruns/339802433472695228/d610de1788744bc1aa07a382335344f0/artifacts
+deleted_time: 1780836133028
+end_time: 1780498507181
+entry_point_name: ''
+experiment_id: '339802433472695228'
+lifecycle_stage: deleted
+run_id: d610de1788744bc1aa07a382335344f0
+run_name: EDA_Exploration
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780498432835
+status: 3
+tags: []
+user_id: angelica

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/295571727087517324/9a3cb89394ac48148b05f36a9b448d31/artifacts
+end_time: 1780325750613
+entry_point_name: ''
+experiment_id: '295571727087517324'
+lifecycle_stage: active
+run_id: 9a3cb89394ac48148b05f36a9b448d31
+run_name: KMedoids_manhattan_k2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780325749500
+status: 3
+tags: []
+user_id: angelica
