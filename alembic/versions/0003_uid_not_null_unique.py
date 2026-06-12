@@ -5,8 +5,16 @@ Revises: 0002_backfill_uid
 Create Date: 2026-06-13 00:00:00
 """
 
+"""Migration: make uid NOT NULL and add unique constraint."""
+
+# pylint: disable=E1101,no-member
+
 from alembic import op
+from typing import Any, cast
 import sqlalchemy as sa
+
+# Cast `op` to Any to avoid linter complaints about dynamic Alembic API.
+op = cast(Any, op)
 
 revision = '0003_uid_not_null_unique'
 down_revision = '0002_backfill_uid'

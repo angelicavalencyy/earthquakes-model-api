@@ -2,17 +2,19 @@
 from typing import AsyncGenerator
 
 from sqlmodel.ext.asyncio.session import AsyncSession
-from app.db.main import async_engine
+from app.db.main import get_async_engine
 
-# Session factory
-async_session = AsyncSession(async_engine, expire_on_commit=False)
 
 # Dependency FastAPI
 async def get_session() -> AsyncGenerator[AsyncSession, None]:
     """FastAPI dependency that yields an async DB session.
 
+    The engine is created lazily by `get_async_engine()` to avoid requiring
+    DB environment variables at import time.
+
     Yields:
         AsyncSession: an async SQLModel/SQLAlchemy session instance.
     """
-    async with AsyncSession(async_engine) as session:
+    engine = get_async_engine()
+    async with AsyncSession(engine) as session:
         yield session

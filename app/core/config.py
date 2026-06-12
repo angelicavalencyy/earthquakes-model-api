@@ -1,6 +1,7 @@
 # for configuration settings using pydantic
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
+from typing import Optional
 import logging
 import os
 
@@ -8,8 +9,14 @@ logger = logging.getLogger(__name__)
 
 
 class Settings(BaseSettings):
-    """Pydantic settings container for application configuration."""
-    POSTGRES_URL: str
+    """Pydantic settings container for application configuration.
+
+    Make `POSTGRES_URL` optional at import time so tools that import the
+    application modules (e.g. Alembic env) do not fail when environment
+    variables are not yet provided. Runtime code that requires a DB URL
+    should validate presence and raise a clear error.
+    """
+    POSTGRES_URL: Optional[str] = None
 
     model_config = SettingsConfigDict(
         env_file=".env",

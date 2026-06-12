@@ -2,16 +2,33 @@ from sqlalchemy.ext.asyncio import create_async_engine
 from sqlmodel import SQLModel, text
 import os
 import logging
+from typing import Optional
 
 from app.core.config import settings
 from app.db.models import EarthquakeRaw
 
 logger = logging.getLogger(__name__)
 
-async_engine = create_async_engine(
-    settings.POSTGRES_URL,
-    echo=True,
-)
+# Lazily create the async engine to avoid constructing it at import time
+# (which would require `POSTGRES_URL` to be present during imports such
+# as when Alembic loads `app.db.models`). Use `get_async_engine()` to
+# obtain the engine at runtime.
+_async_engine = None
+
+def get_async_engine():
+    """Return a cached AsyncEngine, creating it if necessary.
+
+    Raises:
+        RuntimeError: if `POSTGRES_URL` is not configured.
+    """
+    global _async_engine
+    if _async_engine is None:
+        if not settings.POSTGRES_URL:
+            raise RuntimeError(
+                "POSTGRES_URL is not set. Set the environment variable or provide a config file."
+            )
+        _async_engine = create_async_engine(settings.POSTGRES_URL, echo=True)
+    return _async_engine
 
 async def ensure_realtime_updated_at(conn):
     await conn.execute(
@@ -35,7 +52,8 @@ async def ensure_realtime_updated_at(conn):
     )
 
 async def init_db():
-    async with async_engine.begin() as conn:
+    engine = get_async_engine()
+    async with engine.begin() as conn:
         # By default do NOT auto-create DB schema on app startup in production.
         # Use a proper migration workflow (Alembic) instead. To enable the
         # legacy create_all behavior explicitly set `ALLOW_SCHEMA_AUTOCREATE=1`.

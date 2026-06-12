@@ -5,7 +5,15 @@ Revises: d6f588e2c016
 Create Date: 2026-06-13 00:00:00
 """
 
+"""Migration: backfill uid for existing rows."""
+
+# pylint: disable=E1101,no-member
+
 from alembic import op
+from typing import Any, cast
+
+# Cast `op` to Any to avoid linter complaints about dynamic Alembic API.
+op = cast(Any, op)
 
 revision = '0002_backfill_uid'
 down_revision = 'd6f588e2c016'

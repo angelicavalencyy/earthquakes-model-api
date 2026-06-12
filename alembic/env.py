@@ -1,3 +1,12 @@
+"""Alembic env configuration.
+
+This module intentionally uses dynamic Alembic runtime features which static
+linters (pylint/mypy) may not fully understand. Disable `no-member` warnings
+here as they are false positives for the Alembic API.
+"""
+
+# pylint: disable=E1101,no-member
+
 import asyncio
 from logging.config import fileConfig
 import os
@@ -10,6 +19,11 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from alembic import context
+from typing import Any, cast
+
+# Cast Alembic objects to `Any` so linters (pylint/mypy) don't raise
+# false-positive 'no-member' errors for dynamically provided API.
+context = cast(Any, context)
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

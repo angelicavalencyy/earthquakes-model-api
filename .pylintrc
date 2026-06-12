@@ -1,0 +1,22 @@
+# Pylint configuration for backend-fastapi
+# - Adds project root to `sys.path` so imports resolve when running pylint from repo root
+# - Configures generated-members to reduce false-positives for Alembic's dynamic API
+
+[MASTER]
+# ensure project root is on sys.path so pylint can import package modules
+init-hook='import sys, os; sys.path.insert(0, os.path.abspath("."))'
+jobs=1
+
+[MESSAGES CONTROL]
+# no global disables here; keep checks enabled by default
+disable=
+
+[REPORTS]
+reports=no
+
+[FORMAT]
+max-line-length=100
+
+[TYPECHECK]
+# Treat these attribute names as "generated" to reduce false-positive `no-member` issues
+generated-members=op,context,connection,execute,get_bind,session
