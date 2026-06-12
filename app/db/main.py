@@ -52,7 +52,21 @@ async def ensure_realtime_updated_at(conn):
     )
 
 async def init_db():
-    engine = get_async_engine()
+    # If no DB URL configured, skip initialization to avoid crashing
+    # application startup in environments where a DB is optional.
+    if not settings.POSTGRES_URL:
+        logger.info(
+            "POSTGRES_URL not set; skipping database initialization. Set POSTGRES_URL to enable DB features."
+        )
+        return
+
+    try:
+        engine = get_async_engine()
+    except RuntimeError as err:
+        # Engine couldn't be created (e.g., invalid config); log and skip
+        logger.warning("Database engine unavailable, skipping init: %s", err)
+        return
+
     async with engine.begin() as conn:
         # By default do NOT auto-create DB schema on app startup in production.
         # Use a proper migration workflow (Alembic) instead. To enable the
