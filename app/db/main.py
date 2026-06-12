@@ -1,8 +1,12 @@
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlmodel import SQLModel, text
+import os
+import logging
 
 from app.core.config import settings
 from app.db.models import EarthquakeRaw
+
+logger = logging.getLogger(__name__)
 
 async_engine = create_async_engine(
     settings.POSTGRES_URL,
@@ -32,7 +36,13 @@ async def ensure_realtime_updated_at(conn):
 
 async def init_db():
     async with async_engine.begin() as conn:
-        await conn.run_sync(SQLModel.metadata.create_all)
-        # Avoid blocking startup on schema-altering statements.
-        # Keep runtime schema changes out of the app boot path so the API can serve FE requests immediately.
+        # By default do NOT auto-create DB schema on app startup in production.
+        # Use a proper migration workflow (Alembic) instead. To enable the
+        # legacy create_all behavior explicitly set `ALLOW_SCHEMA_AUTOCREATE=1`.
+        if os.getenv("ALLOW_SCHEMA_AUTOCREATE", "0") in ("1", "true", "yes"):
+            await conn.run_sync(SQLModel.metadata.create_all)
+        else:
+            logger.debug(
+                "Schema auto-creation disabled; set ALLOW_SCHEMA_AUTOCREATE=1 to enable."
+            )
         

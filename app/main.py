@@ -7,6 +7,7 @@ from app.routes import mapping_risk, realtime
 import asyncio
 import logging
 import sys
+import os
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -66,16 +67,23 @@ async def lifespan(_: FastAPI):
     print("server is starting")
     await init_db()
 
-    # Start the 7-day training loop (non-blocking background task)
-    task = asyncio.create_task(schedule_model_training())
+    # Start the 7-day training loop only when explicitly enabled to avoid
+    # duplicated retraining across multiple workers/replicas. Use the
+    # RUN_RETRAINER=1 environment variable to enable the in-process scheduler
+    # (recommended: run retraining as a separate cron/job instead).
+    retrain_enabled = os.getenv("RUN_RETRAINER", "0").lower() in ("1", "true", "yes")
+    task = None
+    if retrain_enabled:
+        task = asyncio.create_task(schedule_model_training())
 
     yield
     print("server is shutting down")
-    task.cancel()
-    try:
-        await task
-    except asyncio.CancelledError:
-        pass
+    if task:
+        task.cancel()
+        try:
+            await task
+        except asyncio.CancelledError:
+            pass
 
 app = FastAPI(
     title="Machine Learning Earthquake Prediction API",
