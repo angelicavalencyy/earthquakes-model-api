@@ -42,6 +42,7 @@ metrics = None
 total_data_trained = 0
 total_earthquakes_trained = 0
 clip_bounds = {}
+_pkl_mtime = 0.0  # Track file modification time to avoid wasteful reloads
 
 # Running region statistics for dynamic updates
 _region_stats = None  # DataFrame keyed by id_kabupaten
@@ -76,10 +77,15 @@ def _risk_level(score: float, thresholds: tuple[float, float]) -> str:
 
 
 def load_model():
-    """Load the pre-trained realtime model into module-level globals."""
+    """Load the pre-trained realtime model into module-level globals.
+    
+    Smart reload: only re-reads the .pkl file when its modification time
+    has changed on disk (e.g. after the weekly scheduler retrain).
+    """
     global model, scaler, feature_columns, feature_weights
     global cluster_risk_map, model_version, trained_at, model_hash
     global gadm_gdf, log_transform_cols, _region_stats
+    global _pkl_mtime, _region_events
 
     # Cari model pkl: prioritaskan best
     pkl_path = None
@@ -93,6 +99,11 @@ def load_model():
     if pkl_path is None:
         logging.warning("No realtime model pickle found")
         return {"error": "model file not found"}
+
+    # ── Smart reload: skip jika file belum berubah ───────────────────
+    current_mtime = pkl_path.stat().st_mtime
+    if model is not None and current_mtime == _pkl_mtime:
+        return  # Model sudah loaded dan file belum berubah
 
     class CustomUnpickler(pickle.Unpickler):
         def find_class(self, module, name):
@@ -144,6 +155,12 @@ def load_model():
         total_data_trained = 0
         total_earthquakes_trained = 0
 
+    # Reset dynamic event cache (model baru = statistik baru)
+    _region_events.clear()
+    
+    # Update mtime tracker
+    _pkl_mtime = current_mtime
+
     # Load GADM boundaries
     if gadm_gdf is None:
         try:
@@ -158,7 +175,7 @@ def load_model():
         except Exception:
             gadm_gdf = None
 
-    logging.info("Loaded realtime model: %s from %s", model_version, pkl_path)
+    logging.info("Loaded realtime model: %s from %s (mtime=%.0f)", model_version, pkl_path, _pkl_mtime)
 
 
 # ── Parsing helpers ──────────────────────────────────────────────────

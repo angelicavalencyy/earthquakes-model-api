@@ -5,37 +5,70 @@ from app.db.main import init_db
 from app.routes import mapping_risk, realtime
 
 import asyncio
-import subprocess
+import logging
 import sys
 from pathlib import Path
 
+logger = logging.getLogger(__name__)
+
+# ── Konfigurasi Scheduler ────────────────────────────────────────────
+RETRAIN_INTERVAL_DAYS = 7  # Retrain setiap 7 hari
+RETRAIN_INTERVAL_SECONDS = RETRAIN_INTERVAL_DAYS * 24 * 60 * 60
+
 async def schedule_model_training():
-    """Run model training every 24 hours in the background."""
+    """Run realtime model retraining every 7 days in the background (non-blocking)."""
+    script_path = Path(__file__).resolve().parents[1] / "src" / "train_realtime.py"
+
     while True:
         try:
-            # Wait 24 hours before first background run (or adjust if you want it immediately)
-            await asyncio.sleep(24 * 60 * 60)
-            
-            print("[Scheduler] Starting automated 24-hour K-Medoids model retraining...")
-            script_path = Path(__file__).resolve().parents[2] / "src" / "train_kmed.py"
-            # run training script via subprocess
-            subprocess.run([sys.executable, str(script_path)], check=True)
-            print("[Scheduler] Model retraining completed successfully.")
-            
+            logger.info(
+                "[Scheduler] Next retrain in %d days. Sleeping...",
+                RETRAIN_INTERVAL_DAYS,
+            )
+            await asyncio.sleep(RETRAIN_INTERVAL_SECONDS)
+
+            logger.info(
+                "[Scheduler] Starting automated %d-day K-Medoids realtime model retraining...",
+                RETRAIN_INTERVAL_DAYS,
+            )
+
+            # Non-blocking subprocess — tidak membekukan event loop / API server
+            process = await asyncio.create_subprocess_exec(
+                sys.executable, str(script_path),
+                stdout=asyncio.subprocess.PIPE,
+                stderr=asyncio.subprocess.PIPE,
+            )
+            stdout, stderr = await process.communicate()
+
+            if process.returncode == 0:
+                logger.info("[Scheduler] Model retraining completed successfully.")
+                if stdout:
+                    logger.debug("[Scheduler] stdout: %s", stdout.decode()[-500:])
+            else:
+                logger.error(
+                    "[Scheduler] Retraining failed (exit code %d): %s",
+                    process.returncode,
+                    stderr.decode()[-1000:] if stderr else "no stderr",
+                )
+
         except asyncio.CancelledError:
+            logger.info("[Scheduler] Training scheduler cancelled.")
             break
         except Exception as e:
-            print(f"[Scheduler] Error during model retraining: {e}")
+            logger.exception("[Scheduler] Unexpected error during model retraining: %s", e)
+            # Tetap lanjut loop, jangan crash scheduler
+            await asyncio.sleep(60)  # Tunggu 1 menit sebelum retry loop
 
-# Define lifespan event handlers 
+
+# Define lifespan event handlers
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     print("server is starting")
     await init_db()
-    
-    # Start the 24-hour training loop
+
+    # Start the 7-day training loop (non-blocking background task)
     task = asyncio.create_task(schedule_model_training())
-    
+
     yield
     print("server is shutting down")
     task.cancel()

@@ -20,8 +20,8 @@ router = APIRouter()
 BOUNDARY_GEOJSON_PATH = (
     Path(__file__).resolve().parents[2]
     / "data"
-    / "processed"
-    / "kabupaten_boundaries.json"
+    / "raw"
+    / "gadm41_IDN_2.json"
 )
 
 
@@ -77,8 +77,10 @@ def _build_boundary_area_lookup() -> dict[str, float]:
         properties = feature.get("properties", {})
         projected_geometry = transform(transformer.transform, shape(geometry))
         area_value = projected_geometry.area / 10**6
-        boundary_area_lookup[_normalize_id(properties.get("id_kabupaten"))] = float(area_value)
-        boundary_area_lookup[_normalize_name(properties.get("nama_kabupaten"))] = float(area_value)
+        b_id = properties.get("id_kabupaten") or properties.get("GID_2")
+        b_name = properties.get("nama_kabupaten") or properties.get("NAME_2")
+        boundary_area_lookup[_normalize_id(b_id)] = float(area_value)
+        boundary_area_lookup[_normalize_name(b_name)] = float(area_value)
 
     return boundary_area_lookup
 
@@ -166,12 +168,15 @@ async def get_kmed_risk_map():
 
         for boundary_feature in _load_boundary_features():
             boundary_properties = boundary_feature.get("properties", {})
-            region_id = _normalize_id(boundary_properties.get("id_kabupaten"))
+            b_id = boundary_properties.get("id_kabupaten") or boundary_properties.get("GID_2")
+            b_name = boundary_properties.get("nama_kabupaten") or boundary_properties.get("NAME_2")
+            
+            region_id = _normalize_id(b_id)
             risk_item = risk_lookup.get(region_id)
             
             # fallback: try matching by name if id-based match failed
             if risk_item is None:
-                region_name = _normalize_name(boundary_properties.get("nama_kabupaten"))
+                region_name = _normalize_name(b_name)
                 risk_item = name_lookup.get(region_name)
                 
             has_risk_data = risk_item is not None
@@ -186,10 +191,10 @@ async def get_kmed_risk_map():
                     "properties": {
                         "id_kabupaten": region_id,
                         "GID_2": region_id,
-                        "nama_kabupaten": boundary_properties.get("nama_kabupaten"),
+                        "nama_kabupaten": b_name,
                         "luas_wilayah_km2": _format_area(
                             boundary_area_lookup.get(region_id)
-                            or boundary_area_lookup.get(_normalize_name(boundary_properties.get("nama_kabupaten")))
+                            or boundary_area_lookup.get(_normalize_name(b_name))
                         ),
                         "frekuensi_gempa": _format_whole_number(risk_item.get("frekuensi_gempa", 0)) if has_risk_data else 0,
                         "mag_max": _format_area(risk_item.get("mag_p95", 0.0)) if has_risk_data else 0.0,

@@ -16,18 +16,18 @@ region_features = None
 trained_at = None
 model_hash = None
 metrics = None
+_pkl_mtime = 0.0  # Track file modification time to avoid wasteful reloads
 
 def load_static_model(pkl_path: str | Path = None) -> dict:
-    global model_version, feature_columns, feature_weights, cluster_risk_map, region_features, trained_at, model_hash, metrics
+    global model_version, feature_columns, feature_weights, cluster_risk_map, region_features, trained_at, model_hash, metrics, _pkl_mtime
 
-    # Cari model pkl: prioritaskan yang diberikan, lalu best, k4, legacy k3
+    # Cari model pkl: prioritaskan yang diberikan: k4
     if pkl_path is not None:
         candidates = [Path(pkl_path)]
     else:
         candidates = [
-            Path("app/ml/kmed/static/static_best_k4.pkl"),
-            Path("app/ml/kmed/static/static_KMedoids_euclidean_k4.pkl"),
-            Path("app/ml/kmed/static/static_KMedoids_manhattan_k4.pkl"),
+            Path("app/ml/kmed/static/static_euclidean_best_k4.pkl"),
+            Path("app/ml/kmed/static/static_manhattan_best_k4.pkl"),
         ]
 
     p = None
@@ -39,6 +39,11 @@ def load_static_model(pkl_path: str | Path = None) -> dict:
         msg = f"Static model file not found. Searched: {[str(c) for c in candidates]}"
         logging.warning(msg)
         return {"error": msg}
+
+    # ── Smart reload: skip jika file belum berubah ───────────────────
+    current_mtime = p.stat().st_mtime
+    if model_version is not None and current_mtime == _pkl_mtime:
+        return {}  # Model sudah loaded dan file belum berubah
 
     try:
         with p.open("rb") as f:
@@ -52,8 +57,9 @@ def load_static_model(pkl_path: str | Path = None) -> dict:
         trained_at = data.get("trained_at")
         model_hash = data.get("model_hash")
         metrics = data.get("metrics")
+        _pkl_mtime = current_mtime
         
-        logging.info("Successfully loaded static model version %s", model_version)
+        logging.info("Successfully loaded static model version %s (mtime=%.0f)", model_version, _pkl_mtime)
         return data
     except Exception as exc:
         tb = traceback.format_exc()
@@ -68,7 +74,7 @@ except Exception:
 
 def get_static_risk_data():
     """Return the precomputed static region risk map directly from the loaded model."""
-    load_static_model()  # Reload in case it was updated
+    load_static_model()  # Reload only if file changed on disk
     if region_features is None:
         raise RuntimeError("Static model is not loaded or unavailable")
         
