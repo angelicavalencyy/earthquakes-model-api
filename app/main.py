@@ -1,7 +1,7 @@
 from typing import Union
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
-from app.db.main import init_db
+from app.db.main import init_db, is_db_available
 from app.routes import mapping_risk, realtime
 
 import asyncio
@@ -95,6 +95,15 @@ app = FastAPI(
 @app.get("/")
 async def read_root():
     return {"Hello": "World"}
+
+
+@app.get("/health")
+async def health():
+    """Simple health endpoint reporting DB availability."""
+    return {
+        "status": "ok",
+        "db": is_db_available()
+    }
 
 
 @app.get("/items/{item_id}")

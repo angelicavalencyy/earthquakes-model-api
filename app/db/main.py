@@ -14,21 +14,28 @@ logger = logging.getLogger(__name__)
 # as when Alembic loads `app.db.models`). Use `get_async_engine()` to
 # obtain the engine at runtime.
 _async_engine = None
+_db_available = False
+
 
 def get_async_engine():
     """Return a cached AsyncEngine, creating it if necessary.
 
-    Raises:
-        RuntimeError: if `POSTGRES_URL` is not configured.
+    Returns None when no POSTGRES_URL is configured. Callers should handle
+    a missing engine (e.g., skip DB work or return degraded health).
     """
-    global _async_engine
+    global _async_engine, _db_available
     if _async_engine is None:
         if not settings.POSTGRES_URL:
-            raise RuntimeError(
-                "POSTGRES_URL is not set. Set the environment variable or provide a config file."
-            )
+            _db_available = False
+            return None
         _async_engine = create_async_engine(settings.POSTGRES_URL, echo=True)
+        _db_available = True
     return _async_engine
+
+
+def is_db_available() -> bool:
+    """Return whether a usable DB engine has been created."""
+    return bool(_db_available)
 
 async def ensure_realtime_updated_at(conn):
     await conn.execute(
@@ -52,19 +59,24 @@ async def ensure_realtime_updated_at(conn):
     )
 
 async def init_db():
-    # If no DB URL configured, skip initialization to avoid crashing
-    # application startup in environments where a DB is optional.
+    # Distinguish dev vs production: in development we may skip DB init when
+    # POSTGRES_URL is not provided. In production (FASTAPI_DEV unset/false) we
+    # require a configured DB and should fail fast if missing.
+    is_dev = os.getenv("FASTAPI_DEV", "0").lower() in ("1", "true", "yes")
+
     if not settings.POSTGRES_URL:
-        logger.info(
-            "POSTGRES_URL not set; skipping database initialization. Set POSTGRES_URL to enable DB features."
-        )
+        if is_dev:
+            logger.info("POSTGRES_URL not set and FASTAPI_DEV=true; skipping database initialization.")
+            return
+        # In production, log an error but do not raise to allow the process to
+        # start (useful for orchestrators); health checks will indicate DB
+        # is unavailable.
+        logger.error("POSTGRES_URL is required in production. Continuing startup with DB disabled.")
         return
 
-    try:
-        engine = get_async_engine()
-    except RuntimeError as err:
-        # Engine couldn't be created (e.g., invalid config); log and skip
-        logger.warning("Database engine unavailable, skipping init: %s", err)
+    engine = get_async_engine()
+    if engine is None:
+        logger.warning("Database engine could not be created; skipping initialization.")
         return
 
     async with engine.begin() as conn:
