@@ -68,10 +68,13 @@ async def init_db():
         if is_dev:
             logger.info("POSTGRES_URL not set and FASTAPI_DEV=true; skipping database initialization.")
             return
-        # In production, log an error but do not raise to allow the process to
-        # start (useful for orchestrators); health checks will indicate DB
-        # is unavailable.
-        logger.error("POSTGRES_URL is required in production. Continuing startup with DB disabled.")
+        # In production, don't fail the process automatically here — orchestration
+        # systems may prefer the process to start so they can probe health/readiness.
+        # Log a clear WARNING (not ERROR) with guidance for operators.
+        logger.warning(
+            "POSTGRES_URL is not set. Database features will be disabled. "
+            "Set POSTGRES_URL to enable DB (in production) or set FASTAPI_DEV=1 for local runs."
+        )
         return
 
     engine = get_async_engine()

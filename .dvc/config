@@ -1,4 +1,6 @@
 [core]
-    remote = local_backup
+    remote = ci_remote
 ['remote "local_backup"']
     url = C:\angel\1_PA\dvc_remote
+['remote "ci_remote"']
+    url = s3://my-bucket/path
