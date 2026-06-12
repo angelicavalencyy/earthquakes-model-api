@@ -28,6 +28,35 @@ alembic upgrade head
 
 If your Alembic config expects different env var names, adapt accordingly.
 
+## DVC remote and CI
+
+This repository uses DVC (`dvc.yaml`) to track large data artifacts. Current
+local config points to a local path (used for development). For CI and
+production you should configure a remote store (S3/GCS/Azure) and set
+credentials as repository secrets.
+
+Recommended secrets for DVC (example for S3):
+
+- `DVC_REMOTE_URL` → `s3://my-bucket/path` (or the remote name configured in `.dvc/config`)
+- `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` (if using S3)
+
+CI runner steps should install DVC and run `dvc pull` after checkout and before
+building the Docker image. Example (in the workflow):
+
+```yaml
+- name: Install DVC
+  run: |
+    python -m pip install --upgrade pip
+    pip install "dvc[s3]"  # or dvc[gdrive], dvc[azure], etc. depending on remote
+
+- name: Pull DVC data
+  run: |
+    dvc pull
+```
+
+If DVC remote requires authentication, ensure the necessary cloud credentials
+are added to repository Secrets and available to the runner.
+
 ## How to set secrets using GitHub CLI
 
 Run locally (you need `gh` installed and authenticated):
