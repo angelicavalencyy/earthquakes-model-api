@@ -64,8 +64,14 @@ async def schedule_model_training():
 # Define lifespan event handlers
 @asynccontextmanager
 async def lifespan(_: FastAPI):
-    print("server is starting")
+    logger.info("server is starting")
     await init_db()
+    # Report DB availability after initialization so operators see startup state
+    try:
+        db_ok = is_db_available()
+    except Exception:
+        db_ok = False
+    logger.info("server startup complete — db available=%s", db_ok)
 
     # Start the 7-day training loop only when explicitly enabled to avoid
     # duplicated retraining across multiple workers/replicas. Use the
@@ -77,7 +83,7 @@ async def lifespan(_: FastAPI):
         task = asyncio.create_task(schedule_model_training())
 
     yield
-    print("server is shutting down")
+    logger.info("server is shutting down")
     if task:
         task.cancel()
         try:
