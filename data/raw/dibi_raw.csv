@@ -1,0 +1,814 @@
+﻿kode_identitas_bencana,id_kabupaten,tanggal_kejadian,kejadian,lokasi,kabupaten,provinsi,korban_meninggal,korban_hilang,korban_terluka,rumah_rusak,rumah_terendam,fasum_rusak
+,6571,11/5/2025,GEMPABUMI,Kecamatan:\nKec. Tarakan Barat Kec. Tarakan Tengah Kec. Tarakan Timur,Kota Tarakan,Kalimantan Utara,,,2,22,,2
+,9110,10/16/2025,GEMPABUMI,Kecamatan:\nDistrik Sarmi Kota Distrik Sarmi Selatan Distrik Pantai Timur Bagian Barat Distrik TOR Atas Distrik Pantai Barat,Sarmi,Papua,,,3,121,,16
+,7413,10/11/2025,GEMPABUMI,Kecamatan:\nKec. Saweregadi Ds. Lambu Jaya Ds. Marobea Ds. Ondoke Kec. Barangka Ds. Waulai Ds. Lapolea Ds. Walelei Kec. Wadaga Ds. Lindo Kec. Tiworo Kepulauan Ds. Wandoke Kel. Waumere Ds. Laworo Kec. Tiworo Tengah Ds. Langku langku Ds. Labokolo Ds. Suka Damai Ds. Wapae Ds. Wanseriwu Kec. Tiworo Utara Ds. Tondasi Kec. Kusambi Ds. Kusambi Ds. Bakeramba Ds. Tanjung Pinang Kel. Konawe Kec. Napano Kusambi Ds. Masara Ds. Lahaji Ds. Latawe Kec. Lawa Ds. Latompe,Muna Barat,Sulawesi Tenggara,,,,7,,6
+,9115,10/3/2025,GEMPABUMI,Kecamatan:\nDistrik. Inggerus,Waropen,Papua,,,,24,,0
+,3512,9/30/2025,GEMPABUMI,Kecamatan:\nKec. Mangaran Ds. Semiring Kec. Panarukan Ds. Alasmalang Kec. Panji Kel. Mimbaan,Situbondo,Jawa Timur,,,,3,,2
+,3529,9/30/2025,GEMPABUMI,Kecamatan:\nKec. Gayam Kec. Nonggunong Kec. Talango Kec. Saronggi Kec. Batang-batang Kec. Batuputih,Sumenep,Jawa Timur,,,3,505,,0
+,3509,9/30/2025,GEMPABUMI,Kecamatan:\nKec. Sukorambi Ds. Sukorambi Ds. Karangpring Sukorambi Kec. Panti Ds. Kemuningsari Lor Kec. Jelbuk Ds. Panduman Kec. Wuluhan Ds. Lojejer,Jember,Jawa Timur,,,,5,,4
+,1806,9/26/2025,GEMPABUMI,Kecamatan:\nKec. Semaka Kec. Wonosobo,Tanggamus,Lampung,,,,14,,0
+,3512,9/25/2025,GEMPABUMI,Kecamatan:\nKec. Banyuputih,Situbondo,Jawa Timur,,,,137,,8
+,5101,9/25/2025,GEMPABUMI,Kecamatan:\nKec. Jembrana,Jembrana,Bali,,,,1,,2
+,3510,9/25/2025,GEMPABUMI,Kecamatan:\nKec. Wongsorejo Kec. Glagah,Banyuwangi,Jawa Timur,,,,9,,2
+,3509,9/25/2025,GEMPABUMI,Kecamatan:\nKec. Mayang,Jember,Jawa Timur,,,1,1,,0
+,3511,9/25/2025,GEMPABUMI,Kecamatan:\nKec. Klabang Kec. Ijen,Bondowoso,Jawa Timur,,,,3,,0
+,3201,9/21/2025,GEMPABUMI,Kecamatan:\nKec. Pamijahan Kec. Sukajaya,Bogor,Jawa Barat,,,,0,,2
+,3202,9/21/2025,GEMPABUMI,Kecamatan:\nKec. Kabandungan,Sukabumi,Jawa Barat,,,,135,,0
+,9401,9/19/2025,GEMPABUMI,Kecamatan:\nNabire Kota Nabire Barat,Nabire,Papua Tengah,,,5,27,,37
+,3201,8/20/2025,GEMPABUMI,Kecamatan:\nKec. Ciseeng,Bogor,Jawa Barat,,,,1,,0
+,3216,8/20/2025,GEMPABUMI,Kecamatan:\nKec. Bojongmangu,Bekasi,Jawa Barat,,,,1,,0
+,3215,8/20/2025,GEMPABUMI,Kecamatan:\nKec. Teluk Jambe  Ds. Wanakerta  Ds. Mulyajaya  Ds. Parungsari  Kec. Klari Desa Kutamaneuh Kec. Pangkalan Desa Ciptasari Desa Tamanmekar Desa Cintaasih Kec. Ciampel Desa Parungmulya Kec. Tegalwaru  Ds. Kutamaneuh,Karawang,Jawa Barat,,,,66,,0
+,7202,8/17/2025,GEMPABUMI,Kecamatan:\nKec. Poso Pesisir Kec. Poso Pesisir Utara Kec. Poso Pesisir Selatan,Poso,Sulawesi Tengah,2,,46,353,,76
+,9110,8/12/2025,GEMPABUMI,Kecamatan:\nDistrik Pantai Timur Bagian Barat Distrik Sarmi Distrik Sarmi Selatan Distrik Pantai Barat,Sarmi,Papua,,,,106,,12
+,7202,7/24/2025,GEMPABUMI,Kecamatan:\nKec. Pamona Tenggara Kec. Pamona Selatan Kec. Pamona Barat Kec. Pamona Puselemba Kec. Pamona Timur,Poso,Sulawesi Tengah,,,5,420,,40
+,3513,7/18/2025,GEMPABUMI,Kecamatan:\nKec. Tiris,Probolinggo,Jawa Timur,,,,16,,0
+,7202,7/4/2025,GEMPABUMI,Kecamatan:\nKec. Pamona Tenggara,Poso,Sulawesi Tengah,,,,38,,0
+,8106,6/22/2025,GEMPABUMI,Kecamatan:\nKec. Amalatu,Seram Bagian Barat,Maluku,,,,3,,0
+7410 107 20250527 1,7410,5/27/2025,GEMPABUMI,Kecamatan:\nKec. Kambowa Kec. Bonegunu,Buton Utara,Sulawesi Tenggara,0,0,1,28,,0
+1705 107 20250523 1,1705,5/23/2025,GEMPABUMI,Kecamatan:\n,Seluma,Bengkulu,0,0,0,0,,0
+1703 107 20250523 1,1703,5/23/2025,GEMPABUMI,Kecamatan:\n,Bengkulu Utara,Bengkulu,0,0,0,0,,0
+1771 107 20250523 1,1771,5/23/2025,GEMPABUMI,Kecamatan:\nKec. Selebar Kel Betungan Kel. Pagar Dewa Kel. Bumi Ayu Kec. Gading Cempaka Kel. Jalan Gedang Kel. Sidomulyo Kec. Teluk Segara Kel. Pintu Batu Kel. Pondok Besi Kec. Singaran Pati  Kel. Jembatan Kecil Kel. Lingkar Timur Kel. Dusun Besar  Kel. Panorama  Kec. Kampung Melayu Kel. Sumber Jaya  Kel. Muara Dua Kel. Kandang Mas Kel. Kandang Kec. Ratu Agung Kel. Tanah Pata Kel. Sawah Lebar Baru Kec. Sungai Serut Kel. Surabaya Kel. Sukamerindu Kel. Kampung Kelaw,Kota Bengkulu,Bengkulu,0,0,2,193,,0
+1709 107 20250523 1,1709,5/23/2025,GEMPABUMI,Kecamatan:\nKec. Pondok Kelapa    Kec. Pondok Kubang    Kec. Talang 4,Bengkulu Tengah,Bengkulu,0,0,0,0,,0
+1101 107 20250511 1,1101,5/11/2025,GEMPABUMI,Kecamatan:\nKec. Sawang,Aceh Selatan,Aceh,0,0,0,3,,0
+1112 107 20250511 1,1112,5/11/2025,GEMPABUMI,Kecamatan:\nKec. Manggeng Kec. Lembah Sabil Kec. Tangan-tangan,Aceh Barat Daya,Aceh,0,0,0,3,,0
+3271 107 20250410 1,3271,4/10/2025,GEMPABUMI,Kecamatan:\nKec. Bogor Utara Kel. Kedunghalang Kec. Bogor Barat Kel. Cilendek Timur Kel. Cilendek Barat Kel. Menteng Kel. Pasir Jaya Kec. Bogor Tengah Kel. Panaragan Kel. Curugmekar Kel. Gudang Kec. Bogor Selatan Kel. Rancamaya Kel. Muarasari Kel. Bondongan Kel. Bojongkerta Kel. Pamoyanan Kel. Mulyaharja Kab. Bogor Kec. Babakan Madang Ds. Cijayanti,Kota Bogor,Jawa Barat,0,0,1,31,,6
+1202 107 20250318 1,1202,3/18/2025,GEMPABUMI,Kecamatan:\n•Pahae Julu •Pahae Jae •Purba Tua •Simangumban,Tapanuli Utara,Sumatera Utara,1,0,1,1,,15
+7110 107 20250226 1,7110,2/26/2025,GEMPABUMI,Kecamatan:\n    • 45 km Tenggara TUTUYAN-BOLTIM-SULUT     • 66 km Tenggara KOTAMOBAGU-SULUT     • 71 km Tenggara RATAHAN-MITRA-SULUT     • 118 km BaratDaya MANADO-SULUT     • 2130 km TimurLaut JAKARTA-INDONESIA,Bolaang Mongondow Timur,Sulawesi Utara,0,0,0,11,,2
+7411 107 20250129 1,7411,1/29/2025,GEMPABUMI,Kecamatan:\n(12 Kec / 38 Desa/Kel) Kec. Lalolae Ds. Wesalo Ds. Keisio Kel. Lalolae Ds. Lalosingi Ds. Talodo  Kec. Mowewe Kel. Iwoitombo Kel. Horodopi Kel. Inebenggi Kel. Nelombo Kel.Sabi-sabila Kel. Watopute Kel. Puosu Kec. Tinondo Ds. Tinondo Ds. Tutuwi Kel. Ameroro Kel. Tinengi Kec. Uluiwoi Kel. Pehanggo Kec. Ueesi Kec. Tirawuta Kel. Tebabu Ds. Tirawuta Ds. Poni Poniki Ds. Lalingato Ds. Tawainalu Ds. Simbune Ds. Roko-roko Ds. Tumbudadio Ds. Woiha Kec. Loea Ds. Simbalai Kec. Ladongi Ds. Welala Kec. Dangia Ds. Mekarjaya Ds. Gunung Jaya Ds. Mulia Jaya Kec. Poli Polia Ds. Wia Wia Ds. Hakamboli Kec. Aere Ds. Iwoi Minggura Ds. Tinete Ds. Aere Ds. Aladadio  Kec. Lambandia Ds. Penanggo Jaya,Kolaka Timur,Sulawesi Tenggara,0,0,0,161,,0
+5204 107 20241215 1,5204,12/15/2024,GEMPABUMI,Ds. Semamung Kab. Sumbawa Barat 16 KM Tenggara SUMBAWA,SUMBAWA,NUSA TENGGARA BARAT,0,0,0,8,,0
+7205 107 20241207 1,7205,12/7/2024,GEMPABUMI,Kec. Lakea Ds. Lakuan Buol 86 km BaratLaut BUOL-SULTENG 108 km TimurLaut TOLI-TOLI-SULTENG 136 km TimurLaut PARIGIMOUTONG-SULTENG 243 km BaratLaut GORONTALO-GORONTALO 1825 km TimurLaut JAKARTA-INDONESIA,BUOL,SULAWESI TENGAH,0,0,0,17,,3
+3205 107 20241207 1,3205,12/7/2024,GEMPABUMI,Cikajang Cipangramatan Pasirwangi Padamukti Pasirwangi Karyamekar Pasirwangi Padaasih Cisurupan Sukawangi Sukaresmi Sukalilah Pasirwangi Sinarjaya Cisurupan Cidatar Pasirwangi Pasirwangi Pasirwangi Padamulya Cisurupan Situsari Samarang Sukakarya Sukaresmi Mekarjaya Cikajang Cikajang Tarogong Kaler Mekarwangi Pasirwangi Barusari Pasirwangi Padawaas Cisurupan Kramatwangi Cisurupan Pamulihan Samarang Cisarua Sukaresmi Sukamulya Pasirwangi Sarimukti Pasirwangi Padasuka Samarang Parakan Sukaresmi Sukaresmi Pasirwangi Talaga Samarang Sukarasa Bayongbong Banjarsari,GARUT,JAWA BARAT,0,0,0,45,,0
+3508 107 20241105 1,3508,11/5/2024,GEMPABUMI,Kec. Randuagung Ds. Salak,LUMAJANG,JAWA TIMUR,0,0,0,6,,0
+5103 107 20240921 2,5104,9/21/2024,GEMPABUMI,,GIANYAR,BALI,0,0,0,0,,6
+5103 107 20240921 3,5105,9/21/2024,GEMPABUMI,,KLUNGKUNG,BALI,0,0,0,1,,0
+5103 107 20240921 1,5103,9/21/2024,GEMPABUMI,,BADUNG,BALI,0,0,0,24,,4
+8207 107 20240919 1,8207,9/19/2024,GEMPABUMI,Kecamatan Morotai Selatan (3 Desa)     - Desa Dehegila     - Desa Totodoku     - Desa Joubela    Kecamatan Morotai Timur (11 Desa)     - Desa Rahmat     - Desa Sambiki Baru     - Desa Hino      - Desa Gamlamo      - Desa Sambiki Tua      - Desa Mira      - Desa Sangowo Barat     - Desa Seseli Jaya     - Desa Sangowo Induk     - Desa Buho Buho     - Desa Lifao,PULAU MOROTAI,MALUKU UTARA,0,0,0,66,,1
+3204 107 20240918 4,3214,9/18/2024,GEMPABUMI,Kec. Kiara Pedes  Desa Cibeber,PURWAKARTA,JAWA BARAT,0,0,0,1,,0
+3204 107 20240918 5,3217,9/18/2024,GEMPABUMI,"Kec. Cililin  Desa Rancapanggung  Kec. Cihampelas Desa Situwangi  Kec, Cikalong Wetan Desa Mekar jaya",BANDUNG BARAT,JAWA BARAT,0,0,0,5,,0
+3204 107 20240918 3,3205,9/18/2024,GEMPABUMI,Kec. Pasirwangi (12 Desa)    - Desa Pasirwangi    - Desa Barusari    - Desa Sarimukti    - Desa Talaga    - Desa Padasuka    - Desa Padamukti    - Desa Pasirkiamis    - Desa Padaawas    - Desa Padamulya Desa Karya Mekar Desa Sirna Jaya Desa Pada asih     Kec. Tarogong Kaler (1 Desa)    - Desa Sirnajaya     Kec. Sukaresmi (3 Desa)    - Desa Mekarjaya Desa Cintadamai  Desa Sukajaya Kec. Cibiuk  Desa Lingkung Pasir Kec. Cisurupan  Desa Pamulihan  Desa Pangauban  Desa Cipaganti  Desa Cisurupan  Kec. Samarang Desa Parakan  Desa Cisarua  Desa Sukarasa Desa Sirnasari,GARUT,JAWA BARAT,0,0,5,134,,46
+3204 107 20240918 1,3204,9/18/2024,GEMPABUMI,Kec. Kertasari (8 Desa) Ds. Tarumajaya Ds. Cihawuk Ds. Cibeureum Ds. Sukapura Ds. Cikembang Ds. Resmi Tinggal Ds. Neglawangi Ds. Santosa  Kec. Pangalengan (8 Desa)    - Desa Margamukti    - Desa Margamulya    - Desa Pangalengan    - Desa Wanasuka    - Desa Sukamanah    - Desa Tribaktimulya    - Desa Banjarsari    - Desa Margaluyu Kec. Ibun (5 Desa)    - Desa Sudi    - Desa Lampegan    - Desa Pangguh Desa Karyalaksana Desa Neglasari     Kec. Pacet (6 Desa)    - Desa Cikawao    - Desa Maruyung    - Desa Sukarame    - Desa Mekarjaya    - Desa Nagrak    - Desa Mekarsari Desa Pangauban     Kec. Pameungpeuk (2 Desa)    - Desa Bojongmanggu    - Desa Rancamulya Desa Rancatungku    Kec. Arjasari (1 Desa)    - Desa Pinggirsari    Kec. Banjaran (2 Desa)    - Desa Pasirmulya Desa. Tarajusari    Kec. Rancaekek Desa Rancaekek Wetan  Kec. Cimaung  Desa Cikalong,BANDUNG,JAWA BARAT,1,0,138,6126,,0
+3204 107 20240918 2,3201,9/18/2024,GEMPABUMI,Kec. Cigombong Desa Wates Jaya,BOGOR,JAWA BARAT,0,0,0,5,,0
+3204 107 20240918 6,3277,9/18/2024,GEMPABUMI,Kec. Cimahi Utara  Kel. Cipageran  Kec. Cimahi Tengah  Kel. Setia Manah,KOTA CIMAHI,JAWA BARAT,0,0,0,1,,0
+3403 107 20240826 6,3309,8/26/2024,GEMPABUMI,,BOYOLALI,JAWA TENGAH,0,0,0,2,,0
+3403 107 20240826 4,3404,8/26/2024,GEMPABUMI,,SLEMAN,DAERAH ISTIMEWA YOGYAKARTA,0,0,0,0,,0
+3403 107 20240826 1,3403,8/26/2024,GEMPABUMI,95 km BaratDaya GUNUNGKIDUL-DIY 97 km BaratDaya BANTUL-DIY107 km Tenggara KULONPROGO-DIY109 km BaratDaya YOGYAKARTA-DIY480 km Tenggara JAKARTA-INDONESIA    Kab. Wonogiri Kab. Magelang Kab. Purworejo Kab. Klaten Kab. Banjarnegara Kab. Kebumen Kab. Sragen Kab. Cilacap Kab. Banyumas Kab. Pati Kab. Batang Kab. Karanganyar Kota Salatiga Kota Magelang,GUNUNGKIDUL,DAERAH ISTIMEWA YOGYAKARTA,0,0,0,56,,0
+3403 107 20240826 3,3402,8/26/2024,GEMPABUMI,,BANTUL,DAERAH ISTIMEWA YOGYAKARTA,,,,18,,1
+3403 107 20240826 2,3401,8/26/2024,GEMPABUMI,,KULON PROGO,DAERAH ISTIMEWA YOGYAKARTA,0,0,0,3,,0
+3403 107 20240826 5,3313,8/26/2024,GEMPABUMI,,KARANGANYAR,JAWA TENGAH,0,0,0,1,,0
+3208 107 20240725 1,3208,7/25/2024,GEMPABUMI,Kec. Kuningan Kel. Ciporang Kel. Purwawinangun Ds. Cibinuang Kec. Nusaherang Ds. Kertawirama Kec. Darma Ds. Jagara Kec. Ciniru Ds. Rambatan Kec. Garawangi Ds. Kutakembaran Ds. Lengkong Kec. Kramatmulya Ds. Gerba,KUNINGAN,JAWA BARAT,0,0,0,35,,4
+3325 107 20240707 2,3375,7/7/2024,GEMPABUMI,Kec. Pekalongan Timur Kel. Gamer,KOTA PEKALONGAN,JAWA TENGAH,0,0,0,2,,0
+3325 107 20240707 1,3325,7/7/2024,GEMPABUMI,Kec. Batang  Kel. Proyonanggan Utara Kel. Proyonanggan Tengah Kel. Kauman Kel. Karangasem Utara Kel. Karangasem Selatan Ds. Kalisalak Ds. Klidang Lor Ds. Klidang Wetan Ds. Pasekaran Ds. Cepokuning Ds. Karanganyar Kec. Warungasem Ds. Cepagan    Ds. Candiareng Ds. Lebo Ds. Sawahjoho Ds. Menguneng Ds. Sijono Ds. Gapuro Ds. Terban Kec. Wonotunggal Ds. Siwungu,BATANG,JAWA TENGAH,0,0,14,273,,29
+7206 107 20240531 1,7206,5/31/2024,GEMPABUMI,Kec. Bahodopi Ds. Fatufia Ds. Bahodopi,MOROWALI,SULAWESI TENGAH,0,0,2,4,,2
+3205 107 20240427 4,3203,4/27/2024,GEMPABUMI,,CIANJUR,JAWA BARAT,0,0,0,4,,2
+3205 107 20240427 2,3201,4/27/2024,GEMPABUMI,,BOGOR,JAWA BARAT,0,0,0,47,,0
+3205 107 20240427 3,3202,4/27/2024,GEMPABUMI,Kec. Gegerbitung    - Ds. Cijurey Kec. Simpenan    - Ds. Loji,SUKABUMI,JAWA BARAT,0,0,0,21,,2
+3205 107 20240427 5,3204,4/27/2024,GEMPABUMI,Kec. Cangkuang    - Ds. Jatisari,BANDUNG,JAWA BARAT,0,0,3,131,,4
+3205 107 20240427 1,3205,4/27/2024,GEMPABUMI,Kec. Pameungpeuk Kec. Cilawu  Kec. Talegong  Kec. Sukawening,GARUT,JAWA BARAT,0,0,6,1108,,71
+3205 107 20240427 18,3279,4/27/2024,GEMPABUMI,,KOTA BANJAR,JAWA BARAT,0,0,0,7,,1
+3205 107 20240427 17,3278,4/27/2024,GEMPABUMI,Kec. Cibeureum    - Kel. Awipari    - Kel. Ciherang Kec. Tamansari    - Kel. Tamanjaya Kec. Indihiang    - Kel. Sukamaju,KOTA TASIKMALAYA,JAWA BARAT,0,0,0,26,,1
+3205 107 20240427 16,3277,4/27/2024,GEMPABUMI,,KOTA CIMAHI,JAWA BARAT,0,0,0,3,,1
+3205 107 20240427 15,3273,4/27/2024,GEMPABUMI,,KOTA BANDUNG,JAWA BARAT,0,0,0,0,,0
+3205 107 20240427 14,3272,4/27/2024,GEMPABUMI,,KOTA SUKABUMI,JAWA BARAT,0,0,0,2,,0
+3205 107 20240427 13,3218,4/27/2024,GEMPABUMI,,PANGANDARAN,JAWA BARAT,0,0,0,5,,2
+3205 107 20240427 12,3217,4/27/2024,GEMPABUMI,Kec. Cipatat    - Ds. Citatah Kec. Lembang,BANDUNG BARAT,JAWA BARAT,0,0,0,17,,0
+3205 107 20240427 11,3214,4/27/2024,GEMPABUMI,Kec. Bojong    - Ds. Bojong Barat,PURWAKARTA,JAWA BARAT,0,0,0,4,,0
+3205 107 20240427 10,3213,4/27/2024,GEMPABUMI,,SUBANG,JAWA BARAT,0,0,0,1,,0
+3205 107 20240427 9,3211,4/27/2024,GEMPABUMI,Kec. Sumedang Selatan    - Kelurahan Kotakulon,SUMEDANG,JAWA BARAT,0,0,0,3,,1
+3205 107 20240427 8,3210,4/27/2024,GEMPABUMI,,MAJALENGKA,JAWA BARAT,0,0,0,15,,0
+3205 107 20240427 7,3207,4/27/2024,GEMPABUMI,kec. Banjarsari    - Ds. Ratawangi    - Ds. Cangkring,CIAMIS,JAWA BARAT,0,0,4,147,,1
+3205 107 20240427 6,3206,4/27/2024,GEMPABUMI,Kec. Mangunreja    - Ds. Mangunreja Kec. Sodonghilir    - Ds. Sodonghilir Kec. Singaparna    - Ds. Cikunten Kec. Cigalontang    - Ds. Jayapura    - Ds. Tenjonagara Kec. Cibalong    - Ds. Singajaya Kec. Rajapolah    - Ds. Tanjungpura Kec. Cisayong    - Ds. Mekarwangi Kec. Sukarame    - Ds. Sukamenak,TASIKMALAYA,JAWA BARAT,0,0,1,24,,3
+1701 107 20240323 1,1701,3/23/2024,GEMPABUMI,,BENGKULU SELATAN,BENGKULU,0,0,0,115,,3
+3525 107 20240322 5,3528,3/22/2024,GEMPABUMI,Kec. Larangan Ds. Panaguan,PAMEKASAN,JAWA TIMUR,0,0,0,1,,0
+3525 107 20240322 6,3524,3/22/2024,GEMPABUMI,Kec. Karangbinangun  Ds. Blawi Ds. Palangan Kec. Maduran  Ds. Parengan Kec. Glagah  Ds. Konang Ds. Karangturi Ds. Morocalan,LAMONGAN,JAWA TIMUR,0,0,0,7,,2
+3525 107 20240322 7,3578,3/22/2024,GEMPABUMI,Kec. Simokerto Ds. Tambakrejo Kec. Mulyorejo Ds. Mulyorejo Kec. Genteng Ds. Kapasari Ds. Ketabang,KOTA SURABAYA,JAWA TIMUR,0,0,1,2,,2
+3525 107 20240322 1,3525,3/22/2024,GEMPABUMI,Kec. Sangkapura Ds. Sungairujing Ds. Kotakusuma Ds. Dekatagung Ds. Gunung Teguh Ds. Patarselamat Ds. Sawahmulya Ds. Kebon Teluk Dalam Ds. Sungairujing Kec. Tambak Ds. Kelompanggubug Ds. Tambak Ds. Telukjatidawang Ds. Pekalongan Ds. Sukaoneng Ds. Grejeg Kec. Duduksampeyan Ds. Wadak Kidul Kec. Gresik Kec. Cerme Ds. Semampir,GRESIK,JAWA TIMUR,0,0,7,6478,,325
+3525 107 20240322 2,3317,3/22/2024,GEMPABUMI,Kab. Rembang,REMBANG,JAWA TENGAH,0,0,0,0,,1
+3525 107 20240322 8,3522,3/22/2024,GEMPABUMI,Kec. Sedati  Ds. Buncitan,BOJONEGORO,JAWA TIMUR,0,0,0,0,,0
+3525 107 20240322 4,3515,3/22/2024,GEMPABUMI,Kec. Sedati  Ds. Buncitan,SIDOARJO,JAWA TIMUR,0,0,0,2,,0
+3525 107 20240322 3,3523,3/22/2024,GEMPABUMI,Kec. Soko Ds. Glagahsari Kec. Parengan Ds. Dagangan Kec. Bangilan Ds. Sidokumpul Kec. Rengel Ds. Ngadirejo Ds. Banjararum Ds. Sumberejo Kec. Semanding Ds. Klampok Ds. Bejagung Kec. Tambak Ds. Pekalongan Kec. Plumpang Ds. Sumberagung Kec. Singgahan Ds. Lajolor Kec. Bancar Doyong Ds. Boncong Kec. Palang Ds. Palang Ds. Ngimbang Kec. Kerek Ds. Kedungrejo,TUBAN,JAWA TIMUR,0,0,0,12,,3
+3602 107 20240103 1,3602,1/3/2024,GEMPABUMI,Kec. Lebakgedong Ds. Banjar Irigasi Kec. Cirinten Ds. Karangnunggal Kec. Banjarsari Ds. Bendungan Kec. Cibeber Ds. Mekarsari Kec. Sobang Ds. Hariang Kec. Cihara Ds. Barunai,LEBAK,BANTEN,0,0,0,4,,2
+3602 107 20240103 2,3201,1/3/2024,GEMPABUMI,,BOGOR,JAWA BARAT,0,0,0,5,,0
+3602 107 20240103 3,3202,1/3/2024,GEMPABUMI,,SUKABUMI,JAWA BARAT,0,0,0,7,,0
+3204 108 2023 012 031 1,3204,12/31/2023,GEMPABUMI,Kec. Arjasari  Ds. Pinggirsari Kec. Cicalengka Ds. Nagrog,BANDUNG,JAWA BARAT,,,,3,,1
+3213 108 2023 012 031 1,3213,12/31/2023,GEMPABUMI,,SUBANG,JAWA BARAT,,,,37,,0
+3211 108 2023 012 031 1,3211,12/31/2023,GEMPABUMI,Kec. Sumedang Selatan Ds. Kotakulon Ds. Cipameungpeuk Kec. Tanjung Medar Ds. Sukatani Kec. Sumedang Utara Ds. Rancamulya Ds. Padasuka Ds. Kotakeler Ds. Margamukti Ds. Talun Ds. Kebon Jati,SUMEDANG,JAWA BARAT,,,18,1350,,61
+3202 108 2023 012 028 1,3202,12/28/2023,GEMPABUMI,Kec. Nyalindung Ds. Mekarsari,SUKABUMI,JAWA BARAT,,,,1,,0
+3329 108 2023 012 015 1,3329,12/15/2023,GEMPABUMI,Kec. Salem Ds. Kadumanis Ds. Citimbang Ds. Gandoang Kec. Bantarkawung Ds. Pangarasan  Ds. Sindangwangi Kec. Tonjong Ds. Kutamendala,BREBES,JAWA TENGAH,,,,11,,0
+3202 108 2023 012 014 1,3202,12/14/2023,GEMPABUMI,Kec. Kabandungan Ds. Tugubandung Kec. Kalapanunggal Ds. Walangsari Kec. Kadudampit Ds. Sukamanis Kec. Cikembar Ds. Parakanlima,SUKABUMI,JAWA BARAT,,,,189,,0
+3201 108 2023 012 014 1,3201,12/14/2023,GEMPABUMI,Kec. Pamijahan Ds. Cibunian Ds. Purwabakti Ds. Cibitung Kulon Ds. Pamijahan Kec. Leuwiliang Ds. Purasari Kec. Nanggung Ds. Kalong Liud Ds. Malasri Ds. Parakan Muncang Ds. Cisarua Ds. Bantarkaret Kec. Ciampea Ds. Cihideung Ilir Ds. Bojong Jengkol Kec. Tenjolaya,BOGOR,JAWA BARAT,,,,630,,0
+3202 108 2023 012 08 1,3202,12/8/2023,GEMPABUMI,Kec . Kabandungan Ds. Cipeuteuy Ds. Cihamerang Ds. Mekarjaya Ds. Kabandungan Ds. Tugubandung,SUKABUMI,JAWA BARAT,,,,192,,3
+3201 108 2023 012 08 1,3201,12/8/2023,GEMPABUMI,Kec. Pamijahan Ds. Purwabakti Kec. Leuwiliang Ds. Purasari,BOGOR,JAWA BARAT,,,2,156,,0
+8201 108 2023 011 022 1,8201,11/22/2023,GEMPABUMI,68 km BaratLaut HALMAHERABARAT-MALUT 86 km BaratLaut JAILOLO-MALUT 88 km BaratLaut HALMAHERAUTARA-MALUT 112 km BaratLaut TERNATE-MALUT 2423 km TimurLaut JAKARTA-INDONESIA,HALMAHERA BARAT,MALUKU UTARA,1,,,0,,0
+5371 108 2023 011 02 1,5371,11/2/2023,GEMPABUMI,24 km Tenggara KUPANG-NTT  41 km BaratDaya KAB-KUPANG-NTT  83 km TimurLaut ROTENDAO-NTT  96 km BaratDaya TIMORTENGAHSEL-NTT  1937 km Tenggara JAKARTA-INDONESIA   ●Kota Kupang Kec. Oebobo  Kel. Oebufu Kel. Tuak Daun Merah  Kel. Liliba Kec. Kelapa Lima Kel. Lasiana Kec. Alak Kel. Nunbaun Sabu Kel. Manulai II Kec. Maulafa Kel. Fatukoa Kel. Sikumana Kec. Kotaraja Kel. Naikoten I Kel. Kuanino  ●Kab. Kupang Kec. Amabi Oefeto Timur Ds. Pathau Kec. Amarasi Ds. Kotabes Ds. Oenini I Kec. Amarasi Selatan Ds. Retrain Kel. Sonrraren Kel. Buraren Ds. Sahraen Kec. Amarasi Barat Kel. Teubaun Ds. Tunbaun Ds. Toobaun Kec. Amarasi Timur Ds. Pakubaun Kec. Amfoang Tengah Ds. Binafun Ds. Fatumonas Kec. Amfoang Barat Daya Ds. Manubelon Kec. Amfoang Barat Laut Ds. Honuk Kec. Fatuleu Ds. Camplong II Kel. Camplong Ds. Kuimasi Ds. Sillu Kec. Kupang Timur Ds. Manusak Kel. Oesao Kec. Kupang Barat Ds. Nitneo Kec. Kupang Tengah Ds. Oelnasi Kec. Nekamese Ds. Tunfeu Ds. Oelomin Kec. Taebenu Ds. Baumata Ds. Bokong  ●Kab. Timor Tengah Selatan Kec. Kolbano Ds. Ofu,KOTA KUPANG,NUSA TENGGARA TIMUR,,,,20,,6
+5301 108 2023 011 02 1,5301,11/2/2023,GEMPABUMI,24 km Tenggara KUPANG-NTT  41 km BaratDaya KAB-KUPANG-NTT  83 km TimurLaut ROTENDAO-NTT  96 km BaratDaya TIMORTENGAHSEL-NTT  1937 km Tenggara JAKARTA-INDONESIA   ●Kota Kupang Kec. Oebobo  Kel. Oebufu Kel. Tuak Daun Merah  Kel. Liliba Kec. Kelapa Lima Kel. Lasiana Kec. Alak Kel. Nunbaun Sabu Kel. Manulai II Kec. Maulafa Kel. Fatukoa Kel. Sikumana Kec. Kotaraja Kel. Naikoten I Kel. Kuanino  ●Kab. Kupang Kec. Amabi Oefeto Timur Ds. Pathau Kec. Amarasi Ds. Kotabes Ds. Oenini I Kec. Amarasi Selatan Ds. Retrain Kel. Sonrraren Kel. Buraren Ds. Sahraen Kec. Amarasi Barat Kel. Teubaun Ds. Tunbaun Ds. Toobaun Kec. Amarasi Timur Ds. Pakubaun Kec. Amfoang Tengah Ds. Binafun Ds. Fatumonas Kec. Amfoang Barat Daya Ds. Manubelon Kec. Amfoang Barat Laut Ds. Honuk Kec. Fatuleu Ds. Camplong II Kel. Camplong Ds. Kuimasi Ds. Sillu Kec. Kupang Timur Ds. Manusak Kel. Oesao Kel. Naibonat Kec. Kupang Barat Ds. Nitneo Kec. Kupang Tengah Ds. Oelnasi Kec. Semau Ds. Huilelot Kec. Nekamese Ds. Tunfeu Ds. Oelomin Kec. Taebenu Ds. Baumata Ds. Bokong  ●Kab. Timor Tengah Selatan Kec. Kolbano Ds. Ofu,KUPANG,NUSA TENGGARA TIMUR,,,,172,,45
+5302 108 2023 011 02 1,5302,11/2/2023,GEMPABUMI,24 km Tenggara KUPANG-NTT  41 km BaratDaya KAB-KUPANG-NTT  83 km TimurLaut ROTENDAO-NTT  96 km BaratDaya TIMORTENGAHSEL-NTT  1937 km Tenggara JAKARTA-INDONESIA   ●Kota Kupang Kec. Oebobo  Kel. Oebufu Kel. Tuak Daun Merah  Kel. Liliba Kec. Kelapa Lima Kel. Lasiana Kec. Alak Kel. Nunbaun Sabu Kel. Manulai II Kec. Maulafa Kel. Fatukoa Kel. Sikumana Kec. Kotaraja Kel. Naikoten I Kel. Kuanino  ●Kab. Kupang Kec. Amabi Oefeto Timur Ds. Pathau Kec. Amarasi Ds. Kotabes Ds. Oenini I Kec. Amarasi Selatan Ds. Retrain Kel. Sonrraren Kel. Buraren Ds. Sahraen Kec. Amarasi Barat Kel. Teubaun Ds. Tunbaun Ds. Toobaun Kec. Amarasi Timur Ds. Pakubaun Kec. Amfoang Tengah Ds. Binafun Ds. Fatumonas Kec. Amfoang Barat Daya Ds. Manubelon Kec. Amfoang Barat Laut Ds. Honuk Kec. Fatuleu Ds. Camplong II Kel. Camplong Ds. Kuimasi Ds. Sillu Kec. Kupang Timur Ds. Manusak Kel. Oesao Kec. Kupang Barat Ds. Nitneo Kec. Kupang Tengah Ds. Oelnasi Kec. Nekamese Ds. Tunfeu Ds. Oelomin Kec. Taebenu Ds. Baumata Ds. Bokong  ●Kab. Timor Tengah Selatan Kec. Kolbano Ds. Ofu,TIMOR TENGAH SELATAN,NUSA TENGGARA TIMUR,,,,0,,1
+3202 108 2023 010 01 1,3202,10/1/2023,GEMPABUMI,30 km Tenggara KAB-SUKABUMI-JABAR 52 km BaratDaya KOTA-SUKABUMI-JABAR 53 km Tenggara BAYAH-BANTEN 119 km BaratDaya BANDUNG-JABAR 123 km BaratDaya JAKARTA-Indonesia,SUKABUMI,JAWA BARAT,,,,7,,0
+7208 108 2023 09 09 1,7208,9/9/2023,GEMPABUMI,,PARIGI MOUTONG,SULAWESI TENGAH,,,,1,,0
+7203 108 2023 09 09 1,7203,9/9/2023,GEMPABUMI,Kec. Balaesang Ds. Labean Ds. Sipure Ds. Lombonga Kec. Sirenja Ds. Balituma Ds. Pomolulu Ds. Palau Kec. Balaesang Tanjung Ds. Pomalulu,DONGGALA,SULAWESI TENGAH,,,,0,,1
+7271 108 2023 09 09 1,7271,9/9/2023,GEMPABUMI,,KOTA PALU,SULAWESI TENGAH,,,,0,,0
+5302 108 2023 08 031 1,5302,8/31/2023,GEMPABUMI,Kec. Nunbena Ds. Feomone Ds. Taneotob,TIMOR TENGAH SELATAN,NUSA TENGGARA TIMUR,,,,10,,0
+7210 108 2023 08 06 1,7210,8/6/2023,GEMPABUMI,Kec. Nokilalaki  Desa Kamarora Desa Sopu Kec. Palolo Desa Lembantongoa  47 km Timur Laut SIGI-SULTENG 53 km Tenggara PALU-SULTENG 59 km Barat Laut POSO-SULTENG 97 km Tenggara DONGGALA-SULTENG 1592 km TimurLaut JAKARTA-Indonesia,SIGI,SULAWESI TENGAH,,,,79,,4
+1409 108 2023 08 04 1,1409,8/4/2023,GEMPABUMI,Kec. Singingi Ds. Kebun Lado,KUANTAN SINGINGI,RIAU,,,,10,,2
+3404 108 2023 06 030 1,3404,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,SLEMAN,DAERAH ISTIMEWA YOGYAKARTA,,,4,2,,3
+3306 108 2023 06 030 1,3306,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,PURWOREJO,JAWA TENGAH,,,,10,,0
+3328 108 2023 06 030 1,3328,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,TEGAL,JAWA TENGAH,,,1,1,,0
+3503 108 2023 06 030 1,3503,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,TRENGGALEK,JAWA TIMUR,,,,6,,1
+3502 108 2023 06 030 1,3502,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,PONOROGO,JAWA TIMUR,,,,11,,2
+3501 108 2023 06 030 1,3501,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,PACITAN,JAWA TIMUR,,,,186,,2
+3305 108 2023 06 030 1,3305,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,KEBUMEN,JAWA TENGAH,,,1,17,,2
+3471 108 2023 06 030 1,3471,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,KOTA YOGYAKARTA,DAERAH ISTIMEWA YOGYAKARTA,,,,1,,0
+3402 108 2023 06 030 1,3402,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,BANTUL,DAERAH ISTIMEWA YOGYAKARTA,1,,9,92,,8
+3304 108 2023 06 030 1,3304,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,BANJARNEGARA,JAWA TENGAH,,,,3,,0
+3505 108 2023 06 030 1,3505,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,BLITAR,JAWA TIMUR,,,,1,,0
+3308 108 2023 06 030 1,3308,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,MAGELANG,JAWA TENGAH,,,,3,,0
+3403 108 2023 06 030 1,3403,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,GUNUNGKIDUL,DAERAH ISTIMEWA YOGYAKARTA,,,9,161,,20
+3307 108 2023 06 030 1,3307,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,WONOSOBO,JAWA TENGAH,,,,11,,1
+3310 108 2023 06 030 1,3310,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,KLATEN,JAWA TENGAH,,,,4,,0
+3401 108 2023 06 030 1,3401,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,KULON PROGO,DAERAH ISTIMEWA YOGYAKARTA,,,1,21,,1
+3329 108 2023 06 030 1,3329,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,BREBES,JAWA TENGAH,,,,1,,0
+3504 108 2023 06 030 1,3504,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,TULUNGAGUNG,JAWA TIMUR,,,,1,,0
+3312 108 2023 06 030 1,3312,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,WONOGIRI,JAWA TENGAH,,,,237,,12
+3303 108 2023 06 030 1,3303,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,PURBALINGGA,JAWA TENGAH,,,,8,,0
+3302 108 2023 06 030 1,3302,6/30/2023,GEMPABUMI,86 km BaratDaya BANTUL-DIY 90 km BaratDaya KULON PROGO-DIY 92 km BaratDaya GUNUNGKIDUL-DIY 98 km BaratDaya YOGYAKARTA-DIY 453 km Tenggara JAKARTA-INDONESIA,BANYUMAS,JAWA TENGAH,,,,2,,0
+3201 108 2023 06 011 1,3201,6/11/2023,GEMPABUMI,Kec. Megamendung Ds. Kuta,BOGOR,JAWA BARAT,,,2,2,,0
+3501 108 2023 06 08 1,3501,6/8/2023,GEMPABUMI,117 km BaratDaya PACITAN-JATIM 128 km Tenggara GUNUNGKIDUL-DIY 143 km Tenggara BANTUL-DIY 154 km Tenggara YOGYAKARTA-DIY 542 km Tenggara JAKARTA-INDONESIA,PACITAN,JAWA TIMUR,,,3,0,,0
+3401 108 2023 06 08 1,3401,6/8/2023,GEMPABUMI,"Info Gempa dirasakan Mag:6.0, 08-Jun-23 00:04:55 WIB, Lok:9.15 LS, 110.69 BT (Pusat gempa berada di laut 117 km Baratdaya Pacitan), Kedlmn:10 Km ::BMKG",KULON PROGO,DAERAH ISTIMEWA YOGYAKARTA,,,,2,,0
+3402 108 2023 06 08 1,3402,6/8/2023,GEMPABUMI,"Info Gempa dirasakan Mag:6.0, 08-Jun-23 00:04:55 WIB, Lok:9.15 LS, 110.69 BT (Pusat gempa berada di laut 117 km Baratdaya Pacitan), Kedlmn:10 Km ::BMKG",BANTUL,DAERAH ISTIMEWA YOGYAKARTA,,,3,0,,0
+3272 108 2023 06 06 1,3272,6/6/2023,GEMPABUMI,126 km Tenggara KOTA -SUKABUMI-JABAR,KOTA SUKABUMI,JAWA BARAT,,,,3,,0
+5108 108 2023 05 024 1,5108,5/24/2023,GEMPABUMI,Kec. Sukasada Kec. Kubutambaha Kec. Sawan Kec. Kec. Sukasada,BULELENG,BALI,,,,14,,3
+5106 108 2023 05 024 1,5106,5/24/2023,GEMPABUMI,Kec. Kintamanai,BANGLI,BALI,,,,2,,0
+1309 108 2023 04 025 1,1309,4/25/2023,GEMPABUMI,Kab. Kp. Mentawai 177 km BaratLaut KEP-MENTAWAI-SUMBAR 178 km Tenggara NIAS SELATAN-SUMUT 180 km Barat Laut TUAPEJAT-SUMBAR 247 km Barat Laut PADANG-SUMBAR 1103 km BaratLaut JAKARTA-INDONESIA,KEPULAUAN MENTAWAI,SUMATERA BARAT,,,2,1,,0
+1312 108 2023 04 025 1,1312,4/25/2023,GEMPABUMI,,PASAMAN BARAT,SUMATERA BARAT,,,2,0,,0
+1203 108 2023 04 025 1,1203,4/25/2023,GEMPABUMI,Kab. Kp. Mentawai 177 km BaratLaut KEP-MENTAWAI-SUMBAR 178 km Tenggara NIAS SELATAN-SUMUT 180 km Barat Laut TUAPEJAT-SUMBAR 247 km Barat Laut PADANG-SUMBAR 1103 km BaratLaut JAKARTA-INDONESIA,TAPANULI SELATAN,SUMATERA UTARA,,,,1,,0
+1214 108 2023 04 024 1,1214,4/24/2023,GEMPABUMI,Kab. Kp. Mentawai 177 km BaratLaut KEP-MENTAWAI-SUMBAR 178 km Tenggara NIAS SELATAN-SUMUT 180 km Barat Laut TUAPEJAT-SUMBAR 247 km Barat Laut PADANG-SUMBAR 1103 km BaratLaut JAKARTA-INDONESIA,NIAS SELATAN,SUMATERA UTARA,,,,2,,0
+3503 108 2023 04 014 1,3503,4/14/2023,GEMPABUMI,Kec. Panggul     - Ds. Panggul,TRENGGALEK,JAWA TIMUR,,,,1,,0
+3509 108 2023 04 014 1,3509,4/14/2023,GEMPABUMI,Kec. Arjasa     - Ds. Darsono,JEMBER,JAWA TIMUR,,,,1,,0
+3279 108 2023 04 014 1,3279,4/14/2023,GEMPABUMI,Kec. Banjar     - Ds. Banjar,KOTA BANJAR,JAWA BARAT,,,,1,,0
+3202 108 2023 04 014 1,3202,4/14/2023,GEMPABUMI,Kec. Cikembar     - Ds. Cikembar,SUKABUMI,JAWA BARAT,,,,1,,0
+5103 108 2023 04 06 1,5103,4/6/2023,GEMPABUMI,Kec. Petang,BADUNG,BALI,,,,1,,0
+9171 108 2023 02 09 1,9171,2/9/2023,GEMPABUMI,1 km BaratDaya JAYAPURA-P A P U A 6 km Tenggara KOTA-JAYAPURA-P A P U A 28 km Tenggara KAB-JAYAPURA-P A P U A 83 km Barat Laut KEEROM-P A P U A 3780 km TimurLaut JAKARTA-INDONESIA,KOTA JAYAPURA,P A P U A,4,,5,169,,77
+3202 108 2023 02 07 1,3202,2/7/2023,GEMPABUMI,Prov. Banten 66 km Tenggara MUARABINUANGEUN-BANTEN 69 km BaratDaya BAYAH-BANTEN 89 km BaratDaya KAB-SUKABUMI-JABAR 150 km BaratDaya SERANG-BANTEN 174 km BaratDaya JAKARTA-INDONESIA,SUKABUMI,JAWA BARAT,,,1,0,,1
+3205 108 2023 02 01 1,3205,2/1/2023,GEMPABUMI,Kec. Samarang Ds. Samarang Ds. Cisarua Ds. Sukakarya Ds. Tanjung Karya Ds. Sukarasa Ds. Parakan Kec. Pasirwangi  Ds. Barusari Ds. Talaga Ds. Karyamekar Ds. Padamulya Ds. Pasirwangi Ds. Sarimukti Ds. Padawaas,GARUT,JAWA BARAT,,,1,623,,11
+3204 108 2023 01 028 1,3204,1/28/2023,GEMPABUMI,23 km Tenggara KAB-BANDUNG-JABAR Kec. Pangalengan Kec. Kertasari  Ds. Tarumajaya,BANDUNG,JAWA BARAT,,,,48,,3
+3203 108 2023 01 024 1,3203,1/24/2023,GEMPABUMI,KEC.CUGENANG Desa Cijedil Desa Sukamanah Dsa Sarampad Desa Cibulakan Desa Padaluyu KEC. PACET Desa Ciputri,CIANJUR,JAWA BARAT,,,,0,,0
+8207 108 2023 01 018 1,8207,1/18/2023,GEMPABUMI,●Kekuatan         : 7.1 SR ●Tanggal           : 18-Jan-2023 ●Waktu Gempa  : 13:06:14 WIB ●Lintang            : 2.80 LU ●Bujur               : 127.11 BT ●Kedalaman       : 64 Km,PULAU MOROTAI,MALUKU UTARA,,,,8,,0
+8203 108 2023 01 018 1,8203,1/18/2023,GEMPABUMI,●Kekuatan         : 7.1 SR ●Tanggal           : 18-Jan-2023 ●Waktu Gempa  : 13:06:14 WIB ●Lintang            : 2.80 LU ●Bujur               : 127.11 BT ●Kedalaman       : 64 Km,HALMAHERA UTARA,MALUKU UTARA,,,,1,,0
+3201 108 2023 01 015 1,3201,1/15/2023,GEMPABUMI,Kec. Caringin Ds. Ciderem,BOGOR,JAWA BARAT,,,,1,,0
+1704 108 2023 01 014 1,1704,1/14/2023,GEMPABUMI,"Lokasi di laut pada jarak 55 Km Barat Daya Kaur-Bengkulu, Waktu gempa : 05:41:00 Wib, Lintang: 5.14 LS, Bujur 102.99 BT Kedalaman 18 Km",KAUR,BENGKULU,,,,1,,0
+8103 108 2023 01 010 1,8103,1/10/2023,GEMPABUMI,Lokasi : 1 148 km Barat Laut MALUKU TENGGARA BARAT 283 km Timur Laut MALUKU BIRTHDAY 333 km Barat Daya MALUKUTENGGARA 456 km Tenggara AMBON-MALUKU 2597 km Tenggara JAKARTA-INDONESIA Lokasi : 2       197 km Barat Laut MALUKU TENGGARA BARAT 278 km Barat Daya MALUKUTENGGARA 281 km Barat Daya TUAL-MALUKU 394 km Tenggara AMBON-MALUKU 2615 km Tenggara JAKARTA-INDONESIA,KEPULAUAN TANIMBAR,MALUKU,,,11,697,,73
+5302 108 2023 01 010 1,5302,1/10/2023,GEMPABUMI,Kec. Kie,TIMOR TENGAH SELATAN,NUSA TENGGARA TIMUR,,,,17,,0
+8108 108 2023 01 010 1,8108,1/10/2023,GEMPABUMI,Lokasi : 1 148 km Barat Laut MALUKU TENGGARA BARAT 283 km Timur Laut MALUKU BIRTHDAY 333 km Barat Daya MALUKUTENGGARA 456 km Tenggara AMBON-MALUKU 2597 km Tenggara JAKARTA-INDONESIA Lokasi : 2       197 km Barat Laut MALUKU TENGGARA BARAT 278 km Barat Daya MALUKUTENGGARA 281 km Barat Daya TUAL-MALUKU 394 km Tenggara AMBON-MALUKU 2615 km Tenggara JAKARTA-INDONESIA,MALUKU BARAT DAYA,MALUKU,,,7,197,,23
+9171 108 2023 01 02 1,9171,1/2/2023,GEMPABUMI,,KOTA JAYAPURA,P A P U A,,,,2,,9
+3208 108 2022 012 022 1,3208,12/22/2022,GEMPABUMI,Kec. Cipicung Luragung Desa Susukan,KUNINGAN,JAWA BARAT,,,,1,,0
+5107 108 2022 012 013 1,5107,12/13/2022,GEMPABUMI,Kec. Kubu Kec. Manggis Kec. Karangasem Kec. Abang Kec. Rendang Kec. Bebandem,KARANGASEM,BALI,,,8,177,,46
+3201 108 2022 012 08 1,3201,12/8/2022,GEMPABUMI,Kec. Cigombong Ds. Tugu Jaya,BOGOR,JAWA BARAT,,,,0,,0
+3202 108 2022 012 08 1,3202,12/8/2022,GEMPABUMI,Kec. Ciambar Kec. Nagrak Kec. Parakansalak Kec. Simpenan Kec. Parungkuda Kec. Sukalarang Kec. Kalibunder Kec. Sukaraja Kec. Ciemas Kec. Nyalindung,SUKABUMI,JAWA BARAT,,,,42,,2
+3201 108 2022 012 03 1,3201,12/3/2022,GEMPABUMI,Kec. Caringin Ds. Pancawati,BOGOR,JAWA BARAT,,,,6,,0
+3205 108 2022 012 03 1,3205,12/3/2022,GEMPABUMI,Kec. Pakenjeng Ds. Tanjungya Ds. Jatiwangi Kec. Cikelet Ds. Cigadog Kec. Selaawi Ds. Putrajawa  Kec. Telengong  Ds. Sukalaksana Ds. Sukamulya,GARUT,JAWA BARAT,,,1,10,,0
+3512 108 2022 011 023 1,3512,11/23/2022,GEMPABUMI,"Lokasi :7.81 LS,113.59 BT 14 km Timur Laut Kab. Probolinggo - Jawa Timur",SITUBONDO,JAWA TIMUR,,,,10,,1
+3204 108 2022 011 021 1,3204,11/21/2022,GEMPABUMI,,BANDUNG,JAWA BARAT,,,1,1,,0
+3203 108 2022 011 021 1,3203,11/21/2022,GEMPABUMI,Kec. Cilaku  Ds. Rancagoong Kec. Cianjur Ds. Limbangansari Kec. Cugenang Ds. Cijedil Kec. Karang Tengah Kec. Warung Kondang Kec. Gekbrong Kec. Cibeber Kec. Sukaluyu Kec. Sukaresmi Kec. Pacet Kec. Bojong Picung Kec. Cikalong Kulon  Kec. Mande Kec. Cipanas Kec. Haurwangi Kec. Ciranjang,CIANJUR,JAWA BARAT,602,8,7810,56278,,1021
+3272 108 2022 011 021 1,3272,11/21/2022,GEMPABUMI,,KOTA SUKABUMI,JAWA BARAT,,,,17,,1
+3201 108 2022 011 021 1,3201,11/21/2022,GEMPABUMI,,BOGOR,JAWA BARAT,,,2,63,,0
+3202 108 2022 011 021 1,3202,11/21/2022,GEMPABUMI,,SUKABUMI,JAWA BARAT,,,11,978,,0
+3602 108 2022 010 09 1,3602,10/9/2022,GEMPABUMI,26 km BaratDaya BAYAH-BANTEN 36 km Tenggara MUARABINUANGEUN-BANTEN 53 km BaratDaya KAB-SUKABUMI-JABAR 109 km BaratDaya SERANG-BANTEN 131 km BaratDaya JAKARTA-Indonesia,LEBAK,BANTEN,,,,4,,0
+3202 108 2022 010 09 1,3202,10/9/2022,GEMPABUMI,Kec. Jampangkulon Ds. Cikarang Kec. Ciemas Ds. Ciwaru Kec. Nagrak Ds. Girijaya Ds. Kalaparea,SUKABUMI,JAWA BARAT,,,,5,,0
+3201 108 2022 010 09 1,3201,10/9/2022,GEMPABUMI,Kec. Megamendung Ds. Sukakarya Kec. Leuwiliang Ds. Karacak Kec. Caringin  Ds. Pancawati,BOGOR,JAWA BARAT,,,,5,,0
+1204 108 2022 010 01 1,1201,10/1/2022,GEMPABUMI,,TAPANULI TENGAH,SUMATERA UTARA,,,,0,,0
+1215 108 2022 010 01 1,1216,10/1/2022,GEMPABUMI,,HUMBANG HASUNDUTAN,SUMATERA UTARA,,,,0,,0
+1205 108 2022 010 01 1,1202,10/1/2022,GEMPABUMI,Kec. Tarutung Ds. Sosunggulon Ds. Parbaju Toruan Ds. Siraja Oloan Ds. Hapoltahan Ds. Parbaju Julu Ds. Siandorandor Ds. Hutatoruan V Ds. Hutatoruan X Ds. Parbubu Pea Ds. Hutatoruan VII Ds. Parbubu Dolok Ds. Partali Julu Ds. Hutatoruan XI Ds. Simamora  Kec. Sipoholon Ds. Situmeang Habinsaran Ds. Hutauruk Ds. Hutaraja Ds. Hutaraja Hasundutan Ds. Situmeang Hasundutan Ds. Pagar Batu Ds. Sipahutar Ds. Rurajulu Toruan Ds. Rurajulu Dolok Ds. Simanungkalit Ds. Hutaraja Simanungkalit Ds. Tapian Nauli Ds. Lobusingkam Ds. Hutauruk Hasundutan  Kec. Siatas Barita Ds. Pansurnapitu Ds. Sitompul Ds. Sangkaran Ds. Lumban Siagian Jae Ds. Lumban Siagian Julu Ds. Simorangkir Habinsaran Ds. Enda Portibi Ds. Simorangkir Julu Ds. Siraja Hutagalung Ds. Lobu Hole Ds. Sidagal  Kec. Parmonangan  Kec. Pagaran Ds. Banua Luhu Ds. Sipultak Ds. Pagaran 1 Sibaragas Ds. Parhorboan Ds. Dolok Saribu Ds. Lumban Silintong Ds. Lumban Inaina Ds. Simamora Hasibuan Ds. Hasibuan Ds. Lubis Ds. Strat Lapo Ds. Sibirik Ds. Onan Simbara Ds. Sosor Sitamba Ds. Peatingko 1 Ds. Sosor Talun Ds. Simpang Tolu Ds. Peatingko 2 Ds. Hutagurgur Ds. Naga Timbul Sipultak Ds. Matanggor Ds. Bahal Bagot  Kec. Pahae Jae Ds. Sitoluompu Ds. Pasar Sarulla  Kec. Siborongborong Ds. Sitabo-tabo Ds. Pabiaran Ds. Pariksabungan  Kec. Pahae Julu Ds. Lontung Dolok Ds. Lumbah Garaga Kec. Sipahutar Ds. Sipahutar,TAPANULI UTARA,SUMATERA UTARA,1,,24,1790,,144
+1206 108 2022 010 01 1,1212,10/1/2022,GEMPABUMI,,TOBA,SUMATERA UTARA,,,,0,,0
+1312 108 2022 09 028 1,1312,9/28/2022,GEMPABUMI,Kec. Talamau 0.17 LU dan 99.86 BT 12 KM Timur Laut Pasaman Barat,PASAMAN BARAT,SUMATERA BARAT,,,1,0,,0
+1301 108 2022 09 011 1,1309,9/11/2022,GEMPABUMI,147 Km BaratLaut KEP-MENTAWAI-SUMBAR 150 Km BaratLaut TUAPEJAT-SUMBAR 188 Km BaratDaya PARIAMAN-SUMBAR 233 Km BaratDaya PADANG-SUMBAR 1075 Km BaratLaut,KEPULAUAN MENTAWAI,SUMATERA BARAT,,,3,13,,12
+9428 108 2022 09 08 1,9120,9/8/2022,GEMPABUMI,Distrik Megambilis Desa Tariko Desa Taria Desa Megambilis Desa Higisam  Desa Homasamm,MAMBERAMO RAYA,PAPUA,,,,0,,0
+1301 108 2022 08 029 1,1309,8/29/2022,GEMPABUMI,156 Km Barat Laut Kep. Mentawai Kec. Siberut Barat Ds. Simalegi Ds. Betaet Ds. Simatalu Kec. Sipora Utara,KEPULAUAN MENTAWAI,SUMATERA BARAT,,,,0,,5
+1813 108 2022 08 023 1,1813,8/23/2022,GEMPABUMI,Lokasi : 64 km BaratDaya KAUR-BENGKULU  76 km TimurLaut ENGGANO-BENGKULU  85 km Tenggara BENGKULUSELATAN 176 km Tenggara BENGKULU-BENGKULU 443 km BaratLaut JAKARTA-INDONESIA,PESISIR BARAT,LAMPUNG,,,,2,,0
+1704 108 2022 08 023 1,1704,8/23/2022,GEMPABUMI,Lokasi : 64 km BaratDaya KAUR-BENGKULU  76 km TimurLaut ENGGANO-BENGKULU  85 km Tenggara BENGKULUSELATAN 176 km Tenggara BENGKULU-BENGKULU 443 km BaratLaut JAKARTA-INDONESIA,KAUR,BENGKULU,,,1,1,,1
+5202 108 2022 08 022 1,5202,8/22/2022,GEMPABUMI,Kekuatan          : 5.8 SR Tanggal           : 22-Aug-2022 Waktu Gempa       : 15:36:33 WIB Lintang           : 9.36 LS Bujur             : 115.59 BT Kedalaman         : 124 Km Keterangan : ●Pusat Gempa berada di laut dan tidak berpotensi Tsunami (BMKG) 74 km Tenggara KUTASELATAN-BALI 87 km Tenggara DENPASAR-BALI 93 km Tenggara KLUNGKUNG-BALI 95 km Tenggara GIANYAR-BALI 1036 km Tenggara JAKARTA-INDONESIA,LOMBOK TENGAH,NUSA TENGGARA BARAT,,,1,1,,0
+5103 108 2022 08 022 1,5103,8/22/2022,GEMPABUMI,Lokasi : 74 km Tenggara KUTASELATAN-BALI 87 km Tenggara DENPASAR-BALI 93 km Tenggara KLUNGKUNG-BALI 95 km Tenggara GIANYAR-BALI 1036 km Tenggara JAKARTA-INDONESIA,BADUNG,BALI,,,,3,,0
+5107 108 2022 07 029 1,5107,7/29/2022,GEMPABUMI,Kec. Kubu Ds. Tianyar Barat Ds. Tianyar Jarak 15 km barat laut Karangasem,KARANGASEM,BALI,,,,52,,8
+3508 108 2022 07 09 1,3508,7/9/2022,GEMPABUMI,163 Km Barat Daya Lumajang,LUMAJANG,JAWA TIMUR,,,,0,,0
+7604 108 2022 06 08 1,7602,6/8/2022,GEMPABUMI,Kec. Simboro Kel. Sese Dsn. Salunangka Kec. Mamuju Kec. Tapalang Kec. Tapalang Barat Kec. Kalukku,MAMUJU,SULAWESI BARAT,,,23,70,,11
+7601 108 2022 06 08 1,7605,6/8/2022,GEMPABUMI,Kec. Malunda Ds. Lombong Kec. Ulumanda  Ds. Sulai Ds. Salutambung Kec. Tubo Sendan,MAJENE,SULAWESI BARAT,,,,0,,0
+8108 108 2022 05 027 1,8108,5/27/2022,GEMPABUMI,85 km BaratDaya MALUKUBRTDAYA 261 km TimurLaut BELU-NTT 273 km TimurLaut MALAKA-NTT 434 km TimurLaut KUPANG-NTT 2280 km Tenggara JAKARTA-INDONESIA,MALUKU BARAT DAYA,MALUKU,,,,1,,1
+8205 108 2022 04 018 1,8203,4/18/2022,GEMPABUMI,26 km Barat Laut TOBELO Kec. Galela Barat Ds. Ngidiho Ds. Dokulamo Ds. Duma Ds. Kira Kec. Galela Ds. Towara Ds. Baratu Ds. Simau Ds. Soasio Ds. Pune Kec. Galela Selatan Ds. Makele Ds. Gotalamo Ds. Igobula Ds. Roko Ds. Seki Ds. Barataku Ds. Toweka,HALMAHERA UTARA,MALUKU UTARA,,,2,233,,6
+3202 108 2022 04 01 1,3202,4/1/2022,GEMPABUMI,35 km BaratDaya BAYAH-BANTEN          37 km Tenggara MUARABINUANGEUN-BANTEN          62 km BaratDaya KAB-SUKABUMI-JABAR          115 km BaratDaya SERANG-BANTEN,SUKABUMI,JAWA BARAT,,,,2,,0
+7301 108 2022 03 026 1,7301,3/26/2022,GEMPABUMI,Kec. Pasilambena  209 km Barat Daya SELAYAR-SULSEL,SELAYAR,SULAWESI SELATAN,,,,0,,0
+7403 108 2022 03 026 1,7402,3/26/2022,GEMPABUMI,Lokasi : 27 km TimurLaut KENDARI-SULTRA          43 km BaratLaut KONAWE-KEP-SULTRA          71 km TimurLaut KONAWE-SULTRA          77 km Tenggara KONAWEUTARA-SULTRA          1781 km TimurLaut JAKARTA-INDONESIA,KONAWE,SULAWESI TENGGARA,,,,2,,0
+8106 108 2022 03 024 1,8106,3/24/2022,GEMPABUMI,12 km Tenggara Karaitu Kota Ambon,SERAM BAGIAN BARAT,MALUKU,,,,0,,0
+1214 108 2022 03 014 1,1214,3/14/2022,GEMPABUMI,Kab. Nias Selatan 6.9 SR 161 km Tenggara NIAS SELATAN - SUMUT  Gempa Susulan 6.0 SR 154 km Tenggara NIAS SELATAN - SUMUT  Gempa Susulan  5.4 SR 149 km Tenggara NIAS SELATAN-SUMUT,NIAS SELATAN,SUMATERA UTARA,,,1,2,,0
+1312 108 2022 02 025 1,1312,2/25/2022,GEMPABUMI,18 km TimurLaut PASAMANBARAT-SUMBAR 19 km Barat PASAMAN-SUMBAR 50 km BaratLaut AGAM-SUMBAR 140 km BaratLaut PADANG-SUMBAR 1033 km BaratLaut JAKARTA-INDONESIA,PASAMAN BARAT,SUMATERA BARAT,13,,381,2993,,175
+1307 108 2022 02 025 1,1306,2/25/2022,GEMPABUMI,18 km TimurLaut PASAMANBARAT-SUMBAR 19 km Barat PASAMAN-SUMBAR 50 km BaratLaut AGAM-SUMBAR 140 km BaratLaut PADANG-SUMBAR 1033 km BaratLaut JAKARTA-INDONESIA,AGAM,SUMATERA BARAT,,,1,1,,0
+1309 108 2022 02 025 1,1308,2/25/2022,GEMPABUMI,18 km TimurLaut PASAMANBARAT-SUMBAR 19 km Barat PASAMAN-SUMBAR 50 km BaratLaut AGAM-SUMBAR 140 km BaratLaut PADANG-SUMBAR 1033 km BaratLaut JAKARTA-INDONESIA,PASAMAN,SUMATERA BARAT,14,,75,2442,,182
+1308 108 2022 02 025 1,1307,2/25/2022,GEMPABUMI,18 km TimurLaut PASAMANBARAT-SUMBAR 19 km Barat PASAMAN-SUMBAR 50 km BaratLaut AGAM-SUMBAR 140 km BaratLaut PADANG-SUMBAR 1033 km BaratLaut JAKARTA-INDONESIA,LIMA PULUH KOTA,SUMATERA BARAT,,,,27,,2
+1306 108 2022 02 025 1,1305,2/25/2022,GEMPABUMI,18 km TimurLaut PASAMANBARAT-SUMBAR 19 km Barat PASAMAN-SUMBAR 50 km BaratLaut AGAM-SUMBAR 140 km BaratLaut PADANG-SUMBAR 1033 km BaratLaut JAKARTA-INDONESIA,PADANG PARIAMAN,SUMATERA BARAT,,,,1,,0
+7104 108 2022 01 022 1,7104,1/22/2022,GEMPABUMI,,KEPULAUAN TALAUD,SULAWESI UTARA,,,,10,,0
+3603 108 2022 01 014 1,3603,1/14/2022,GEMPABUMI,,TANGERANG,BANTEN,,,,3,,0
+3201 108 2022 01 014 1,3201,1/14/2022,GEMPABUMI,,BOGOR,JAWA BARAT,,,,35,,0
+3604 108 2022 01 014 1,3604,1/14/2022,GEMPABUMI,,SERANG,BANTEN,,,,15,,0
+3602 108 2022 01 014 1,3602,1/14/2022,GEMPABUMI,,LEBAK,BANTEN,,,2,282,,27
+3601 108 2022 01 014 1,3601,1/14/2022,GEMPABUMI,,PANDEGLANG,BANTEN,,,10,2865,,144
+3202 108 2022 01 014 1,3202,1/14/2022,GEMPABUMI,,SUKABUMI,JAWA BARAT,,,,9,,0
+8205 108 2022 01 010 1,8203,1/10/2022,GEMPABUMI,Kec. Tobelo Barat Ds. Kusuri Ds. Wangongira Kec. Kao Barat Ds. Sukamaju Ds. Hero Ino Ds. Gagaapok Ds. Tolabit Ds. Sidomulyo Ds. Takimo Ds. Toboulamo Ds. Soamaetek Ds. Pitago Ds. Kai Ds. Bailengit Ds. Soa Hukum Ds. Tuguis Ds. Beringin Agung Ds. Parseba,HALMAHERA UTARA,MALUKU UTARA,,,2,194,,8
+8108 108 2021 012 30 1,8108,12/30/2021,GEMPABUMI,45 km BaratLaut MALUKUBRTDAYA 342 km TimurLaut BELU-NTT 350 km TimurLaut ALOR-NTT 459 km BaratDaya AMBON-MALUKU 2321 km Tenggara JAKARTA-INDONESIA,MALUKU BARAT DAYA,MALUKU,0,0,0,12,0,0
+3509 108 2021 012 16 1,3509,12/16/2021,GEMPABUMI,Kec.Ambulu Desa Ambulu  Desa Sumberejo  Desa Andongsari Desa Sabrang Kec.Tempurejo Desa Wonoasri Desa Pondokrejo  Desa Curahnongko Desa Sidodadi Kec.Silo Desa Sidomulyo Kec.Puger Desa Jambearum Kec. Wuluhan Desa Dukuhdempok Desa Kesilir Desa Lojejer Desa Tanjungrejo,JEMBER,JAWA TIMUR,0,0,8,50,0,5
+8108 108 2021 012 16 1,8108,12/16/2021,GEMPABUMI,Kec. Damer Ds. Kehli Ds. Ilih Dsn. Bebar Barat,MALUKU BARAT DAYA,MALUKU,0,0,0,7,0,1
+5313 108 2021 012 14 1,5310,12/14/2021,GEMPABUMI,Kab. Flores Timur Kab. Sikka Kab. Lembata Kab. Manggarai  Kab. Nagekeo Kab. Kep. Selayar  Kab. Wakatobi Kab. Sabu Raijua Kab. Manggarai Barat Kab. Ende Kab. Ngada,MANGGARAI,NUSA TENGGARA TIMUR,0,0,1,0,0,0
+5310 108 2021 012 14 1,5307,12/14/2021,GEMPABUMI,Kab. Flores Timur Kab. Sikka Kab. Lembata Kab. Manggarai  Kab. Nagekeo Kab. Kep. Selayar  Kab. Wakatobi Kab. Sabu Raijua Kab. Manggarai Barat Kab. Ende Kab. Ngada,SIKKA,NUSA TENGGARA TIMUR,0,0,0,0,0,0
+5309 108 2021 012 14 1,5306,12/14/2021,GEMPABUMI,,FLORES TIMUR,NUSA TENGGARA TIMUR,0,0,0,8,0,0
+7301 108 2021 012 14 1,7301,12/14/2021,GEMPABUMI,Prov. Sulawesi Selatan  Kota Makassar Kab. Selayar Kec. Pasilambena Desa Kalaotoa Desa Pulo Madu Desa Karumpa   Desa Lembang Matene Kec. Takabonerate Kec. Pasimarannu Kab. Bulukumba Kec. Gantarang Kec. Ujung bulu Kec. Ujung loe Kec. Bonto bahari Kec. Bontotiro Kec. Herlang Kec. Kajang Kec. Kindang,SELAYAR,SULAWESI SELATAN,0,0,97,595,0,2
+8108 108 2021 012 11 1,8108,12/11/2021,GEMPABUMI,163 KM Timur laut Kec. Damer Ds. Ilih  Ds. Bebar Timur Ds. Bebar Barat Ds. Kumur,MALUKU BARAT DAYA,MALUKU,0,0,0,34,0,5
+8103 108 2021 011 4 1,8101,11/4/2021,GEMPABUMI,69 km TimurLaut MALUKUTENGAH,MALUKU TENGAH,MALUKU,0,0,0,42,0,4
+3322 108 2021 010 23 1,3322,10/23/2021,GEMPABUMI,13 Km Barat Laut Kota Salatiga 3 Km Timur Ambarawa 14 Km Timur Laut Temanggung 45 Barat Laut Surakarta Kec. Ambarawa Kec. Jambu,SEMARANG,JAWA TENGAH,0,0,0,39,0,0
+3505 108 2021 010 22 1,3505,10/22/2021,GEMPABUMI,• 78 km BaratDaya KAB-MALANG-JATIM,BLITAR,JAWA TIMUR,0,0,0,1,0,4
+5108 108 2021 010 16 1,5108,10/16/2021,GEMPABUMI,TEJAKULA,BULELENG,BALI,0,0,0,4,0,0
+5107 108 2021 010 16 1,5107,10/16/2021,GEMPABUMI,"Kec. Kubu, Ds. Ban, Ds. Dukuh - Kec. Rendang, Ds. Rendang, Ds. Pempatan - Kec. Bebandem, Ds. Jungutan - Kec. Selat, Ds. Amerta Buana",KARANGASEM,BALI,1,0,126,1236,0,573
+5106 108 2021 010 16 1,5106,10/16/2021,GEMPABUMI,"Kec. Bangli, Kintamani, Tembuku, Susut",BANGLI,BALI,0,0,0,217,0,0
+3329 108 2021 09 28 1,3329,9/28/2021,GEMPABUMI,"Desa Dawuhan dan Desa Sridadi, Kecamatan Sirampog",BREBES,JAWA TENGAH,0,0,0,22,0,0
+7209 108 2021 08 26 1,7209,8/26/2021,GEMPABUMI,"Kec. Ampana Tete, Ds. Pusungi ● Kec. Ratolindo, Kel. Uentanaga Atas, Kel. Muara Toba, Kel. Dondo Barat ● Kec. Ampana Kota, Kel. Bailo, Kel. Ampana, Kel. Labiabae",TOJO UNA-UNA,SULAWESI TENGAH,1,0,2,77,0,3
+7209 108 2021 07 26 1,7209,7/26/2021,GEMPABUMI,59 km TimurLaut TOJOUNA-UNA-SULTENG,TOJO UNA-UNA,SULAWESI TENGAH,0,0,0,9,0,0
+7202 108 2021 07 26 1,7201,7/26/2021,GEMPABUMI,59 km TimurLaut TOJOUNA-UNA-SULTENG,BANGGAI,SULAWESI TENGAH,0,0,0,6,0,4
+7603 108 2021 07 22 1,7603,7/22/2021,GEMPABUMI,Kec. Mamasa,MAMASA,SULAWESI BARAT,0,0,0,5,0,0
+3402 108 2021 06 28 1,3402,6/28/2021,GEMPABUMI,"8.49 LS,110.59 BT (55 km BaratDaya GUNUNGKIDUL-DIY), Kedlmn:48 Km",BANTUL,DI YOGYAKARTA,0,0,0,3,0,0
+3403 108 2021 06 28 1,3403,6/28/2021,GEMPABUMI,"8.49 LS,110.59 BT (55 km BaratDaya GUNUNGKIDUL-DIY), Kedlmn:48 Km",GUNUNGKIDUL,DI YOGYAKARTA,0,0,0,14,0,0
+8107 108 2021 06 16 1,8105,6/16/2021,GEMPABUMI,,SERAM BAGIAN TIMUR,MALUKU,0,0,0,0,0,0
+8171 108 2021 06 16 1,8171,6/16/2021,GEMPABUMI,,KOTA AMBON,MALUKU,0,0,0,0,0,0
+8106 108 2021 06 16 1,8106,6/16/2021,GEMPABUMI,Kec. Kai Ratu,SERAM BAGIAN BARAT,MALUKU,0,0,0,0,0,0
+8103 108 2021 06 16 1,8101,6/16/2021,GEMPABUMI,Kec. Tehoru.,MALUKU TENGAH,MALUKU,0,0,0,102,0,4
+3509 108 2021 05 21 1,3509,5/21/2021,GEMPABUMI,Lokasi :   • 57 km Tenggara Kab. Blitar • 60 km BaratDaya KAB-MALANG-JATIM • 62 km Tenggara KOTA-BLITAR-JATIM • 159 km BaratDaya SURABAYA-JATIM • 671 km Tenggara JAKARTA-INDONESIA,JEMBER,JAWA TIMUR,0,0,0,0,0,1
+3507 108 2021 05 21 1,3507,5/21/2021,GEMPABUMI,Lokasi :   • 57 km Tenggara Kab. Blitar • 60 km BaratDaya KAB-MALANG-JATIM • 62 km Tenggara KOTA-BLITAR-JATIM • 159 km BaratDaya SURABAYA-JATIM • 671 km Tenggara JAKARTA-INDONESIA,MALANG,JAWA TIMUR,0,0,1,616,0,20
+3506 108 2021 05 21 1,3506,5/21/2021,GEMPABUMI,Lokasi :   • 57 km Tenggara Kab. Blitar • 60 km BaratDaya KAB-MALANG-JATIM • 62 km Tenggara KOTA-BLITAR-JATIM • 159 km BaratDaya SURABAYA-JATIM • 671 km Tenggara JAKARTA-INDONESIA,KEDIRI,JAWA TIMUR,0,0,0,3,0,0
+3508 108 2021 05 21 1,3508,5/21/2021,GEMPABUMI,Lokasi :   • 57 km Tenggara Kab. Blitar • 60 km BaratDaya KAB-MALANG-JATIM • 62 km Tenggara KOTA-BLITAR-JATIM • 159 km BaratDaya SURABAYA-JATIM • 671 km Tenggara JAKARTA-INDONESIA,LUMAJANG,JAWA TIMUR,0,0,0,85,0,0
+3573 108 2021 05 21 1,3573,5/21/2021,GEMPABUMI,Lokasi :   • 57 km Tenggara Kab. Blitar • 60 km BaratDaya KAB-MALANG-JATIM • 62 km Tenggara KOTA-BLITAR-JATIM • 159 km BaratDaya SURABAYA-JATIM • 671 km Tenggara JAKARTA-INDONESIA,KOTA MALANG,JAWA TIMUR,0,0,0,1,0,0
+3572 108 2021 05 21 1,3572,5/21/2021,GEMPABUMI,Lokasi :   • 57 km Tenggara Kab. Blitar • 60 km BaratDaya KAB-MALANG-JATIM • 62 km Tenggara KOTA-BLITAR-JATIM • 159 km BaratDaya SURABAYA-JATIM • 671 km Tenggara JAKARTA-INDONESIA,KOTA BLITAR,JAWA TIMUR,0,0,0,13,0,0
+3514 108 2021 05 21 1,3514,5/21/2021,GEMPABUMI,Lokasi :   • 57 km Tenggara Kab. Blitar • 60 km BaratDaya KAB-MALANG-JATIM • 62 km Tenggara KOTA-BLITAR-JATIM • 159 km BaratDaya SURABAYA-JATIM • 671 km Tenggara JAKARTA-INDONESIA,PASURUAN,JAWA TIMUR,0,0,0,92,0,3
+3505 108 2021 05 21 1,3505,5/21/2021,GEMPABUMI,Lokasi :   • 57 km Tenggara Kab. Blitar • 60 km BaratDaya KAB-MALANG-JATIM • 62 km Tenggara KOTA-BLITAR-JATIM • 159 km BaratDaya SURABAYA-JATIM • 671 km Tenggara JAKARTA-INDONESIA,BLITAR,JAWA TIMUR,0,0,1,598,0,39
+3201 108 2021 04 27 1,3201,4/27/2021,GEMPABUMI,Kec. Cijeruk  Ds. Palasari,BOGOR,JAWA BARAT,0,0,0,7,0,0
+3202 108 2021 04 27 1,3202,4/27/2021,GEMPABUMI,Kec. Bantargadung Ds. Bantar Gadung,SUKABUMI,JAWA BARAT,0,0,0,2,0,0
+3514 108 2021 04 10 1,3514,4/10/2021,GEMPABUMI,101 KM BaratDaya Kab. Malang,PASURUAN,JAWA TIMUR,0,0,0,35,0,5
+3513 108 2021 04 10 1,3513,4/10/2021,GEMPABUMI,102 KM BaratDaya Kab. Malang,PROBOLINGGO,JAWA TIMUR,0,0,0,10,0,3
+3507 108 2021 04 10 1,3507,4/10/2021,GEMPABUMI,90 KM BaratDaya Kab. Malang,MALANG,JAWA TIMUR,4,0,80,11360,0,330
+3579 108 2021 04 10 1,3579,4/10/2021,GEMPABUMI,104 KM BaratDaya Kab. Malang,KOTA BATU,JAWA TIMUR,0,0,0,2,0,7
+3506 108 2021 04 10 1,3506,4/10/2021,GEMPABUMI,95 KM BaratDaya Kab. Malang,KEDIRI,JAWA TIMUR,0,0,0,1,0,0
+3508 108 2021 04 10 1,3508,4/10/2021,GEMPABUMI,94 KM BaratDaya Kab. Malang,LUMAJANG,JAWA TIMUR,6,0,16,3361,0,76
+3509 108 2021 04 10 1,3509,4/10/2021,GEMPABUMI,100 KM BaratDaya Kab. Malang,JEMBER,JAWA TIMUR,0,0,2,56,0,4
+3511 108 2021 04 10 1,3511,4/10/2021,GEMPABUMI,106 KM BaratDaya Kab. Malang,BONDOWOSO,JAWA TIMUR,0,0,0,2,0,0
+3510 108 2021 04 10 1,3510,4/10/2021,GEMPABUMI,99 KM BaratDaya Kab. Malang,BANYUWANGI,JAWA TIMUR,0,0,0,0,0,0
+3505 108 2021 04 10 1,3505,4/10/2021,GEMPABUMI,92 KM BaratDaya Kab. Malang,BLITAR,JAWA TIMUR,0,0,11,1423,0,131
+3502 108 2021 04 10 1,3502,4/10/2021,GEMPABUMI,103 KM BaratDaya Kab. Malang,PONOROGO,JAWA TIMUR,0,0,0,2,0,0
+3573 108 2021 04 10 1,3573,4/10/2021,GEMPABUMI,91 KM BaratDaya Kab. Malang,KOTA MALANG,JAWA TIMUR,0,0,2,7,0,1
+3572 108 2021 04 10 1,3572,4/10/2021,GEMPABUMI,93 KM BaratDaya Kab. Malang,KOTA BLITAR,JAWA TIMUR,0,0,2,42,0,16
+3518 108 2021 04 10 1,3518,4/10/2021,GEMPABUMI,105 KM BaratDaya Kab. Malang,NGANJUK,JAWA TIMUR,0,0,0,1,0,0
+3501 108 2021 04 10 1,3501,4/10/2021,GEMPABUMI,106 KM BaratDaya Kab. Malang,PACITAN,JAWA TIMUR,0,0,0,1,0,0
+3571 108 2021 04 10 1,3571,4/10/2021,GEMPABUMI,96 KM BaratDaya Kab. Malang,KOTA KEDIRI,JAWA TIMUR,0,0,0,1,0,3
+3503 108 2021 04 10 1,3503,4/10/2021,GEMPABUMI,97 KM BaratDaya Kab. Malang,TRENGGALEK,JAWA TIMUR,0,0,0,149,0,18
+3504 108 2021 04 10 1,3504,4/10/2021,GEMPABUMI,98 KM BaratDaya Kab. Malang,TULUNGAGUNG,JAWA TIMUR,0,0,2,75,0,12
+1301 108 2021 03 5 1,1309,3/5/2021,GEMPABUMI,Kec. Sipora Utara Kec. Sipora Selatan Kec. Siberut Barat Daya Kec. Siberut Selatan Kec. Siberut Barat Kec. Siberut Utara Kec. Siberut Tengah Kec. Sikakap Kec. Pagai Selatan Kec. Pagai Utara Kab. Pesisir Selatan,KEPULAUAN MENTAWAI,SUMATERA BARAT,0,0,0,0,0,1
+8204 108 2021 02 26 1,8204,2/26/2021,GEMPABUMI,11 Km TimurLaut LABUHA-MALUT 104 Km BaratDaya WEDA-MALUT 110 Km BaratLaut HALMAHERASELATAN-MALUT 148 Km Tenggara TERNATE-MALUT 2382 Km TimurLaut JAKARTA - INDONESIA,HALMAHERA SELATAN,MALUKU UTARA,0,0,10,890,0,16
+8105 108 2021 01 31 1,8107,1/31/2021,GEMPABUMI,73 km BaratLaut KEP.ARU,KEPULAUAN ARU,MALUKU,0,0,0,0,0,1
+7104 108 2021 01 21 1,7104,1/21/2021,GEMPABUMI,Kec. Tampan Amma Ds. Ganalo Kec. Melonguane Ds. Mala Kec. Beo Ds. Bantik Kec. Beo Utara Ds. Rae Kec. Essang Selatan Ds. Sambuara (134 km TimurLaut MELONGUANE-SULUT),KEPULAUAN TALAUD,SULAWESI UTARA,0,0,0,8,0,5
+7602 108 2021 01 15 1,7604,1/15/2021,GEMPABUMI,6 Km Timur Laut MAJENE 27 Km Tenggara MAMUJU-SULBAR 43 Km BaratDaya MAMASA-SULBAR 45 Km BaratLaut POLEWALIMANDAR-SULBAR,POLEWALI MANDAR,SULAWESI BARAT,0,0,0,0,0,0
+7604 108 2021 01 15 1,7602,1/15/2021,GEMPABUMI,6 km Timur Laut MAJENE  27 km Tenggara MAMUJU-SULBAR  43 km BaratDaya MAMASA-SULBAR  45 km BaratLaut POLEWALIMANDAR-SULBAR,MAMUJU,SULAWESI BARAT,96,0,0,11423,0,290
+7601 108 2021 01 15 1,7605,1/15/2021,GEMPABUMI,6 km Timur Laut MAJENE  27 km Tenggara MAMUJU-SULBAR  43 km BaratDaya MAMASA-SULBAR  45 km BaratLaut POLEWALIMANDAR-SULBAR,MAJENE,SULAWESI BARAT,11,3,11124,4099,0,182
+7603 108 2021 01 15 1,7603,1/15/2021,GEMPABUMI,"Kecamatan Tabulahan(Kel. Lakahang, Desa Burana, Desa Lakahang Utama, Desa Tampakkurra) Kecamatan Aralle(Desa Baruru, Desa Ralleanak, Desa Pamoseang Pangga, Desa Uhaidao, Kel. Aralle)",MAMASA,SULAWESI BARAT,0,0,0,574,0,0
+7606 108 2021 01 14 1,7606,1/14/2021,GEMPABUMI,DESA KUO KEC. PANGALE,MAMUJU TENGAH,SULAWESI BARAT,0,0,0,0,0,0
+7606 108 2021 01 14 1,7606,1/14/2021,GEMPABUMI,KEC. BUDONG-BUDONG DESA SALUGATTA,MAMUJU TENGAH,SULAWESI BARAT,0,0,0,0,0,0
+7606 108 2021 01 14 1,7606,1/14/2021,GEMPABUMI,DESA PANGLLOANG KEC. TOPOYO,MAMUJU TENGAH,SULAWESI BARAT,0,0,0,0,0,0
+3208 108 2020 012 011 1,3208,12/11/2020,GEMPABUMI,Kec. Cibingbin Ds. Cipondok,KUNINGAN,JAWA BARAT,0,0,0,23,0,2
+3203 108 2020 011 03 1,3203,11/3/2020,GEMPABUMI,KEC CIKALONG DESA PUTARAN,CIANJUR,JAWA BARAT,0,0,0,2,0,0
+7606 108 2020 010 028 1,7606,10/28/2020,GEMPABUMI,34 km BaratDaya  Kab. Mamuju Tengah Kec. Pangale Kec. Budong-budong,MAMUJU TENGAH,SULAWESI BARAT,0,0,1,13,0,0
+3207 108 2020 010 025 1,3207,10/25/2020,GEMPABUMI,(90 km BaratDaya KAB-PANGANDARAN-JABAR),CIAMIS,JAWA BARAT,0,0,2,25,0,0
+3205 108 2020 010 025 1,3205,10/25/2020,GEMPABUMI,(90 km BaratDaya KAB-PANGANDARAN-JABAR),GARUT,JAWA BARAT,0,0,0,1,0,0
+3278 108 2020 010 025 1,3278,10/25/2020,GEMPABUMI,(90 km BaratDaya KAB-PANGANDARAN-JABAR),KOTA TASIKMALAYA,JAWA BARAT,0,0,1,3,0,0
+3279 108 2020 010 025 1,3279,10/25/2020,GEMPABUMI,(90 km BaratDaya KAB-PANGANDARAN-JABAR),KOTA BANJAR,JAWA BARAT,0,0,3,39,0,0
+3206 108 2020 010 025 1,3206,10/25/2020,GEMPABUMI,(90 km BaratDaya KAB-PANGANDARAN-JABAR),TASIKMALAYA,JAWA BARAT,0,0,0,27,0,0
+3218 108 2020 010 025 1,3218,10/25/2020,GEMPABUMI,(90 km BaratDaya KAB-PANGANDARAN-JABAR),PANGANDARAN,JAWA BARAT,0,0,0,7,0,0
+7104 108 2020 09 09 1,7104,9/9/2020,GEMPABUMI,Kec. Pulutan Kec. Rainis Kec. Beo Kec. Beo selatan Kec. Melonguane Timur,KEPULAUAN TALAUD,SULAWESI UTARA,0,0,2,136,0,11
+3320 108 2020 07 07 1,3320,7/7/2020,GEMPABUMI,(53 km BaratLaut JEPARA-JATENG),JEPARA,JAWA TENGAH,0,0,0,1,0,0
+1172 108 2020 06 018 1,1172,6/18/2020,GEMPABUMI,,KOTA SABANG,ACEH,0,0,0,0,0,1
+5204 108 2020 06 013 1,5204,6/13/2020,GEMPABUMI,79 km Tenggara SUMBAWA-NTB 81 km BaratDaya DOMPU-NTB 110 km BaratDaya BIMA-NTB 206 km Tenggara MATARAM-NTB 1271 km Tenggara JAKARTA-INDONESIA,SUMBAWA,NUSA TENGGARA BARAT,0,0,0,0,0,0
+5205 108 2020 06 013 1,5205,6/13/2020,GEMPABUMI,79 km Tenggara SUMBAWA-NTB 81 km BaratDaya DOMPU-NTB 110 km BaratDaya BIMA-NTB 206 km Tenggara MATARAM-NTB 1271 km Tenggara JAKARTA-INDONESIA,DOMPU,NUSA TENGGARA BARAT,0,0,0,0,0,1
+8271 108 2020 06 04 1,8271,6/4/2020,GEMPABUMI,,KOTA TERNATE,MALUKU UTARA,0,0,0,0,0,0
+8205 108 2020 06 04 1,8203,6/4/2020,GEMPABUMI,,HALMAHERA UTARA,MALUKU UTARA,0,0,0,0,0,0
+8207 108 2020 06 04 1,8207,6/4/2020,GEMPABUMI,Kec. Morotai Selatan  Kec. Morotai Timur  Kec. Morotai Utara  Kec. Morotai Jaya  Kec. Morotai Selatan Barat Kec. Pulau Rao,PULAU MOROTAI,MALUKU UTARA,0,0,0,312,0,12
+1172 108 2020 06 04 1,1172,6/4/2020,GEMPABUMI,26 km Barat Laut Kota Sabang-Aceh 41 km Barat Laut Jantho-Aceh Besar,KOTA SABANG,ACEH,0,0,0,2,0,5
+8201 108 2020 06 04 1,8201,6/4/2020,GEMPABUMI,Kec. Jailolo,HALMAHERA BARAT,MALUKU UTARA,0,0,0,0,0,0
+1203 108 2020 04 030 1,1203,4/30/2020,GEMPABUMI,24 km BaratLaut PADANGLAWAS-SUMUT 33 km BaratLaut MANDAILINGNATAL-SUMUT 36 km Tenggara PADANGSIDEMPUAN-SUMUT,TAPANULI SELATAN,SUMATERA UTARA,0,0,0,4,0,3
+7210 108 2020 03 028 1,7210,3/28/2020,GEMPABUMI,Kec. Kulawi Selatan Ds. Gimpu Ds. OO Parese Ds. Tomua  (46 km Tenggara SIGI-SULTENG),SIGI,SULAWESI TENGAH,0,0,9,136,0,8
+9403 108 2020 03 026 1,9103,3/26/2020,GEMPABUMI,72 km BaratLaut KAB-JAYAPURA-PAPUA,JAYAPURA,PAPUA,0,0,0,0,0,0
+3207 108 2020 03 011 1,3207,3/11/2020,GEMPABUMI,KEC RANCAH KEL SITUMANDALA,CIAMIS,JAWA BARAT,0,0,0,1,0,0
+3202 108 2020 03 010 1,3202,3/10/2020,GEMPABUMI,(13 km TimurLaut KAB-SUKABUMI-JABAR) 1. Kecamatan Kabandungan a. Desa Kabandungan b. Desa Tugu Bandung c. Desa Cipeuteuy d. Desa Cihamerang e. Desa Mekarjaya f. Desa Cianaga 2. Kecamatan Warungkiara a. Desa Sukaharja 3. Kecematan Kalapanunggal a. Desa Makasari b. Desa Pulosari c. Desa Gunung Endut 4. Kecamatan Cidahu a. Desa Cidahu b. Desa Girijaya 5. Kecamatan Parakansalak a. Desa Sukakersa b. Desa Lebaksari c. Desa Sukatani 6. Kecamatan Cikidang a. Desa Mekarnangka b. Desa Gunung Malang,SUKABUMI,JAWA BARAT,0,0,12,1009,0,19
+3201 108 2020 03 010 1,3201,3/10/2020,GEMPABUMI,"(13 km TimurLaut KAB-SUKABUMI-JABAR) Kec. Pamijahan Ds. Ciasihan 1 Kp Gn Menir Rt 02,03,05/07,08 2 Kp Ciputri Rt 06/08  3 Kp Sindang Rasa Rt 02/06  4 Kp Raina Rt 05/08",BOGOR,JAWA BARAT,0,0,0,327,0,0
+8103 108 2020 02 08 1,8101,2/8/2020,GEMPABUMI,75 km BaratLaut SERAMBAGIANTIMUR-MALUKU 114 km TimurLaut MALUKUTENGAH 188 km TimurLaut SERAMBAGIANBARAT-MALUKU 208 km TimurLaut AMBON-MALUKU 2587 km TimurLaut JAKARTA-INDONESIA,MALUKU TENGAH,MALUKU,0,0,0,5,0,1
+1101 108 2020 01 022 1,1109,1/22/2020,GEMPABUMI,,SIMEULUE,ACEH,0,0,0,1,0,0
+1101 108 2020 01 07 1,1109,1/7/2020,GEMPABUMI,,SIMEULUE,ACEH,0,0,0,1,0,0
+,3202,12/26/2019,GEMPABUMI,121 km Tenggara KAB-SUKABUMI-JABAR,SUKABUMI,JAWA BARAT,,,,0,,1
+,8101,11/25/2019,GEMPABUMI,5 km Baratlaut Nusalaut-MALTENG,MALUKU TENGAH,MALUKU,,,1,0,,0
+,8271,11/14/2019,GEMPABUMI,134 km BaratLaut JAILOLO-MALUT 138 km BaratLaut HALMAHERABARAT-MALUT 143 km TimurLaut BITUNG-SULUT 146 km BaratLaut TERNATE-MALUT,KOTA TERNATE,MALUKU UTARA,,,2,39,,8
+,7102,11/14/2019,GEMPABUMI,134 km BaratLaut JAILOLO-MALUT 138 km BaratLaut HALMAHERABARAT-MALUT 143 km TimurLaut BITUNG-SULUT 146 km BaratLaut TERNATE-MALUT,MINAHASA,SULAWESI UTARA,,,,2,,0
+,8171,11/14/2019,GEMPABUMI,135 km BaratLaut JAILOLO-MALUT 138 km BaratLaut HALMAHERABARAT-MALUT 143 km TimurLaut BITUNG-SULUT 146 km BaratLaut TERNATE-MALUT,KOTA AMBON,MALUKU,,,,1,,2
+,7107,11/14/2019,GEMPABUMI,134 km BaratLaut JAILOLO-MALUT 138 km BaratLaut HALMAHERABARAT-MALUT 143 km TimurLaut BITUNG-SULUT 146 km BaratLaut TERNATE-MALUT,MINAHASA TENGGARA,SULAWESI UTARA,,,,0,,1
+,3508,11/13/2019,GEMPABUMI,Kec. Ranuyoso Ds. Sumberpatung Dsn. Gunung  Dsn. Berca Kenik,LUMAJANG,JAWA TIMUR,,,,9,,0
+,8101,11/12/2019,GEMPABUMI,25 Km TimurLaut AMBON-MALUKU 50 Km Tenggara SERAMBAGIANBARAT-MALUKU 70 Km BaratDaya MALUKUTENGAH 78 Km TimurLaut BURUSELATAN-MALUKU 2410 Km TimurLaut JAKARTA - INDONESIA,MALUKU TENGAH,MALUKU,,,1,29,,0
+,8171,11/12/2019,GEMPABUMI,25 Km TimurLaut AMBON-MALUKU 50 Km Tenggara SERAMBAGIANBARAT-MALUKU 70 Km BaratDaya MALUKUTENGAH 78 Km TimurLaut BURUSELATAN-MALUKU 2410 Km TimurLaut JAKARTA - INDONESIA,KOTA AMBON,MALUKU,1,,12,94,,3
+,8171,10/10/2019,GEMPABUMI,,KOTA AMBON,MALUKU,1,,8,19,,6
+,3202,10/1/2019,GEMPABUMI,Kec. Tamansari Ds. Tamansari,SUKABUMI,JAWA BARAT,,,,1,,0
+,8101,9/26/2019,GEMPABUMI,Kec. Haruku Ds. Pelau Kec. Salahutu Ds. Liang Kec. Leihitu Ds. Wakal,MALUKU TENGAH,MALUKU,18,,1150,9006,,421
+,8171,9/26/2019,GEMPABUMI,Kec. Leitimur Selatan Ds. Toisapu Kec. Sirimau Ds. Hative Kecil Kec. Baguala  Ds. Galala Ds. Waiheru Kel. Ridwan Pelu Kel. Amriya Kec. Nusaniwe Ds. Urimessing,KOTA AMBON,MALUKU,12,,56,1631,,161
+,8106,9/26/2019,GEMPABUMI,Kec. Kairatu Ds. Waisamu,SERAM BAGIAN BARAT,MALUKU,11,,396,1500,,158
+,3217,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,BANDUNG BARAT,JAWA BARAT,,,,6,,0
+,3301,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,CILACAP,JAWA TENGAH,,,,1,,0
+,3602,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,LEBAK,BANTEN,3,,,63,,5
+,3601,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,PANDEGLANG,BANTEN,2,,2,608,,39
+,3271,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,KOTA BOGOR,JAWA BARAT,,,,1,,0
+,3604,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,SERANG,BANTEN,,,,27,,2
+,3203,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,CIANJUR,JAWA BARAT,,,,31,,1
+,3201,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,BOGOR,JAWA BARAT,,,,32,,1
+,3672,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,KOTA CILEGON,BANTEN,,,,3,,1
+,3278,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,KOTA TASIKMALAYA,JAWA BARAT,,,,0,,1
+,3204,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,BANDUNG,JAWA BARAT,,,,2,,0
+,3205,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,GARUT,JAWA BARAT,,,,4,,0
+,1801,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,LAMPUNG SELATAN,LAMPUNG,,,,0,,0
+,3202,8/2/2019,GEMPABUMI,147 km BaratDaya SUMUR-BANTEN 164 km BaratDaya MUARABINUANGEUN-BANTEN 190 km BaratDaya LABUAN-BANTEN 237 km BaratDaya SERANG-BANTEN 292 km BaratDaya JAKARTA-INDONESIA,SUKABUMI,JAWA BARAT,2,,1,146,,10
+,5103,7/16/2019,GEMPABUMI,,BADUNG,BALI,,,3,0,,14
+,3509,7/16/2019,GEMPABUMI,,JEMBER,JAWA TIMUR,,,,1,,4
+,5108,7/16/2019,GEMPABUMI,,BULELENG,BALI,,,,2,,0
+,5171,7/16/2019,GEMPABUMI,,KOTA DENPASAR,BALI,,,,0,,1
+,3510,7/16/2019,GEMPABUMI,,BANYUWANGI,JAWA TIMUR,,,4,3,,5
+,5104,7/16/2019,GEMPABUMI,,GIANYAR,BALI,,,,2,,4
+,5101,7/16/2019,GEMPABUMI,,JEMBRANA,BALI,,,2,2,,2
+,8204,7/14/2019,GEMPABUMI,,HALMAHERA SELATAN,MALUKU UTARA,14,,121,2900,,350
+,5204,7/13/2019,GEMPABUMI,,SUMBAWA,NUSA TENGGARA BARAT,,,,1,,1
+,8204,7/11/2019,GEMPABUMI,19 km TimurLaut LABUHA-MALUT 101 km BaratDaya WEDA-MALUT Ds. Bori,HALMAHERA SELATAN,MALUKU UTARA,,,,0,,0
+,8108,6/24/2019,GEMPABUMI,245 km TimurLaut MALUKUBRTDAYA,MALUKU BARAT DAYA,MALUKU,,,,0,,1
+,9121,6/24/2019,GEMPABUMI,48 km Tenggara MAMBERAMOTENGAH-PAPUA,MAMBERAMO TENGAH,PAPUA,,,,0,,1
+,9110,6/20/2019,GEMPABUMI,Kab. Sarmi Distrik Sarmi Selatan Kp. Manukania Kp. Togonfo,SARMI,PAPUA,,,3,101,,16
+,9121,6/20/2019,GEMPABUMI,,MAMBERAMO TENGAH,PAPUA,,,,0,,0
+,3320,5/22/2019,GEMPABUMI,KEC MAYONG DESA PULE,JEPARA,JAWA TENGAH,,,,4,,1
+,7201,4/11/2019,GEMPABUMI,,BANGGAI,SULAWESI TENGAH,1,,2,43,,3
+,3529,4/2/2019,GEMPABUMI,Kec. Raas Pulau Raas Ds. Brakas Ds. Kropoh Ds. Tonduk Ds. Poteran,SUMENEP,JAWA TIMUR,,,1,97,,23
+,7202,3/24/2019,GEMPABUMI,Kec. Pamona Barat Ds. Uranosari Kec. Pamona Barat Ds. Toinasa,POSO,SULAWESI TENGAH,,,,0,,49
+,3278,3/21/2019,GEMPABUMI,Kec. Tamansari Kel. Tamansari,KOTA TASIKMALAYA,JAWA BARAT,,,,0,,1
+,1305,3/20/2019,GEMPABUMI,Kec. V Koto Timur Nagari Gunung Korong Sialang,PADANG PARIAMAN,SUMATERA BARAT,,,,15,,1
+,5208,3/17/2019,GEMPABUMI,,LOMBOK UTARA,NUSA TENGGARA BARAT,,,37,0,,0
+,5203,3/17/2019,GEMPABUMI,24 Km TimurLaut LOMBOKTIMUR-NTB 36 Km TimurLaut LOMBOKUTARA-NTB 37 Km BaratLaut P.PANJANG-NTB 63 Km TimurLaut MATARAM-NTB 1111 Km Tenggara JAKARTA - INDONESIA 7 Km BaratLaut LOMBOKTIMUR-NTB 27 Km Tenggara LOMBOKUTARA-NTB 31 Km TimurLaut LOMBOKTENGAH-NTB 43 Km TimurLaut MATARAM-NTB 1104 Km Tenggara JAKARTA - INDONESIA,LOMBOK TIMUR,NUSA TENGGARA BARAT,4,,40,4589,,56
+,1311,2/28/2019,GEMPABUMI,19 km BaratDaya Kabupaten SOLOK SELATAN-SUMBAR,SOLOK SELATAN,SUMATERA BARAT,,,62,480,,16
+,3205,2/11/2019,GEMPABUMI,Kec. Bungbulang Desa Mekarjaya,GARUT,JAWA BARAT,,,,0,,1
+,8207,2/7/2019,GEMPABUMI,PULAUMOROTAI-MALUT Kec. Morotai Utara Ds. Yao Kec. Morotai Timur Ds. Sangowo Barat Ds. Sangowo Induk Ds. Sangowo Timur,PULAU MOROTAI,MALUKU UTARA,,,,44,,2
+,1309,2/2/2019,GEMPABUMI,Ds. Malakopa Kec. Pagai Selatan,KEPULAUAN MENTAWAI,SUMATERA BARAT,,,,11,,2
+,8102,1/26/2019,GEMPABUMI,112 km BaratLaut KEP-ARU-MALUKU 118 km TimurLaut TUAL-MALUKU 123 km TimurLaut MALUKUTENGGARA 517 km BaratDaya MANOKWARI-PAPUABRT 2999 km TimurLaut JAKARTA-INDONESIA,MALUKU TENGGARA,MALUKU,,,1,3,,1
+,5312,1/22/2019,GEMPABUMI,Ds. Patiala Dete Kec. Lamboya Barat,SUMBA BARAT,NUSA TENGGARA TIMUR,,,,0,,1
+,3202,1/8/2019,GEMPABUMI,kampung cpari desa Rambay kecamatan Tegalbuleud,SUKABUMI,JAWA BARAT,,,,1,,0
+9.11E+15,9202,12/28/2018,GEMPABUMI,,MANOKWARI,PAPUA BARAT,0,0,0,0,0,2
+7.31E+15,7313,12/17/2018,GEMPABUMI,,WAJO,SULAWESI SELATAN,0,0,0,3,0,1
+5.11E+15,5108,12/6/2018,GEMPABUMI,,BULELENG,BALI,0,0,0,1,0,0
+5.11E+15,5107,12/6/2018,GEMPABUMI,,KARANGASEM,BALI,0,0,0,0,0,4
+5.21E+15,5208,12/6/2018,GEMPABUMI,,LOMBOK UTARA,NUSA TENGGARA BARAT,0,0,4,0,0,1
+5.20E+15,5201,12/6/2018,GEMPABUMI,,LOMBOK BARAT,NUSA TENGGARA BARAT,0,0,7,0,0,0
+7.60E+15,7603,11/15/2018,GEMPABUMI,,MAMASA,SULAWESI BARAT,0,0,0,239,0,6
+5.10E+15,5102,11/15/2018,GEMPABUMI,,TABANAN,BALI,0,0,0,0,0,1
+7.60E+15,7603,11/8/2018,GEMPABUMI,,MAMASA,SULAWESI BARAT,0,0,0,17,0,3
+3.51E+15,3509,10/11/2018,GEMPABUMI,,JEMBER,JAWA TIMUR,1,0,0,30,0,0
+3.53E+15,3529,10/11/2018,GEMPABUMI,,SUMENEP,JAWA TIMUR,3,0,35,504,0,0
+3.51E+15,3513,10/11/2018,GEMPABUMI,,PROBOLINGGO,JAWA TIMUR,0,0,0,2,0,0
+3.51E+15,3512,10/11/2018,GEMPABUMI,,SITUBONDO,JAWA TIMUR,0,0,1,16,0,0
+5.11E+15,5108,10/11/2018,GEMPABUMI,,BULELENG,BALI,0,0,0,4,0,0
+5.10E+15,5101,10/11/2018,GEMPABUMI,,JEMBRANA,BALI,0,0,0,22,0,8
+7.31E+15,7314,10/9/2018,GEMPABUMI,,SIDENRENG RAPPANG,SULAWESI SELATAN,0,0,0,0,0,3
+5.30E+15,5311,10/2/2018,GEMPABUMI,,SUMBA TIMUR,NUSA TENGGARA TIMUR,0,0,0,0,0,4
+5.21E+15,5207,8/19/2018,GEMPABUMI,,SUMBAWA BARAT,NUSA TENGGARA BARAT,2,0,0,18514,0,0
+5.20E+15,5204,8/19/2018,GEMPABUMI,,SUMBAWA,NUSA TENGGARA BARAT,5,0,53,11992,0,0
+5.20E+15,5202,8/19/2018,GEMPABUMI,,LOMBOK TENGAH,NUSA TENGGARA BARAT,1,0,0,13775,0,0
+5.20E+15,5203,8/19/2018,GEMPABUMI,,LOMBOK TIMUR,NUSA TENGGARA BARAT,8,0,111,22500,0,1044
+5.10E+15,5103,8/19/2018,GEMPABUMI,,BADUNG,BALI,0,0,0,1,0,0
+5.11E+15,5108,8/15/2018,GEMPABUMI,,BULELENG,BALI,0,0,1,0,0,0
+5.10E+15,5102,8/15/2018,GEMPABUMI,,TABANAN,BALI,0,0,0,1,0,2
+5.10E+15,5102,8/13/2018,GEMPABUMI,,TABANAN,BALI,0,0,0,9,0,44
+5.10E+15,5102,8/9/2018,GEMPABUMI,,TABANAN,BALI,0,0,0,0,0,6
+5.11E+15,5108,8/9/2018,GEMPABUMI,,BULELENG,BALI,0,0,0,2,0,0
+5.10E+15,5102,8/8/2018,GEMPABUMI,,TABANAN,BALI,0,0,0,12,0,23
+5.10E+15,5102,8/7/2018,GEMPABUMI,,TABANAN,BALI,3,0,0,0,0,77
+5.10E+15,5102,8/6/2018,GEMPABUMI,,TABANAN,BALI,0,0,0,1,0,10
+5.10E+15,5104,8/6/2018,GEMPABUMI,,GIANYAR,BALI,0,0,0,0,0,1
+5.11E+15,5105,8/6/2018,GEMPABUMI,,KLUNGKUNG,BALI,0,0,0,18,0,53
+5.20E+15,5201,8/5/2018,GEMPABUMI,,LOMBOK BARAT,NUSA TENGGARA BARAT,44,0,399,72194,0,0
+5.17E+15,5171,8/5/2018,GEMPABUMI,,KOTA DENPASAR,BALI,2,0,0,38,0,0
+5.11E+15,5106,8/5/2018,GEMPABUMI,,BANGLI,BALI,0,0,4,30,0,233
+5.20E+15,5202,8/5/2018,GEMPABUMI,,LOMBOK TENGAH,NUSA TENGGARA BARAT,1,0,3,11232,0,0
+5.11E+15,5108,8/5/2018,GEMPABUMI,,BULELENG,BALI,0,0,2,64,0,11
+5.21E+15,5208,8/5/2018,GEMPABUMI,,LOMBOK UTARA,NUSA TENGGARA BARAT,464,0,829,40795,0,0
+5.27E+15,5271,8/5/2018,GEMPABUMI,,KOTA MATARAM,NUSA TENGGARA BARAT,9,0,63,13437,0,0
+5.20E+15,5203,8/5/2018,GEMPABUMI,,LOMBOK TIMUR,NUSA TENGGARA BARAT,8,0,0,0,0,0
+5.11E+15,5107,8/5/2018,GEMPABUMI,,KARANGASEM,BALI,0,0,8,0,0,0
+5.20E+15,5201,7/29/2018,GEMPABUMI,,LOMBOK BARAT,NUSA TENGGARA BARAT,0,0,0,28,0,0
+5.20E+15,5203,7/29/2018,GEMPABUMI,,LOMBOK TIMUR,NUSA TENGGARA BARAT,17,0,353,2993,0,111
+5.27E+15,5271,7/29/2018,GEMPABUMI,,KOTA MATARAM,NUSA TENGGARA BARAT,0,0,1,0,0,0
+5.21E+15,5208,7/29/2018,GEMPABUMI,,LOMBOK UTARA,NUSA TENGGARA BARAT,5,0,71,10218,0,47
+5.11E+15,5107,7/29/2018,GEMPABUMI,,KARANGASEM,BALI,0,0,0,0,0,3
+5.21E+15,5207,7/29/2018,GEMPABUMI,,SUMBAWA BARAT,NUSA TENGGARA BARAT,0,0,0,1,0,0
+1.37E+15,1371,7/21/2018,GEMPABUMI,,KOTA PADANG,SUMATERA BARAT,0,0,0,25,0,0
+1.30E+15,1302,7/21/2018,GEMPABUMI,,SOLOK,SUMATERA BARAT,1,0,8,87,0,0
+3.20E+15,3202,7/7/2018,GEMPABUMI,,SUKABUMI,JAWA BARAT,0,0,0,35,0,0
+9.42E+15,9110,6/15/2018,GEMPABUMI,,SARMI,PAPUA,0,0,0,4,0,0
+3.53E+15,3529,6/13/2018,GEMPABUMI,,SUMENEP,JAWA TIMUR,0,0,6,156,0,3
+3.30E+15,3304,4/18/2018,GEMPABUMI,,BANJARNEGARA,JAWA TENGAH,2,0,41,693,0,19
+8.20E+15,8201,4/16/2018,GEMPABUMI,,HALMAHERA BARAT,MALUKU UTARA,0,0,0,7,0,0
+9.41E+15,9116,2/26/2018,GEMPABUMI,,BOVEN DIGOEL,PAPUA,0,0,0,8,0,3
+1.11E+15,1107,2/8/2018,GEMPABUMI,,PIDIE,ACEH,0,0,0,78,0,3
+3.27E+15,3271,1/23/2018,GEMPABUMI,,KOTA BOGOR,JAWA BARAT,0,0,0,3,0,0
+3.60E+15,3604,1/23/2018,GEMPABUMI,,SERANG,BANTEN,0,0,0,4,0,0
+3.60E+15,3602,1/23/2018,GEMPABUMI,,LEBAK,BANTEN,1,0,2,1074,0,12
+3.60E+15,3601,1/23/2018,GEMPABUMI,,PANDEGLANG,BANTEN,0,0,0,9,0,3
+3.60E+15,3603,1/23/2018,GEMPABUMI,,TANGERANG,BANTEN,0,0,0,0,0,0
+3.20E+15,3203,1/23/2018,GEMPABUMI,,CIANJUR,JAWA BARAT,0,0,8,9,0,3
+3.17E+15,3175,1/23/2018,GEMPABUMI,,KOTA JAKARTA TIMUR,DKI JAKARTA,0,0,1,0,0,3
+3.20E+15,3201,1/23/2018,GEMPABUMI,,BOGOR,JAWA BARAT,0,0,1,805,0,13
+3.20E+15,3202,1/23/2018,GEMPABUMI,,SUKABUMI,JAWA BARAT,0,0,12,6339,0,12
+3.21E+15,3206,12/15/2017,GEMPABUMI,,TASIKMALAYA,JAWA BARAT,0,0,0,1568,0,56
+3.30E+15,3304,12/15/2017,GEMPABUMI,,BANJARNEGARA,JAWA TENGAH,0,0,0,2,0,0
+3.28E+15,3278,12/15/2017,GEMPABUMI,,KOTA TASIKMALAYA,JAWA BARAT,0,0,0,665,0,33
+3.20E+15,3204,12/15/2017,GEMPABUMI,,BANDUNG,JAWA BARAT,0,0,0,2,0,0
+3.30E+15,3301,12/15/2017,GEMPABUMI,,CILACAP,JAWA TENGAH,0,0,0,1172,0,24
+3.40E+15,3402,12/15/2017,GEMPABUMI,,BANTUL,DI YOGYAKARTA,1,0,0,0,0,0
+3.31E+15,3305,12/15/2017,GEMPABUMI,,KEBUMEN,JAWA TENGAH,0,0,0,37,0,0
+3.20E+15,3202,12/15/2017,GEMPABUMI,,SUKABUMI,JAWA BARAT,0,0,0,3,0,3
+3.30E+15,3302,12/15/2017,GEMPABUMI,,BANYUMAS,JAWA TENGAH,0,0,1,121,0,13
+3.22E+15,3218,12/15/2017,GEMPABUMI,,PANGANDARAN,JAWA BARAT,0,0,2,854,0,26
+3.20E+15,3203,12/15/2017,GEMPABUMI,,CIANJUR,JAWA BARAT,0,0,0,2,0,0
+3.33E+15,3326,12/15/2017,GEMPABUMI,,PEKALONGAN,JAWA TENGAH,0,0,0,1,0,0
+3.31E+15,3307,12/15/2017,GEMPABUMI,,WONOSOBO,JAWA TENGAH,0,0,0,4,0,2
+3.21E+15,3207,12/15/2017,GEMPABUMI,,CIAMIS,JAWA BARAT,1,0,0,1847,0,43
+3.38E+15,3375,12/15/2017,GEMPABUMI,,KOTA PEKALONGAN,JAWA TENGAH,1,0,0,4,0,0
+3.31E+15,3306,12/15/2017,GEMPABUMI,,PURWOREJO,JAWA TENGAH,0,0,1,0,0,0
+3.28E+15,3279,12/15/2017,GEMPABUMI,,KOTA BANJAR,JAWA BARAT,1,0,0,133,0,9
+3.21E+15,3205,12/15/2017,GEMPABUMI,,GARUT,JAWA BARAT,0,0,0,139,0,13
+3.33E+15,3329,12/15/2017,GEMPABUMI,,BREBES,JAWA TENGAH,0,0,1,4,0,0
+3.40E+15,3404,12/15/2017,GEMPABUMI,,SLEMAN,DI YOGYAKARTA,0,0,0,1,0,0
+1.71E+15,1707,12/6/2017,GEMPABUMI,,LEBONG,BENGKULU,0,0,1,247,0,0
+8.21E+15,8207,11/18/2017,GEMPABUMI,,PULAU MOROTAI,MALUKU UTARA,1,0,63,312,0,10
+8.17E+15,8171,10/31/2017,GEMPABUMI,,KOTA AMBON,MALUKU,0,0,0,64,0,13
+9.47E+15,9171,10/28/2017,GEMPABUMI,,KOTA JAYAPURA,PAPUA,0,0,7,0,0,1
+5.31E+15,5313,10/10/2017,GEMPABUMI,,LEMBATA,NUSA TENGGARA TIMUR,0,0,2,136,0,6
+8.20E+15,8201,9/28/2017,GEMPABUMI,,HALMAHERA BARAT,MALUKU UTARA,0,0,3,0,0,0
+1.37E+15,1371,9/1/2017,GEMPABUMI,,KOTA PADANG,SUMATERA BARAT,0,0,1,0,0,0
+1.31E+15,1306,9/1/2017,GEMPABUMI,,AGAM,SUMATERA BARAT,0,0,0,9,0,2
+1.71E+15,1706,8/13/2017,GEMPABUMI,,MUKOMUKO,BENGKULU,0,0,0,4,0,0
+3.20E+15,3204,7/18/2017,GEMPABUMI,,BANDUNG,JAWA BARAT,0,0,0,2,0,0
+7.50E+15,7502,7/15/2017,GEMPABUMI,,BOALEMO,GORONTALO,0,0,0,6,0,0
+1.28E+15,1277,7/14/2017,GEMPABUMI,,KOTA PADANG SIDEMPUAN,SUMATERA UTARA,0,0,1,85,0,3
+7.21E+15,7210,5/29/2017,GEMPABUMI,,SIGI,SULAWESI TENGAH,0,0,0,20,0,0
+1.11E+15,1113,5/29/2017,GEMPABUMI,,GAYO LUES,ACEH,0,0,0,26,0,2
+7.20E+15,7202,5/29/2017,GEMPABUMI,,POSO,SULAWESI TENGAH,0,0,25,528,0,54
+3.21E+15,3206,4/24/2017,GEMPABUMI,,TASIKMALAYA,JAWA BARAT,0,0,3,273,0,8
+1.30E+15,1309,4/21/2017,GEMPABUMI,,KEPULAUAN MENTAWAI,SUMATERA BARAT,0,0,0,1,0,0
+5.17E+15,5171,3/22/2017,GEMPABUMI,,KOTA DENPASAR,BALI,0,0,4,4,0,7
+8.21E+15,8207,3/8/2017,GEMPABUMI,,PULAU MOROTAI,MALUKU UTARA,0,0,0,0,0,2
+1.12E+15,1118,2/16/2017,GEMPABUMI,,PIDIE JAYA,ACEH,0,0,15,0,0,0
+1.21E+15,1207,1/16/2017,GEMPABUMI,,DELI SERDANG,SUMATERA UTARA,0,0,0,78,0,4
+1.11E+15,1107,12/7/2016,GEMPABUMI,,PIDIE,ACEH,5,0,73,243,0,76
+1.12E+15,1118,12/7/2016,GEMPABUMI,,PIDIE JAYA,ACEH,96,0,589,8228,0,817
+1.11E+15,1111,12/7/2016,GEMPABUMI,,BIREUEN,ACEH,2,0,270,836,0,166
+3.51E+15,3509,11/16/2016,GEMPABUMI,,JEMBER,JAWA TIMUR,0,0,0,7,0,0
+3.51E+15,3507,11/16/2016,GEMPABUMI,,MALANG,JAWA TIMUR,0,0,0,108,0,0
+3.27E+15,3273,11/6/2016,GEMPABUMI,,KOTA BANDUNG,JAWA BARAT,1,0,0,4,0,3
+9.43E+15,9121,8/28/2016,GEMPABUMI,,MAMBERAMO TENGAH,PAPUA,0,0,0,1,0,0
+5.21E+15,5205,8/1/2016,GEMPABUMI,,DOMPU,NUSA TENGGARA BARAT,0,0,4,692,0,0
+8.27E+15,8271,6/8/2016,GEMPABUMI,,KOTA TERNATE,MALUKU UTARA,0,0,0,32,0,0
+1.71E+15,1706,6/2/2016,GEMPABUMI,,MUKOMUKO,BENGKULU,0,0,0,301,0,1
+1.37E+15,1371,6/2/2016,GEMPABUMI,,KOTA PADANG,SUMATERA BARAT,1,0,2,0,0,0
+1.30E+15,1301,6/2/2016,GEMPABUMI,,PESISIR SELATAN,SUMATERA BARAT,0,0,21,2627,0,8
+1.50E+15,1501,6/2/2016,GEMPABUMI,,KERINCI,JAMBI,0,0,0,10,0,1
+1.71E+15,1709,4/10/2016,GEMPABUMI,,BENGKULU TENGAH,BENGKULU,0,0,0,13,0,0
+3.51E+15,3512,4/4/2016,GEMPABUMI,,SITUBONDO,JAWA TIMUR,0,0,0,2,0,0
+5.21E+15,5208,3/31/2016,GEMPABUMI,,LOMBOK UTARA,NUSA TENGGARA BARAT,0,0,0,41,0,0
+8.20E+15,8201,2/24/2016,GEMPABUMI,,HALMAHERA BARAT,MALUKU UTARA,0,0,1,113,0,0
+5.30E+15,5312,2/12/2016,GEMPABUMI,,SUMBA BARAT,NUSA TENGGARA TIMUR,0,0,0,10,0,9
+8.10E+15,8104,1/17/2016,GEMPABUMI,,BURU,MALUKU,1,0,14,620,0,1
+8.11E+15,8106,12/28/2015,GEMPABUMI,,SERAM BAGIAN BARAT,MALUKU,0,0,0,3,0,4
+6.57E+15,6571,12/21/2015,GEMPABUMI,,KOTA TARAKAN,KALIMANTAN UTARA,0,0,5,9,0,0
+3.60E+15,3601,11/28/2015,GEMPABUMI,,PANDEGLANG,BANTEN,0,0,0,4,0,1
+8.20E+15,8201,11/16/2015,GEMPABUMI,,HALMAHERA BARAT,MALUKU UTARA,0,0,1,1042,0,15
+1.17E+15,1172,11/8/2015,GEMPABUMI,,KOTA SABANG,ACEH,0,0,0,1,0,0
+5.31E+15,5305,11/4/2015,GEMPABUMI,,ALOR,NUSA TENGGARA TIMUR,0,0,3,998,0,48
+3.60E+15,3601,11/4/2015,GEMPABUMI,,PANDEGLANG,BANTEN,0,0,0,0,0,1
+9.17E+15,9271,9/24/2015,GEMPABUMI,,KOTA SORONG,PAPUA BARAT,0,0,62,3487,0,31
+9.43E+15,9120,7/28/2015,GEMPABUMI,,MAMBERAMO RAYA,PAPUA,0,0,1,3,0,2
+3.51E+15,3508,7/26/2015,GEMPABUMI,,LUMAJANG,JAWA TIMUR,0,0,0,14,0,0
+3.30E+15,3301,7/25/2015,GEMPABUMI,,CILACAP,JAWA TENGAH,0,0,0,4,0,1
+3.52E+15,3519,6/25/2015,GEMPABUMI,,MADIUN,JAWA TIMUR,0,0,0,58,0,0
+7.50E+15,7503,6/16/2015,GEMPABUMI,,BONE BOLANGO,GORONTALO,0,0,0,0,0,0
+7.10E+15,7103,6/16/2015,GEMPABUMI,,KEPULAUAN SANGIHE,SULAWESI UTARA,0,0,0,0,0,0
+5.30E+15,5302,6/16/2015,GEMPABUMI,,TIMOR TENGAH SELATAN,NUSA TENGGARA TIMUR,0,0,0,0,0,0
+7.11E+15,7106,6/15/2015,GEMPABUMI,,MINAHASA UTARA,SULAWESI UTARA,0,0,0,0,0,0
+1.31E+15,1311,6/13/2015,GEMPABUMI,,SOLOK SELATAN,SUMATERA BARAT,0,0,0,0,0,0
+5.30E+15,5311,6/11/2015,GEMPABUMI,,SUMBA TIMUR,NUSA TENGGARA TIMUR,0,0,0,0,0,0
+8.10E+15,8102,6/10/2015,GEMPABUMI,,MALUKU TENGGARA,MALUKU,0,0,0,0,0,0
+3.50E+15,3503,6/5/2015,GEMPABUMI,,TRENGGALEK,JAWA TIMUR,0,0,0,0,0,0
+1.12E+15,1114,6/1/2015,GEMPABUMI,,ACEH JAYA,ACEH,0,0,0,0,0,0
+8.17E+15,8171,6/1/2015,GEMPABUMI,,KOTA AMBON,MALUKU,0,0,0,0,0,0
+1.70E+15,1704,5/31/2015,GEMPABUMI,,KAUR,BENGKULU,0,0,0,0,0,0
+9.43E+15,9119,5/31/2015,GEMPABUMI,,SUPIORI,PAPUA,0,0,0,0,0,0
+8.20E+15,8201,3/18/2015,GEMPABUMI,,HALMAHERA BARAT,MALUKU UTARA,0,0,0,36,0,0
+7.60E+15,7602,2/8/2015,GEMPABUMI,,MAMUJU,SULAWESI BARAT,0,0,0,19,0,2
+8.20E+15,8201,11/21/2014,GEMPABUMI,,HALMAHERA BARAT,MALUKU UTARA,0,0,1,99,0,0
+7.17E+15,7171,11/15/2014,GEMPABUMI,,KOTA MANADO,SULAWESI UTARA,0,0,0,4,0,1
+1.71E+15,1708,10/28/2014,GEMPABUMI,,KEPAHIANG,BENGKULU,0,0,0,12,0,2
+1.37E+15,1374,9/11/2014,GEMPABUMI,,KOTA PADANG PANJANG,SUMATERA BARAT,0,0,2,15,0,15
+1.31E+15,1304,9/11/2014,GEMPABUMI,,TANAH DATAR,SUMATERA BARAT,0,0,2,205,0,34
+3.52E+15,3520,7/14/2014,GEMPABUMI,,MAGETAN,JAWA TIMUR,0,0,0,2,0,1
+3.21E+15,3206,6/22/2014,GEMPABUMI,,TASIKMALAYA,JAWA BARAT,0,0,0,11,0,1
+3.51E+15,3512,5/4/2014,GEMPABUMI,,SITUBONDO,JAWA TIMUR,0,0,0,3,0,1
+8.17E+15,8171,5/2/2014,GEMPABUMI,,KOTA AMBON,MALUKU,0,0,0,67,0,5
+1.61E+15,1609,3/31/2014,GEMPABUMI,,OGAN KOMERING ULU SELATAN,SUMATERA SELATAN,0,0,0,12,0,8
+3.21E+15,3207,1/27/2014,GEMPABUMI,,CIAMIS,JAWA BARAT,0,0,0,1,0,0
+3.22E+15,3218,1/25/2014,GEMPABUMI,,PANGANDARAN,JAWA BARAT,0,0,0,7,0,0
+3.31E+15,3305,1/25/2014,GEMPABUMI,,KEBUMEN,JAWA TENGAH,0,0,0,4,0,0
+3.21E+15,3205,1/25/2014,GEMPABUMI,,GARUT,JAWA BARAT,0,0,0,8,0,0
+3.30E+15,3302,1/25/2014,GEMPABUMI,,BANYUMAS,JAWA TENGAH,0,0,0,129,0,1
+3.31E+15,3306,1/25/2014,GEMPABUMI,,PURWOREJO,JAWA TENGAH,0,0,0,10,0,0
+3.40E+15,3402,1/25/2014,GEMPABUMI,,BANTUL,DI YOGYAKARTA,0,0,0,5,0,0
+3.30E+15,3301,1/25/2014,GEMPABUMI,,CILACAP,JAWA TENGAH,0,0,0,84,0,0
+3.20E+15,3202,1/15/2014,GEMPABUMI,,SUKABUMI,JAWA BARAT,0,0,0,0,0,0
+3.20E+15,3202,12/18/2013,GEMPABUMI,,SUKABUMI,JAWA BARAT,0,0,0,346,0,0
+3.21E+15,3206,10/31/2013,GEMPABUMI,,TASIKMALAYA,JAWA BARAT,0,0,0,1,0,0
+1.11E+15,1107,10/22/2013,GEMPABUMI,,PIDIE,ACEH,1,0,2,688,0,81
+3.33E+15,3329,7/13/2013,GEMPABUMI,,BREBES,JAWA TENGAH,0,0,0,45,0,0
+3.21E+15,3208,7/13/2013,GEMPABUMI,,KUNINGAN,JAWA BARAT,0,0,0,181,0,0
+3.51E+15,3510,7/8/2013,GEMPABUMI,,BANYUWANGI,JAWA TIMUR,0,0,0,0,0,1
+3.51E+15,3508,7/8/2013,GEMPABUMI,,LUMAJANG,JAWA TIMUR,0,0,0,6,0,3
+3.51E+15,3507,7/8/2013,GEMPABUMI,,MALANG,JAWA TIMUR,0,0,1,77,0,283
+1.12E+15,1117,7/2/2013,GEMPABUMI,,BENER MERIAH,ACEH,8,0,114,5040,0,419
+1.11E+15,1104,7/2/2013,GEMPABUMI,,ACEH TENGAH,ACEH,35,0,2418,13971,0,1447
+5.20E+15,5201,6/22/2013,GEMPABUMI,,LOMBOK BARAT,NUSA TENGGARA BARAT,0,0,29,0,0,0
+3.30E+15,3304,4/19/2013,GEMPABUMI,,BANJARNEGARA,JAWA TENGAH,0,0,1,172,0,0
+1.11E+15,1107,1/22/2013,GEMPABUMI,,PIDIE,ACEH,1,0,7,250,0,2
+8.11E+15,8107,10/12/2012,GEMPABUMI,,KEPULAUAN ARU,MALUKU,0,0,0,0,0,7
+3.20E+15,3201,9/9/2012,GEMPABUMI,,BOGOR,JAWA BARAT,0,0,3,343,0,8
+3.20E+15,3202,9/9/2012,GEMPABUMI,,SUKABUMI,JAWA BARAT,0,0,0,206,0,13
+7.21E+15,7208,8/18/2012,GEMPABUMI,,PARIGI MOUTONG,SULAWESI TENGAH,5,0,694,1626,0,7
+1.10E+15,1109,7/25/2012,GEMPABUMI,,SIMEULUE,ACEH,1,0,0,0,0,8
+5.32E+15,5315,6/27/2012,GEMPABUMI,,MANGGARAI BARAT,NUSA TENGGARA TIMUR,0,0,0,298,0,17
+1.18E+15,1175,6/23/2012,GEMPABUMI,,KOTA SUBULUSSALAM,ACEH,0,0,0,4,0,2
+1.18E+15,1175,6/11/2012,GEMPABUMI,,KOTA SUBULUSSALAM,ACEH,0,0,0,6,0,3
+3.20E+15,3202,6/4/2012,GEMPABUMI,,SUKABUMI,JAWA BARAT,0,0,2,612,0,4
+9.11E+15,9202,4/21/2012,GEMPABUMI,,MANOKWARI,PAPUA BARAT,0,0,0,70,0,0
+1.17E+15,1174,3/21/2012,GEMPABUMI,,KOTA LANGSA,ACEH,0,0,0,5,0,0
+1.12E+15,1117,3/5/2012,GEMPABUMI,,BENER MERIAH,ACEH,0,0,0,5,0,0
+1.17E+15,1174,3/5/2012,GEMPABUMI,,KOTA LANGSA,ACEH,0,0,0,7,0,0
+1.17E+15,1174,2/22/2012,GEMPABUMI,,KOTA LANGSA,ACEH,0,0,0,7,0,0
+1.70E+15,1703,2/1/2012,GEMPABUMI,,BENGKULU UTARA,BENGKULU,0,0,0,54,0,9
+1.12E+15,1115,2/1/2012,GEMPABUMI,,NAGAN RAYA,ACEH,0,0,0,157,0,8
+5.32E+15,5315,1/21/2012,GEMPABUMI,,MANGGARAI BARAT,NUSA TENGGARA TIMUR,0,0,0,401,0,96
+5.17E+15,5171,10/13/2011,GEMPABUMI,,KOTA DENPASAR,BALI,0,0,90,34,0,25
+3.51E+15,3509,10/13/2011,GEMPABUMI,,JEMBER,JAWA TIMUR,0,0,0,3,0,1
+3.51E+15,3510,10/13/2011,GEMPABUMI,,BANYUWANGI,JAWA TIMUR,0,0,0,49,0,6
+5.10E+15,5104,10/13/2011,GEMPABUMI,,GIANYAR,BALI,0,0,0,0,0,6
+5.10E+15,5101,10/13/2011,GEMPABUMI,,JEMBRANA,BALI,0,0,0,14,0,4
+5.11E+15,5106,10/13/2011,GEMPABUMI,,BANGLI,BALI,0,0,0,1,0,2
+5.10E+15,5103,10/13/2011,GEMPABUMI,,BADUNG,BALI,0,0,0,0,0,5
+5.10E+15,5102,10/13/2011,GEMPABUMI,,TABANAN,BALI,0,0,0,7,0,5
+1.18E+15,1175,9/6/2011,GEMPABUMI,,KOTA SUBULUSSALAM,ACEH,1,0,0,3331,0,234
+1.22E+15,1215,9/6/2011,GEMPABUMI,,PAKPAK BHARAT,SUMATERA UTARA,0,0,2,242,0,55
+1.22E+15,1216,9/6/2011,GEMPABUMI,,HUMBANG HASUNDUTAN,SUMATERA UTARA,0,0,0,65,0,22
+1.10E+15,1110,9/6/2011,GEMPABUMI,,ACEH SINGKIL,ACEH,1,0,0,110,0,0
+1.21E+15,1211,9/6/2011,GEMPABUMI,,DAIRI,SUMATERA UTARA,1,0,11,693,0,34
+3.20E+15,3204,8/28/2011,GEMPABUMI,,BANDUNG,JAWA BARAT,0,0,0,103,0,0
+1.71E+15,1706,8/6/2011,GEMPABUMI,,MUKOMUKO,BENGKULU,0,0,0,40,0,2
+7.47E+15,7471,7/11/2011,GEMPABUMI,,KOTA KENDARI,SULAWESI TENGGARA,0,0,0,2,0,0
+5.31E+15,5305,7/11/2011,GEMPABUMI,,ALOR,NUSA TENGGARA TIMUR,0,0,0,2,0,0
+9.43E+15,9115,6/26/2011,GEMPABUMI,,WAROPEN,PAPUA,2,0,10,976,0,112
+1.21E+15,1202,6/14/2011,GEMPABUMI,,TAPANULI UTARA,SUMATERA UTARA,0,0,50,833,0,34
+3.31E+15,3305,6/5/2011,GEMPABUMI,,KEBUMEN,JAWA TENGAH,0,0,0,10,0,0
+7.47E+15,7471,4/25/2011,GEMPABUMI,,KOTA KENDARI,SULAWESI TENGGARA,0,0,19,733,0,3
+3.60E+15,3601,4/5/2011,GEMPABUMI,,PANDEGLANG,BANTEN,0,0,0,3,0,0
+3.40E+15,3402,9/12/2010,GEMPABUMI,,BANTUL,DI YOGYAKARTA,0,0,10,1,0,0
+3.40E+15,3402,8/21/2010,GEMPABUMI,,BANTUL,DI YOGYAKARTA,0,0,12,21,0,0
+3.30E+15,3301,6/26/2010,GEMPABUMI,,CILACAP,JAWA TENGAH,0,0,0,13,0,0
+3.21E+15,3206,6/26/2010,GEMPABUMI,,TASIKMALAYA,JAWA BARAT,0,0,0,182,0,0
+3.30E+15,3301,6/26/2010,GEMPABUMI,,CILACAP,JAWA TENGAH,0,0,0,14,0,0
+9.41E+15,9106,6/16/2010,GEMPABUMI,,BIAK NUMFOR,PAPUA,17,0,106,5026,0,219
+7.61E+15,7601,6/16/2010,GEMPABUMI,,PASANGKAYU,SULAWESI BARAT,1,0,139,355,0,10
+3.20E+15,3202,5/18/2010,GEMPABUMI,,SUKABUMI,JAWA BARAT,0,0,0,5,0,0
+3.20E+15,3202,5/18/2010,GEMPABUMI,,SUKABUMI,JAWA BARAT,0,0,0,4,0,0
+1.11E+15,1105,5/9/2010,GEMPABUMI,,ACEH BARAT,ACEH,0,0,0,8,0,0
+1.11E+15,1112,5/9/2010,GEMPABUMI,,ACEH BARAT DAYA,ACEH,0,0,0,14,0,0
+1.12E+15,1114,5/9/2010,GEMPABUMI,,ACEH JAYA,ACEH,0,0,0,0,0,1
+1.12E+15,1115,5/9/2010,GEMPABUMI,,NAGAN RAYA,ACEH,0,0,0,6,0,0
+1.10E+15,1109,5/9/2010,GEMPABUMI,,SIMEULUE,ACEH,0,0,9,49,0,21
+7.20E+15,7207,5/8/2010,GEMPABUMI,,BANGGAI KEPULAUAN,SULAWESI TENGAH,0,0,0,86,0,9
+1.21E+15,1202,4/9/2010,GEMPABUMI,,TAPANULI UTARA,SUMATERA UTARA,0,0,0,65,0,2
+1.10E+15,1110,4/7/2010,GEMPABUMI,,ACEH SINGKIL,ACEH,0,0,0,124,0,21
+1.10E+15,1109,4/7/2010,GEMPABUMI,,SIMEULUE,ACEH,0,0,39,881,0,154
+1.18E+15,1175,4/7/2010,GEMPABUMI,,KOTA SUBULUSSALAM,ACEH,0,0,0,28,0,5
+8.20E+15,8204,3/14/2010,GEMPABUMI,,HALMAHERA SELATAN,MALUKU UTARA,0,0,0,39,0,5
+1.12E+15,1117,1/29/2010,GEMPABUMI,,BENER MERIAH,ACEH,0,0,0,123,0,10
+1.11E+15,1104,1/28/2010,GEMPABUMI,,ACEH TENGAH,ACEH,0,0,4,581,0,68
+3.21E+15,3206,1/10/2010,GEMPABUMI,,TASIKMALAYA,JAWA BARAT,1,0,2,35,0,0
+5.31E+15,5305,1/1/2010,GEMPABUMI,,ALOR,NUSA TENGGARA TIMUR,0,0,0,1,0,0
+6.40E+15,6401,11/24/2009,GEMPABUMI,,PASER,KALIMANTAN TIMUR,0,0,0,141,0,19
+5.21E+15,5206,11/9/2009,GEMPABUMI,,BIMA,NUSA TENGGARA BARAT,0,0,0,1964,0,45
+5.27E+15,5272,11/9/2009,GEMPABUMI,,KOTA BIMA,NUSA TENGGARA BARAT,2,0,3,4190,0,87
+7.41E+15,7405,10/20/2009,GEMPABUMI,,KONAWE SELATAN,SULAWESI TENGGARA,0,0,0,0,0,0
+7.41E+15,7409,10/20/2009,GEMPABUMI,,KONAWE UTARA,SULAWESI TENGGARA,0,0,0,0,0,0
+7.40E+15,7402,10/20/2009,GEMPABUMI,,KONAWE,SULAWESI TENGGARA,0,0,0,0,0,0
+7.47E+15,7471,10/20/2009,GEMPABUMI,,KOTA KENDARI,SULAWESI TENGGARA,0,0,0,0,0,0
+3.60E+15,3601,10/16/2009,GEMPABUMI,,PANDEGLANG,BANTEN,0,0,1,220,0,3
+1.50E+15,1501,10/1/2009,GEMPABUMI,,KERINCI,JAMBI,3,0,26,1509,0,65
+1.30E+15,1309,9/30/2009,GEMPABUMI,,KEPULAUAN MENTAWAI,SUMATERA BARAT,0,0,0,0,0,20
+1.31E+15,1305,9/30/2009,GEMPABUMI,,PADANG PARIAMAN,SUMATERA BARAT,666,0,25,87879,0,1769
+1.31E+15,1308,9/30/2009,GEMPABUMI,,PASAMAN,SUMATERA BARAT,0,0,0,1091,0,48
+1.31E+15,1311,9/30/2009,GEMPABUMI,,SOLOK SELATAN,SUMATERA BARAT,0,0,0,0,0,0
+1.37E+15,1373,9/30/2009,GEMPABUMI,,KOTA SAWAHLUNTO,SUMATERA BARAT,0,0,0,0,0,0
+1.31E+15,1306,9/30/2009,GEMPABUMI,,AGAM,SUMATERA BARAT,81,0,137,23144,0,667
+1.30E+15,1301,9/30/2009,GEMPABUMI,,PESISIR SELATAN,SUMATERA BARAT,9,0,27,18872,0,363
+1.37E+15,1374,9/30/2009,GEMPABUMI,,KOTA PADANG PANJANG,SUMATERA BARAT,0,0,20,594,0,140
+1.30E+15,1302,9/30/2009,GEMPABUMI,,SOLOK,SUMATERA BARAT,0,0,5,745,0,137
+1.31E+15,1307,9/30/2009,GEMPABUMI,,LIMA PULUH KOTA,SUMATERA BARAT,0,0,0,0,0,0
+1.31E+15,1312,9/30/2009,GEMPABUMI,,PASAMAN BARAT,SUMATERA BARAT,5,0,30,9148,0,160
+1.38E+15,1375,9/30/2009,GEMPABUMI,,KOTA BUKITTINGGI,SUMATERA BARAT,0,0,0,50,0,17
+1.31E+15,1304,9/30/2009,GEMPABUMI,,TANAH DATAR,SUMATERA BARAT,0,0,0,134,0,28
+1.37E+15,1371,9/30/2009,GEMPABUMI,,KOTA PADANG,SUMATERA BARAT,383,2,1202,116478,0,4328
+1.37E+15,1372,9/30/2009,GEMPABUMI,,KOTA SOLOK,SUMATERA BARAT,3,0,0,0,0,9
+1.38E+15,1377,9/30/2009,GEMPABUMI,,KOTA PARIAMAN,SUMATERA BARAT,48,0,352,13405,0,463
+3.22E+15,3217,9/2/2009,GEMPABUMI,,BANDUNG BARAT,JAWA BARAT,0,0,16,7781,0,447
+3.20E+15,3203,9/2/2009,GEMPABUMI,,CIANJUR,JAWA BARAT,28,42,21,18665,0,1205
+3.20E+15,3202,9/2/2009,GEMPABUMI,,SUKABUMI,JAWA BARAT,2,0,14,25060,0,1152
+3.21E+15,3206,9/2/2009,GEMPABUMI,,TASIKMALAYA,JAWA BARAT,5,0,109,42081,0,3710
+3.21E+15,3214,9/2/2009,GEMPABUMI,,PURWAKARTA,JAWA BARAT,0,0,0,98,0,52
+3.28E+15,3278,9/2/2009,GEMPABUMI,,KOTA TASIKMALAYA,JAWA BARAT,5,0,22,9570,0,117
+3.21E+15,3213,9/2/2009,GEMPABUMI,,SUBANG,JAWA BARAT,0,0,0,103,0,50
+3.21E+15,3208,9/2/2009,GEMPABUMI,,KUNINGAN,JAWA BARAT,0,0,0,739,0,15
+3.30E+15,3301,9/2/2009,GEMPABUMI,,CILACAP,JAWA TENGAH,0,0,10,4120,0,63
+3.21E+15,3207,9/2/2009,GEMPABUMI,,CIAMIS,JAWA BARAT,8,0,123,41453,0,1572
+3.21E+15,3210,9/2/2009,GEMPABUMI,,MAJALENGKA,JAWA BARAT,0,0,0,1784,0,50
+3.20E+15,3201,9/2/2009,GEMPABUMI,,BOGOR,JAWA BARAT,2,0,17,2139,0,0
+3.20E+15,3204,9/2/2009,GEMPABUMI,,BANDUNG,JAWA BARAT,23,0,771,46129,0,2076
+3.27E+15,3272,9/2/2009,GEMPABUMI,,KOTA SUKABUMI,JAWA BARAT,0,0,0,1943,0,16
+3.28E+15,3279,9/2/2009,GEMPABUMI,,KOTA BANJAR,JAWA BARAT,0,0,4,996,0,17
+3.21E+15,3205,9/2/2009,GEMPABUMI,,GARUT,JAWA BARAT,8,0,190,45875,0,1926
+1.30E+15,1309,8/16/2009,GEMPABUMI,,KEPULAUAN MENTAWAI,SUMATERA BARAT,0,0,0,20,0,2
+1.37E+15,1371,8/16/2009,GEMPABUMI,,KOTA PADANG,SUMATERA BARAT,0,0,14,0,0,0
+5.31E+15,5303,5/15/2009,GEMPABUMI,,TIMOR TENGAH UTARA,NUSA TENGGARA TIMUR,0,0,0,11,0,3
+7.10E+15,7104,2/12/2009,GEMPABUMI,,KEPULAUAN TALAUD,SULAWESI UTARA,1,0,74,1420,0,48
+9.11E+15,9204,1/4/2009,GEMPABUMI,,SORONG SELATAN,PAPUA BARAT,0,0,2,39,0,22
+9.11E+15,9201,1/4/2009,GEMPABUMI,,SORONG,PAPUA BARAT,3,0,9,815,0,25
+9.17E+15,9271,1/4/2009,GEMPABUMI,,KOTA SORONG,PAPUA BARAT,0,0,27,473,0,28
+9.11E+15,9202,1/4/2009,GEMPABUMI,,MANOKWARI,PAPUA BARAT,1,0,471,2053,0,486
+1.60E+15,1604,9/9/2008,GEMPABUMI,,LAHAT,SUMATERA SELATAN,1,0,29,876,0,34
+5.21E+15,5205,8/7/2008,GEMPABUMI,,DOMPU,NUSA TENGGARA BARAT,0,0,11,1396,0,77
+5.21E+15,5206,8/7/2008,GEMPABUMI,,BIMA,NUSA TENGGARA BARAT,0,0,0,75,0,0
+5.20E+15,5204,8/7/2008,GEMPABUMI,,SUMBAWA,NUSA TENGGARA BARAT,0,0,0,110,0,9
+8.10E+15,8101,6/18/2008,GEMPABUMI,,MALUKU TENGAH,MALUKU,0,0,0,20,0,0
+1.21E+15,1202,5/19/2008,GEMPABUMI,,TAPANULI UTARA,SUMATERA UTARA,0,0,200,316,0,21
+1.20E+15,1203,5/19/2008,GEMPABUMI,,TAPANULI SELATAN,SUMATERA UTARA,0,0,0,18,0,13
+1.30E+15,1301,2/25/2008,GEMPABUMI,,PESISIR SELATAN,SUMATERA BARAT,0,0,0,2,0,1
+1.30E+15,1309,2/25/2008,GEMPABUMI,,KEPULAUAN MENTAWAI,SUMATERA BARAT,2,0,2,343,0,9
+1.10E+15,1109,2/20/2008,GEMPABUMI,,SIMEULUE,ACEH,4,0,88,3090,0,380
+7.60E+15,7602,2/5/2008,GEMPABUMI,,MAMUJU,SULAWESI BARAT,0,0,2,0,0,0
+1.20E+15,1204,1/23/2008,GEMPABUMI,,NIAS,SUMATERA UTARA,1,0,5,5,0,0
+9.11E+15,9202,1/7/2008,GEMPABUMI,,MANOKWARI,PAPUA BARAT,0,0,38,54,0,8
+5.21E+15,5205,11/25/2007,GEMPABUMI,,DOMPU,NUSA TENGGARA BARAT,2,0,104,7232,,0
+5.27E+15,5272,11/25/2007,GEMPABUMI,,KOTA BIMA,NUSA TENGGARA BARAT,0,0,10,448,,52
+5.21E+15,5206,11/25/2007,GEMPABUMI,,BIMA,NUSA TENGGARA BARAT,1,0,86,1170,,15
+1.70E+15,1702,9/12/2007,GEMPABUMI,,REJANG LEBONG,BENGKULU,0,0,0,0,,24
+1.77E+15,1771,9/12/2007,GEMPABUMI,,KOTA BENGKULU,BENGKULU,2,0,11,15025,,85
+1.71E+15,1708,9/12/2007,GEMPABUMI,,KEPAHIANG,BENGKULU,0,0,0,426,,349
+1.71E+15,1707,9/12/2007,GEMPABUMI,,LEBONG,BENGKULU,0,0,1,31,,19
+1.71E+15,1706,9/12/2007,GEMPABUMI,,MUKO MUKO,BENGKULU,7,0,0,10412,,559
+1.71E+15,1705,9/12/2007,GEMPABUMI,,SELUMA,BENGKULU,0,0,0,420,,121
+1.70E+15,1704,9/12/2007,GEMPABUMI,,KAUR,BENGKULU,0,0,0,12,,0
+1.70E+15,1703,9/12/2007,GEMPABUMI,,BENGKULU UTARA,BENGKULU,6,0,26,32885,,784
+1.50E+15,1501,9/12/2007,GEMPABUMI,,KERINCI,JAMBI,0,0,0,71,,7
+1.38E+15,1377,9/12/2007,GEMPABUMI,,KOTA PARIAMAN,SUMATERA BARAT,0,0,0,188,,12
+1.38E+15,1376,9/12/2007,GEMPABUMI,,KOTA PAYAKUMBUH,SUMATERA BARAT,0,0,0,33,,18
+1.37E+15,1372,9/12/2007,GEMPABUMI,,KOTA SOLOK,SUMATERA BARAT,0,0,4,0,,0
+1.37E+15,1371,9/12/2007,GEMPABUMI,,KOTA PADANG,SUMATERA BARAT,2,0,19,6436,,726
+1.31E+15,1311,9/12/2007,GEMPABUMI,,SOLOK SELATAN,SUMATERA BARAT,0,0,0,44,,0
+1.30E+15,1309,9/12/2007,GEMPABUMI,,KEPULAUAN MENTAWAI,SUMATERA BARAT,3,0,29,4789,,301
+1.31E+15,1306,9/12/2007,GEMPABUMI,,AGAM,SUMATERA BARAT,0,0,0,70,,3
+1.31E+15,1305,9/12/2007,GEMPABUMI,,PADANG PARIAMAN,SUMATERA BARAT,0,0,0,6986,,377
+1.30E+15,1302,9/12/2007,GEMPABUMI,,SOLOK,SUMATERA BARAT,1,0,1,81,,12
+1.30E+15,1301,9/12/2007,GEMPABUMI,,PESISIR SELATAN,SUMATERA BARAT,4,0,1,14075,,295
+3.51E+15,3512,9/10/2007,GEMPABUMI,,SITUBONDO,JAWA TIMUR,0,0,24,325,,29
+8.20E+15,8204,8/15/2007,GEMPABUMI,,HALMAHERA SELATAN,MALUKU UTARA,0,0,1,0,,0
+3.21E+15,3207,8/9/2007,GEMPABUMI,,CIAMIS,JAWA BARAT,0,0,0,2,,0
+3.21E+15,3206,8/9/2007,GEMPABUMI,,TASIKMALAYA,JAWA BARAT,0,0,0,10,,3
+3.20E+15,3202,8/9/2007,GEMPABUMI,,SUKABUMI,JAWA BARAT,0,0,0,23,,1
+3.27E+15,3271,8/9/2007,GEMPABUMI,,KOTA BOGOR,JAWA BARAT,1,0,0,0,,0
+8.21E+15,8203,7/26/2007,GEMPABUMI,,HALMAHERA UTARA,MALUKU UTARA,0,0,23,63,,3
+8.20E+15,8204,3/15/2007,GEMPABUMI,,HALMAHERA SELATAN,MALUKU UTARA,0,0,3,77,,3
+1.31E+15,1306,3/6/2007,GEMPABUMI,,AGAM,SUMATERA BARAT,16,0,146,6229,,386
+1.31E+15,1305,3/6/2007,GEMPABUMI,,PADANG PARIAMAN,SUMATERA BARAT,3,0,11,12177,,341
+1.31E+15,1304,3/6/2007,GEMPABUMI,,TANAH DATAR,SUMATERA BARAT,11,0,233,16647,,1994
+1.30E+15,1302,3/6/2007,GEMPABUMI,,SOLOK,SUMATERA BARAT,17,0,246,3597,,186
+1.37E+15,1374,3/6/2007,GEMPABUMI,,KOTA PADANG PANJANG,SUMATERA BARAT,2,0,50,4069,,143
+1.38E+15,1375,3/6/2007,GEMPABUMI,,KOTA BUKITTINGGI,SUMATERA BARAT,7,0,100,49,,0
+1.38E+15,1376,3/6/2007,GEMPABUMI,,KOTA PAYAKUMBUH,SUMATERA BARAT,1,0,14,175,,65
+1.30E+15,1303,3/6/2007,GEMPABUMI,,SIJUNJUNG,SUMATERA BARAT,0,0,0,0,,21
+1.38E+15,1377,3/6/2007,GEMPABUMI,,KOTA PARIAMAN,SUMATERA BARAT,0,0,0,23,,2
+1.37E+15,1372,3/6/2007,GEMPABUMI,,KOTA SOLOK,SUMATERA BARAT,7,0,15,438,,75
+1.37E+15,1371,3/6/2007,GEMPABUMI,,KOTA PADANG,SUMATERA BARAT,2,0,3,110,,106
+1.31E+15,1307,3/6/2007,GEMPABUMI,,LIMA PULUH KOTA,SUMATERA BARAT,1,0,8,205,,42
+8.20E+15,8204,2/20/2007,GEMPABUMI,,HALMAHERA SELATAN,MALUKU UTARA,0,0,0,108,,5
+8.20E+15,8204,2/4/2007,GEMPABUMI,,HALMAHERA SELATAN,MALUKU UTARA,0,0,2,294,,7
+9.41E+15,9105,1/22/2007,GEMPABUMI,,KEPULAUAN YAPEN,P A P U A,0,0,0,0,,0
+7.11E+15,7106,1/21/2007,GEMPABUMI,,MINAHASA UTARA,SULAWESI UTARA,0,0,0,0,,0
+7.17E+15,7171,1/21/2007,GEMPABUMI,,KOTA MANADO,SULAWESI UTARA,6,0,8,2,,38
+8.27E+15,8271,1/21/2007,GEMPABUMI,,KOTA TERNATE,MALUKU UTARA,0,0,0,138,,20
+8.10E+15,8104,1/11/2007,GEMPABUMI,,BURU,MALUKU,0,0,0,0,,0
+1.20E+15,1213,12/18/2006,GEMPABUMI,GEMPABUMI,MANDAILING NATAL,SUMATERA UTARA,4,0,1719,1310,0,47
+5.21E+15,5206,12/1/2006,GEMPABUMI,GEMPABUMI,BIMA,NUSA TENGGARA BARAT,1,0,9,640,0,21
+8.21E+15,8203,11/29/2006,GEMPABUMI,GEMPABUMI,HALMAHERA UTARA,MALUKU UTARA,0,0,0,91,0,10
+3.21E+15,3206,11/28/2006,GEMPABUMI,GEMPABUMI,TASIKMALAYA,JAWA BARAT,0,0,0,0,0,0
+9.40E+15,9501,11/22/2006,GEMPABUMI,GEMPABUMI,JAYAWIJAYA,PAPUA PEGUNUNGAN,0,0,0,0,0,0
+9.11E+15,9202,11/22/2006,GEMPABUMI,GEMPABUMI,MANOKWARI,PAPUA BARAT,0,0,0,0,0,0
+1.77E+15,1771,11/20/2006,GEMPABUMI,GEMPABUMI,KOTA BENGKULU,BENGKULU,0,0,0,0,0,0
+8.20E+15,8204,10/27/2006,GEMPABUMI,GEMPABUMI,HALMAHERA SELATAN,MALUKU UTARA,0,0,0,0,0,0
+1.30E+15,1301,10/26/2006,GEMPABUMI,GEMPABUMI,PESISIR SELATAN,SUMATERA BARAT,0,0,0,0,0,0
+1.20E+15,1204,10/25/2006,GEMPABUMI,GEMPABUMI,NIAS,SUMATERA UTARA,0,0,0,0,0,0
+7.10E+15,7103,10/24/2006,GEMPABUMI,GEMPABUMI,KEPULAUAN SANGIHE,SULAWESI UTARA,0,0,0,0,0,0
+7.10E+15,7103,10/23/2006,GEMPABUMI,GEMPABUMI,KEPULAUAN SANGIHE,SULAWESI UTARA,0,0,0,0,0,0
+9.47E+15,9171,10/20/2006,GEMPABUMI,GEMPABUMI,KOTA JAYAPURA,P A P U A,0,0,0,0,0,0
+3.20E+15,3202,9/30/2006,GEMPABUMI,GEMPABUMI,SUKABUMI,JAWA BARAT,0,0,0,4,0,0
+3.31E+15,3311,5/27/2006,GEMPABUMI,GEMPABUMI,SUKOHARJO,JAWA TENGAH,3,0,67,1529,0,99
+3.31E+15,3305,5/27/2006,GEMPABUMI,GEMPABUMI,KEBUMEN,JAWA TENGAH,,,,3,,0
+3.47E+15,3471,5/27/2006,GEMPABUMI,GEMPABUMI,KOTA YOGYAKARTA,DAERAH ISTIMEWA YOGYAKARTA,218,0,318,14348,0,478
+3.40E+15,3404,5/27/2006,GEMPABUMI,GEMPABUMI,SLEMAN,DAERAH ISTIMEWA YOGYAKARTA,243,0,4679,22251,0,607
+3.40E+15,3403,5/27/2006,GEMPABUMI,GEMPABUMI,GUNUNGKIDUL,DAERAH ISTIMEWA YOGYAKARTA,84,0,1086,8740,0,789
+3.40E+15,3402,5/27/2006,GEMPABUMI,GEMPABUMI,BANTUL,DAERAH ISTIMEWA YOGYAKARTA,4143,0,12026,148440,0,1743
+3.40E+15,3401,5/27/2006,GEMPABUMI,GEMPABUMI,KULON PROGO,DAERAH ISTIMEWA YOGYAKARTA,22,0,2179,9143,0,422
+3.32E+15,3323,5/27/2006,GEMPABUMI,GEMPABUMI,TEMANGGUNG,JAWA TENGAH,,,,85,,0
+3.31E+15,3313,5/27/2006,GEMPABUMI,GEMPABUMI,KARANGANYAR,JAWA TENGAH,,,,141,,0
+3.31E+15,3312,5/27/2006,GEMPABUMI,GEMPABUMI,WONOGIRI,JAWA TENGAH,0,0,4,168,0,39
+3.31E+15,3310,5/27/2006,GEMPABUMI,GEMPABUMI,KLATEN,JAWA TENGAH,1045,0,18127,95892,0,1354
+3.31E+15,3309,5/27/2006,GEMPABUMI,GEMPABUMI,BOYOLALI,JAWA TENGAH,4,0,300,764,0,3
+3.31E+15,3308,5/27/2006,GEMPABUMI,GEMPABUMI,MAGELANG,JAWA TENGAH,10,0,24,772,0,228
+3.31E+15,3306,5/27/2006,GEMPABUMI,GEMPABUMI,PURWOREJO,JAWA TENGAH,1,0,4,376,0,115
+3.52E+15,3520,5/26/2006,GEMPABUMI,GEMPABUMI,MAGETAN,JAWA TIMUR,0,0,0,15,0,0
+8.17E+15,8171,3/23/2006,GEMPABUMI,GEMPABUMI,KOTA AMBON,MALUKU,3,0,0,0,0,0
+8.10E+15,8104,3/14/2006,GEMPABUMI,GEMPABUMI,BURU,MALUKU,3,0,1,277,0,0
+3.21E+15,3210,2/27/2006,GEMPABUMI,GEMPABUMI,MAJALENGKA,JAWA BARAT,0,0,0,11,0,0
+8.10E+15,8102,1/27/2006,GEMPABUMI,GEMPABUMI,MALUKU TENGGARA,MALUKU,0,0,0,50,0,0
+8.10E+15,8101,1/27/2006,GEMPABUMI,GEMPABUMI,MALUKU TENGAH,MALUKU,0,0,0,10,0,0
+8.10E+15,8104,11/2/2005,GEMPABUMI,,BURU,MALUKU,0,0,5,55,0,1
+8.17E+15,8171,10/5/2005,GEMPABUMI,,KOTA AMBON,MALUKU,0,0,0,10,0,0
+7.27E+15,7271,7/10/2005,GEMPABUMI,,KOTA PALU,SULAWESI TENGAH,0,0,3,50,0,0
+1.30E+15,1301,4/12/2005,GEMPABUMI,,PESISIR SELATAN,SUMATERA BARAT,0,0,0,49,0,0
+1.31E+15,1305,4/10/2005,GEMPABUMI,,PADANG PARIAMAN,SUMATERA BARAT,1,0,0,3006,0,211
+1.21E+15,1211,3/28/2005,GEMPABUMI,,DAIRI,SUMATERA UTARA,0,0,0,117,0,73
+1.20E+15,1213,3/28/2005,GEMPABUMI,,MANDAILING NATAL,SUMATERA UTARA,1,0,0,682,0,4
+1.21E+15,1214,3/28/2005,GEMPABUMI,,NIAS SELATAN,SUMATERA UTARA,165,0,3001,20574,0,857
+1.22E+15,1216,3/28/2005,GEMPABUMI,,HUMBANG HASUNDUTAN,SUMATERA UTARA,0,0,0,0,0,56
+1.22E+15,1217,3/28/2005,GEMPABUMI,,SAMOSIR,SUMATERA UTARA,0,0,0,386,0,18
+1.10E+15,1109,3/28/2005,GEMPABUMI,,SIMEULUE,ACEH,37,0,0,14539,0,1277
+1.10E+15,1101,3/28/2005,GEMPABUMI,,ACEH SELATAN,ACEH,3,0,0,2714,0,324
+1.20E+15,1204,3/28/2005,GEMPABUMI,,NIAS,SUMATERA UTARA,685,1,3277,24739,0,2659
+1.21E+15,1205,3/28/2005,GEMPABUMI,,LANGKAT,SUMATERA UTARA,0,0,0,4,0,1
+1.21E+15,1208,3/28/2005,GEMPABUMI,,SIMALUNGUN,SUMATERA UTARA,0,0,0,5,0,0
+1.28E+15,1271,3/28/2005,GEMPABUMI,,KOTA MEDAN,SUMATERA UTARA,0,0,0,0,0,0
+1.27E+15,1273,3/28/2005,GEMPABUMI,,KOTA SIBOLGA,SUMATERA UTARA,1,0,0,122,0,1
+1.20E+15,1203,3/28/2005,GEMPABUMI,,TAPANULI SELATAN,SUMATERA UTARA,0,0,0,26,0,1
+1.10E+15,1110,3/28/2005,GEMPABUMI,,ACEH SINGKIL,ACEH,22,0,0,3314,0,175
+1.20E+15,1201,3/28/2005,GEMPABUMI,,TAPANULI TENGAH,SUMATERA UTARA,1,0,0,830,0,243
+1.21E+15,1202,3/28/2005,GEMPABUMI,,TAPANULI UTARA,SUMATERA UTARA,0,0,0,0,0,59
+7.40E+15,7404,2/19/2005,GEMPABUMI,,BUTON,SULAWESI TENGGARA,0,0,0,101,0,7
+3.20E+15,3204,2/2/2005,GEMPABUMI,,BANDUNG,JAWA BARAT,0,0,0,19,0,1
+9.40E+15,9401,11/26/2004,GEMPABUMI,,NABIRE,PAPUA TENGAH,31,0,228,4787,0,60
+5.31E+15,5305,11/12/2004,GEMPABUMI,,ALOR,NUSA TENGGARA TIMUR,33,0,310,16051,0,1049
+7.20E+15,7201,6/29/2004,GEMPABUMI,,BANGGAI,SULAWESI TENGAH,3,0,0,229,0,0
+9.40E+15,9401,6/2/2004,GEMPABUMI,,NABIRE,PAPUA TENGAH,37,0,691,0,0,2
+1.37E+15,1371,4/9/2004,GEMPABUMI,,KOTA PADANG,SUMATERA BARAT,0,0,0,100,0,0
+9.40E+15,9401,3/6/2004,GEMPABUMI,,NABIRE,PAPUA TENGAH,0,0,0,3960,0,110
+1.30E+15,1301,2/22/2004,GEMPABUMI,,PESISIR SELATAN,SUMATERA BARAT,1,0,9,141,0,4
+1.31E+15,1304,2/16/2004,GEMPABUMI,,TANAH DATAR,SUMATERA BARAT,6,0,25,1058,0,107
+9.40E+15,9401,2/6/2004,GEMPABUMI,,NABIRE,PAPUA TENGAH,39,0,722,858,0,232
+5.11E+15,5107,1/2/2004,GEMPABUMI,,KARANGASEM,BALI,0,0,9,4101,0,155
+5.27E+15,5271,1/2/2004,GEMPABUMI,,KOTA MATARAM,NUSA TENGGARA BARAT,0,0,3,616,0,0
+5.20E+15,5201,1/2/2004,GEMPABUMI,,LOMBOK BARAT,NUSA TENGGARA BARAT,0,0,22,7473,0,72
+5.20E+15,5202,1/2/2004,GEMPABUMI,,LOMBOK TENGAH,NUSA TENGGARA BARAT,0,0,0,326,0,22
+5.20E+15,5203,1/2/2004,GEMPABUMI,,LOMBOK TIMUR,NUSA TENGGARA BARAT,0,0,0,741,0,0
+3.51E+15,3507,5/28/2003,GEMPABUMI,,MALANG,JAWA TIMUR,0,0,0,1,0,1
+8.21E+15,8203,5/27/2003,GEMPABUMI,,HALMAHERA UTARA,MALUKU UTARA,1,0,29,208,0,0
+5.31E+15,5306,4/2/2003,GEMPABUMI,,FLORES TIMUR,NUSA TENGGARA TIMUR,41,19,280,0,0,0
+5.31E+15,5310,3/25/2003,GEMPABUMI,,MANGGARAI,NUSA TENGGARA TIMUR,5,0,15,1,0,0
+3.21E+15,3208,3/13/2003,GEMPABUMI,,KUNINGAN,JAWA BARAT,0,0,0,685,0,2
+8.27E+15,8271,3/10/2003,GEMPABUMI,,KOTA TERNATE,MALUKU UTARA,0,0,0,679,0,0
+1.77E+15,1771,2/3/2003,GEMPABUMI,,KOTA BENGKULU,BENGKULU,0,0,0,5,0,0
+5.20E+15,5204,1/24/2003,GEMPABUMI,,SUMBAWA,NUSA TENGGARA BARAT,0,0,2,504,0,0
+1.11E+15,1103,1/22/2003,GEMPABUMI,,ACEH TIMUR,ACEH,0,0,0,57,0,0
+1.31E+15,1306,1/20/2003,GEMPABUMI,,AGAM,SUMATERA BARAT,0,0,0,109,0,0
+1.10E+15,1109,11/2/2002,GEMPABUMI,,SIMEULUE,ACEH,2,0,51,,0,127
+9.11E+15,9202,10/11/2002,GEMPABUMI,,MANOKWARI,PAPUA BARAT,1,0,2,,0,2
+9.40E+15,9401,10/10/2002,GEMPABUMI,,NABIRE,PAPUA TENGAH,1,0,0,,0,1
+7.21E+15,7209,8/15/2002,GEMPABUMI,,TOJO UNA UNA,SULAWESI TENGAH,0,0,32,,0,0
+7.20E+15,7202,8/15/2002,GEMPABUMI,,POSO,SULAWESI TENGAH,0,0,16,,0,0
+7.21E+15,7204,6/16/2002,GEMPABUMI,,TOLI TOLI,SULAWESI TENGAH,2,0,77,,0,0
+3.21E+15,3210,6/28/2001,GEMPABUMI,,MAJALENGKA,JAWA BARAT,0,0,0,6358,,107
+5.20E+15,5204,6/15/2001,GEMPABUMI,,SUMBAWA,NUSA TENGGARA BARAT,0,0,0,0,,0
+3.47E+15,3471,5/25/2001,GEMPABUMI,,KOTA YOGYAKARTA,DAERAH ISTIMEWA YOGYAKARTA,0,0,0,0,,0
+5.30E+15,5311,5/24/2001,GEMPABUMI,,SUMBA TIMUR,NUSA TENGGARA TIMUR,0,0,0,0,,0
+1.27E+15,1273,5/17/2001,GEMPABUMI,,KOTA SIBOLGA,SUMATERA UTARA,0,0,0,0,,0
+3.31E+15,3310,5/5/2001,GEMPABUMI,,KLATEN,JAWA TENGAH,0,0,0,2,,0
+3.31E+15,3307,3/27/2001,GEMPABUMI,,WONOSOBO,JAWA TENGAH,0,0,0,2,,0
+8.17E+15,8171,3/19/2001,GEMPABUMI,,KOTA AMBON,MALUKU,0,0,0,0,,0
+7.17E+15,7171,2/24/2001,GEMPABUMI,,KOTA MANADO,SULAWESI UTARA,0,0,0,0,,0

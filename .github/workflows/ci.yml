@@ -23,7 +23,7 @@ jobs:
       - name: Lint with pylint
         run: |
           pip install pylint
-          pylint --rcfile=.pylintrc app || true
+          pylint --rcfile=.pylintrc app || true 
 
   build-and-smoke-test:
     runs-on: ubuntu-latest

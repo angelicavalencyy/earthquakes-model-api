@@ -25,10 +25,14 @@ def get_async_engine():
     """
     global _async_engine, _db_available
     if _async_engine is None:
-        if not settings.POSTGRES_URL:
+        # Prefer configured settings value, but fall back to the environment
+        # variable in case the settings object was created before the
+        # environment was populated (reloaders may import modules early).
+        db_url = settings.POSTGRES_URL or os.getenv("POSTGRES_URL")
+        if not db_url:
             _db_available = False
             return None
-        _async_engine = create_async_engine(settings.POSTGRES_URL, echo=True)
+        _async_engine = create_async_engine(db_url, echo=True)
         _db_available = True
     return _async_engine
 
@@ -64,7 +68,7 @@ async def init_db():
     # require a configured DB and should fail fast if missing.
     is_dev = os.getenv("FASTAPI_DEV", "0").lower() in ("1", "true", "yes")
 
-    if not settings.POSTGRES_URL:
+    if not (settings.POSTGRES_URL or os.getenv("POSTGRES_URL")):
         if is_dev:
             logger.info("POSTGRES_URL not set and FASTAPI_DEV=true; skipping database initialization.")
             return

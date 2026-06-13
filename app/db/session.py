@@ -1,6 +1,7 @@
 """Async database session management."""
 from typing import AsyncGenerator
 
+from fastapi import HTTPException
 from sqlmodel.ext.asyncio.session import AsyncSession
 from app.db.main import get_async_engine
 
@@ -16,5 +17,9 @@ async def get_session() -> AsyncGenerator[AsyncSession, None]:
         AsyncSession: an async SQLModel/SQLAlchemy session instance.
     """
     engine = get_async_engine()
+    if engine is None:
+        # Return a clear 503 Service Unavailable when DB not configured
+        raise HTTPException(status_code=503, detail="Database not configured")
+
     async with AsyncSession(engine) as session:
         yield session
