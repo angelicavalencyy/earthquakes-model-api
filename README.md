@@ -9,7 +9,7 @@ This project is a backend for the **Earthquake Prediction Machine Learning** pro
 To set up the project, you need to install the required dependencies. You can do this by running the following command in your terminal:
 
 ## Virtual Environment
-- Create Virtual ENV (Python 3.10)
+- Create Virtual ENV (Python 3.11)
   
     [Click here for installation guide](https://fastapi.tiangolo.com/virtual-environments/#create-a-virtual-environment)
 
@@ -22,7 +22,7 @@ To set up the project, you need to install the required dependencies. You can do
 
 ## Prerequisites
 
-- Python 3.10
+- Python 3.11
 - DBMS PostgreSQL
 - FastAPI
 - Pydantic
